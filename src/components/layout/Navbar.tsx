@@ -113,24 +113,23 @@ export default function Navbar() {
           isScrolled ? 'my-2' : 'my-4'
         }`}
       >
-        <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#e8efe9] px-6 py-2 flex items-center justify-between">
-          {/* Logo Section */}
-          <div className="flex items-center gap-4 shrink-0">
-            <Logo />
-            <span className="hidden xl:block h-8 w-[1.5px] bg-[#e2e8e4]" />
-            <span className="hidden xl:block text-[11px] font-bold text-[#5c6860] max-w-[130px] leading-tight text-left">
-              Corporate Health &amp; <br /> Wellness Solutions
+        <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#e8efe9] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4">
+          {/* Logo Section — tagline only on wide screens so MacBook widths stay clean */}
+          <div className="flex items-center gap-3 shrink-0 min-w-0">
+            <Logo compact />
+            <span className="hidden 2xl:block h-8 w-px bg-[#e2e8e4] shrink-0" />
+            <span className="hidden 2xl:block text-[11px] font-semibold text-[#5c6860] max-w-[120px] leading-snug text-left whitespace-normal">
+              Corporate Health &amp; Wellness Solutions
             </span>
           </div>
 
-          {/* Desktop Navigation Links (Clean text active states matching Mockup) */}
-          <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center justify-center flex-1 min-w-0 gap-0 xl:gap-0.5 2xl:gap-1.5">
             {navItems.map((item) => {
               const isActive =
                 location.pathname === item.path ||
                 (item.path === '/services' && location.pathname.startsWith('/services')) ||
                 (item.path === '/resources' && (location.pathname.startsWith('/resources') || location.pathname.startsWith('/health-hub')));
-              const label = item.label;
 
               if (item.path === '/services') {
                 return <ServicesDropdown key={item.path} isActive={isActive} isCapsule={true} />;
@@ -140,38 +139,49 @@ export default function Navbar() {
                 return <ResourcesDropdown key={item.path} isActive={isActive} isCapsule={true} />;
               }
 
+              const shortLabel =
+                item.label === 'Corporate Programs'
+                  ? 'Programs'
+                  : item.label === 'About Us'
+                    ? 'About'
+                    : item.label === 'Contact Us'
+                      ? 'Contact'
+                      : item.label;
+
               return (
-                <div key={item.path} className="relative flex flex-col items-center py-1">
+                <div key={item.path} className="relative flex flex-col items-center">
                   <Link
                     to={item.path}
-                    className={`px-3 py-1.5 text-[14.5px] font-semibold transition-all duration-200 ${
+                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
                       isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
                     }`}
                   >
-                    {label}
+                    <span className="2xl:hidden">{shortLabel}</span>
+                    <span className="hidden 2xl:inline">{item.label}</span>
                   </Link>
                 </div>
               );
             })}
           </div>
 
-          {/* Right Section: WhatsApp circle outline, Separator, Pill CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Right Section */}
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1a2e32] hover:text-[#FF7A1A] hover:scale-105 transition-all w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer shrink-0"
+              className="text-[#1a2e32] hover:text-[#FF7A1A] hover:scale-105 transition-all w-8 h-8 xl:w-9 xl:h-9 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer shrink-0"
               aria-label="WhatsApp"
             >
-              <FaWhatsapp className="w-5 h-5" />
+              <FaWhatsapp className="w-4 h-4 xl:w-5 xl:h-5" />
             </a>
 
             <Link
               to="/contact"
-              className="bg-[#FF7A1A] text-white hover:bg-[#E86800] font-semibold text-[13.5px] px-5 py-2.5 rounded-full transition-all duration-300 flex items-center gap-1.5 shadow-md shadow-[#FF7A1A]/10"
+              className="bg-[#FF7A1A] text-white hover:bg-[#E86800] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 whitespace-nowrap"
             >
-              <span>Book Consultation</span>
+              <span className="hidden xl:inline">Book Consultation</span>
+              <span className="xl:hidden">Book Now</span>
               <span className="font-sans font-bold">→</span>
             </Link>
           </div>

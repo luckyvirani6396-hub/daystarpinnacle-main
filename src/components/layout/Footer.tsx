@@ -161,7 +161,7 @@ export default function Footer() {
           {/* Brand Column */}
           <motion.div variants={columnVariants} className="sm:col-span-2 lg:col-span-4 flex flex-col items-start">
             <Logo className="mb-6 hover:scale-103 transition-transform duration-300" light />
-            <span className="inline-flex text-[9.5px] font-semibold tracking-[0.22em] uppercase px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/10 text-[#D4A574] mb-5">
+            <span className="inline-flex text-[9.5px] font-semibold tracking-[0.22em] uppercase px-3 py-1.5 rounded-lg bg-[#FF7A1A]/10 border border-[#FF7A1A]/30 text-[#FF9A4A] mb-5">
               {SITE_TAGLINE}
             </span>
             <p className="text-[#A8B8BC] text-[13.5px] leading-relaxed mb-7 max-w-sm font-normal">

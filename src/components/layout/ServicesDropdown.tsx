@@ -67,7 +67,7 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
   const closeDropdown = () => setIsOpen(false);
 
   const linkClass = isCapsule
-    ? `inline-flex items-center gap-1 px-3 py-1.5 text-[14.5px] font-semibold transition-all duration-200 ${
+    ? `inline-flex items-center gap-0.5 px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
         isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
       }`
     : `inline-flex items-center gap-1 px-3.5 xl:px-4.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
