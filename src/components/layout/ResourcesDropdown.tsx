@@ -11,8 +11,6 @@ interface ResourcesDropdownProps {
 
 const resourcesItems = [
   { label: 'Blog', path: '/health-hub' },
-  { label: 'Wellness Guides', path: '/health-hub' },
-  { label: 'Case Studies', path: '/why-wellness' },
   { label: 'FAQs', path: '/faq' },
 ];
 
@@ -55,10 +53,10 @@ export default function ResourcesDropdown({ isActive, isLight = false, isCapsule
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0, y: -16, scaleY: 0.95, originY: 0 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1, originY: 0 }}
+            exit={{ opacity: 0, y: -16, scaleY: 0.95, originY: 0 }}
+            transition={{ type: 'spring', stiffness: 220, damping: 18 }}
             className="absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[200px] z-50 pointer-events-auto"
           >
             <div className="bg-white rounded-xl shadow-xl shadow-black/10 border border-border overflow-hidden">

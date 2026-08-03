@@ -31,10 +31,10 @@ export default function ArticleGrid({ posts, activeCategory, onCategoryChange }:
               key={category}
               type="button"
               onClick={() => onCategoryChange(category)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeCategory === category
-                  ? 'bg-[#5c8730] text-white shadow-lg shadow-[#5c8730]/25'
-                  : 'bg-white text-dark/70 border border-[#E2E8E4] hover:border-[#5c8730]/50 hover:text-[#5c8730]'
+                  ? 'bg-[#FF7A1A] text-white shadow-lg shadow-[#FF7A1A]/20'
+                  : 'bg-white text-dark/70 border border-[#E2E8E4] hover:border-[#FF7A1A]/50 hover:text-[#FF7A1A]'
               }`}
             >
               {category}

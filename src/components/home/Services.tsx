@@ -131,14 +131,14 @@ export default function Services() {
   const activeDim = dimensions.find((d) => d.id === active) ?? dimensions[0];
 
   return (
-    <section id="services" className="relative w-full min-h-screen min-h-[100dvh] bg-[#FAF9F5] overflow-hidden scroll-mt-28">
+    <section id="services" className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[15%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
         <div className="absolute left-[-8%] bottom-[10%] w-[40%] h-[40%] rounded-full bg-[#004B57]/5 blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 py-16 md:py-20 min-h-screen min-h-[100dvh] flex flex-col justify-center">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -186,7 +186,7 @@ export default function Services() {
           </div>
 
           {/* Active detail panel */}
-          <div className="lg:col-span-8 h-full">
+          <div className="lg:col-span-8 h-full bg-white rounded-3xl border border-[#e2e8e4]/80 shadow-[0_8px_40px_rgba(12,29,55,0.06)] p-6 md:p-8 lg:p-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeDim.id}
@@ -194,7 +194,7 @@ export default function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -16 }}
                 transition={{ duration: 0.35 }}
-                className="bg-white rounded-3xl border border-[#e2e8e4]/80 shadow-[0_8px_40px_rgba(12,29,55,0.06)] p-6 md:p-8 lg:p-10 h-full"
+                className="h-full"
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch h-full">
                   {/* Left Column: Details */}

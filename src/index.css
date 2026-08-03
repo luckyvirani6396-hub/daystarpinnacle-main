@@ -65,6 +65,46 @@
   color: var(--color-primary-dark);
 }
 
+label,
+input,
+textarea,
+select,
+option {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif !important;
+  color: #9ca3af !important;
+  opacity: 0.85 !important;
+  font-weight: 400 !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-family: 'Poppins', sans-serif !important;
+  color: #9ca3af !important;
+  opacity: 0.85 !important;
+  font-weight: 400 !important;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-family: 'Poppins', sans-serif !important;
+  color: #9ca3af !important;
+  opacity: 0.85 !important;
+  font-weight: 400 !important;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-family: 'Poppins', sans-serif !important;
+  color: #9ca3af !important;
+  opacity: 0.85 !important;
+  font-weight: 400 !important;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -85,73 +125,6 @@ select:focus {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
-}
-
-@keyframes loader-orbit-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loader-pulse-ring {
-
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-
-  50% {
-    transform: scale(1.06);
-    opacity: 1;
-  }
-}
-
-@keyframes loader-logo-float {
-
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-
-  50% {
-    transform: translateY(-4px) scale(1.03);
-  }
-}
-
-@keyframes loader-dot-bounce {
-
-  0%,
-  80%,
-  100% {
-    transform: scale(0.6);
-    opacity: 0.4;
-  }
-
-  40% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.loader-orbit {
-  animation: loader-orbit-spin 4s linear infinite;
-}
-
-.loader-pulse-ring {
-  animation: loader-pulse-ring 2.4s ease-in-out infinite;
-}
-
-.loader-logo-float {
-  animation: loader-logo-float 2.4s ease-in-out infinite;
-}
-
-.loader-dot {
-  animation: loader-dot-bounce 1.2s ease-in-out infinite;
 }
 
 /* Google Maps InfoWindow — align close (×) button on the same row as the logo */

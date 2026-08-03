@@ -128,7 +128,8 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive =
                 location.pathname === item.path ||
-                (item.path === '/services' && location.pathname.startsWith('/services'));
+                (item.path === '/services' && location.pathname.startsWith('/services')) ||
+                (item.path === '/resources' && (location.pathname.startsWith('/resources') || location.pathname.startsWith('/health-hub')));
               const label = item.label;
 
               if (item.path === '/services') {

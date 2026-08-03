@@ -1,130 +1,152 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Leaf, ArrowRight, BookOpen, Utensils, Brain, Flower2 } from 'lucide-react';
-import Container from '../common/Container';
+import { BookOpen, Utensils, Brain, ArrowRight, Calendar, ClipboardList } from 'lucide-react';
 import { PAGE_HERO_IMAGES } from '../../constants/pageImages';
 import { fadeUp } from '../../utils/animations';
+import {
+  btnPrimary,
+  sectionBody,
+  sectionDotGrid,
+  sectionIntroBadge,
+} from '../home/sectionStyles';
 
 export default function WellnessHubHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-[#F8F7F2] to-[#EEF5E8] min-h-screen lg:flex lg:items-center pt-36 pb-24 lg:pt-0 lg:pb-0">
-      <div className="absolute left-[-120px] top-0 w-[520px] h-[520px] rounded-full bg-[#DDEFCF] blur-[140px] opacity-70" />
-      <div className="absolute right-[-180px] bottom-[-150px] w-[420px] h-[420px] rounded-full bg-[#EAF4DD] blur-[120px] opacity-80" />
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden isolate">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute right-[-8%] top-[8%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/6 blur-[100px]" />
+        <div className="absolute left-[-8%] bottom-[5%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
+      </div>
 
-      <Container className="relative z-10 w-full px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          <div className="col-span-1 lg:col-span-6 flex flex-col items-start text-left relative z-10">
-            <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex items-center gap-3 mb-5">
-              <div className="w-8 h-8 rounded-full bg-[#5c8730]/10 flex items-center justify-center text-[#5c8730]">
-                <Leaf className="w-4.5 h-4.5" />
-              </div>
-              <nav className="flex items-center gap-1.5 text-xs font-extrabold tracking-wider uppercase text-[#004B57]/90">
-                <Link to="/" className="hover:text-[#5c8730] transition-colors duration-200">Home</Link>
-                <span className="text-[#004B57]/30">/</span>
-                <span className="text-[#5C8730]">Health Hub</span>
-              </nav>
-            </motion.div>
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          <div className="col-span-1 lg:col-span-7 flex flex-col items-start text-left relative z-10">
+            <motion.nav
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              aria-label="Breadcrumb"
+              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-5 flex-wrap"
+            >
+              <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
+                Home
+              </Link>
+              <span className="text-[#004B57]/30">/</span>
+              <span className="text-[#FF7A1A]">Blog</span>
+            </motion.nav>
 
-            <motion.h1 variants={fadeUp} initial="hidden" animate="visible" className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-[#153B24] leading-none">
-              Health Hub
+            <motion.span
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className={`${sectionIntroBadge} items-center gap-2`}
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              Wellness &amp; Nutrition Hub
+            </motion.span>
+
+            <motion.h1
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-[2rem] sm:text-5xl md:text-[3.25rem] lg:text-[3.5rem] font-serif font-medium text-[#004B57] leading-[1.1] tracking-tight mb-4 sm:mb-5 max-w-2xl"
+            >
+              Wellness Hub
             </motion.h1>
 
-            <motion.div variants={fadeUp} initial="hidden" animate="visible" className="mb-4 flex items-center gap-2">
-              <svg className="w-40 h-2.5 text-[#5c8730]/75" viewBox="0 0 300 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5C50 2 150 2 299 5C150 7 50 7 1 5Z" />
-              </svg>
-              <Leaf className="w-4.5 h-4.5 text-[#8cb95d] transform rotate-12 shrink-0" />
+            {/* Separator Accent */}
+            <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex items-center gap-3 mb-5 sm:mb-6">
+              <div className="h-px w-10 bg-[#FF7A1A]/40" />
+              <div className="h-1.5 w-1.5 rounded-full bg-[#FF7A1A]" />
+              <div className="h-px flex-1 max-w-[120px] bg-[#004B57]/15" />
             </motion.div>
 
-            <motion.h2 variants={fadeUp} initial="hidden" animate="visible" className="text-xl md:text-2xl font-bold text-[#5c8730] mb-4 leading-snug">
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-xl md:text-2xl font-bold text-[#FF7A1A] mb-4 leading-snug font-heading"
+            >
               Learn, Grow, and Thrive Every Day.
             </motion.h2>
 
-            <motion.p variants={fadeUp} initial="hidden" animate="visible" className="text-[#2c4033] text-sm md:text-[15.5px] leading-relaxed max-w-xl mb-8 font-medium">
+            <motion.p variants={fadeUp} initial="hidden" animate="visible" className={`${sectionBody} mb-6 max-w-2xl`}>
               Explore expert articles, nourishing recipes, and practical tips to support your health journey — all in one place.
             </motion.p>
 
-            <motion.div variants={fadeUp} initial="hidden" animate="visible" className="relative flex items-start justify-between w-full max-w-[340px] sm:max-w-[420px] mb-10 px-2">
-              <div className="absolute top-7 left-12 right-12 sm:top-8 sm:left-14 sm:right-14 h-[1.8px] bg-[#5C8730]/65 z-0" />
-
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="relative flex items-start justify-between w-full max-w-[340px] sm:max-w-[420px] mb-10 px-2 mt-6"
+            >
+              <div className="absolute top-7 left-12 right-12 sm:top-8 sm:left-14 sm:right-14 h-[1.8px] bg-[#FF7A1A]/20 z-0" />
               {[
-                { key: 'articles', icon: BookOpen, label: <>Expert<br />Articles</> },
-                { key: 'recipes', icon: Utensils, label: <>Healthy<br />Recipes</> },
-                { key: 'tips', icon: Brain, label: <>Mind &amp;<br />Body Tips</> },
+                { key: 'nutrition', icon: Utensils, label: <>Nutrition<br />Tips</> },
+                { key: 'mental', icon: Brain, label: <>Mental<br />Wellbeing</> },
+                { key: 'lifestyle', icon: BookOpen, label: <>Healthy<br />Lifestyle</> },
               ].map(({ key, icon: Icon, label }) => (
                 <div key={key} className="flex flex-col items-center z-10 w-24 sm:w-28">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#EAF2E1] rounded-full flex items-center justify-center text-[#496b26] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#E2ECD8] shadow-[0_4px_12px_rgba(92,135,48,0.06)]">
-                    <Icon className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.6} />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FEF3E8] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FDF2E9] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.8} />
                   </div>
-                  <span className="text-[11.5px] sm:text-[12.5px] font-bold text-[#153B24] text-center mt-3.5 leading-snug tracking-wide">
-                    {label}
-                  </span>
+                  <span className="text-[11.5px] sm:text-[12.5px] font-bold text-[#004B57] text-center mt-3.5 leading-snug tracking-wide">{label}</span>
                 </div>
               ))}
             </motion.div>
 
-            <motion.div variants={fadeUp} initial="hidden" animate="visible">
-              <a
-                href="#featured"
-                className="px-7 py-3.5 rounded-full bg-[#5c8730] hover:bg-[#496b26] text-white font-bold text-sm transition-all duration-300 inline-flex items-center gap-2 shadow-md shadow-[#5c8730]/10 hover:scale-[1.02]"
-              >
+            <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a href="#featured" className={btnPrimary}>
                 <span>Explore Articles</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
               </a>
             </motion.div>
           </div>
 
-          <div className="col-span-1 lg:col-span-6 relative w-full flex items-center justify-center lg:justify-end mt-8 lg:mt-0 z-10">
-            <div
-              className="absolute inset-y-2 left-[-25px] right-10 border-2 border-[#5c8730]/40 pointer-events-none select-none z-0"
-              style={{ borderRadius: '50% 0 0 0' }}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative w-full h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden shadow-2xl z-10 bg-[#F8FAF6]"
-              style={{ borderRadius: '50% 0 0 0' }}
-            >
-              <img
-                src={PAGE_HERO_IMAGES.wellnessHub}
-                alt="Meditation and mental health"
-                className="w-full h-full object-cover object-[center_35%] transition-transform duration-[4000ms] hover:scale-105"
-              />
-            </motion.div>
+          <div className="col-span-1 lg:col-span-5 relative w-full flex items-center justify-center lg:justify-end mt-8 lg:mt-0 z-10">
+            <div className="absolute left-[-10px] top-[10%] bottom-[10%] w-7 bg-[#FF7A1A] rounded-r-full z-20 shadow-lg shadow-[#FF7A1A]/20" />
+            <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
+            
+            <div className="relative">
+              <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/10 to-[#004B57]/5 rounded-[28px] blur-xl" />
+              
+              <div className="relative rounded-[24px] overflow-hidden border-[3px] border-white shadow-[0_24px_60px_rgba(0,75,87,0.12)]">
+                <img
+                  src={PAGE_HERO_IMAGES.wellnessHub}
+                  alt="Meditation and mental health"
+                  className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />
+              </div>
+            </div>
           </div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-5 lg:mt-2 translate-y-0 lg:translate-y-12 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-[10px] p-6 lg:p-8.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full z-20 md:divide-x md:divide-gray-150"
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mt-16 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-6 lg:p-8.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full z-20 md:divide-x md:divide-gray-150"
         >
           {[
-            { icon: Leaf, title: 'Nutrition Tips', desc: 'Science-backed advice for smarter eating.' },
+            { icon: ClipboardList, title: 'Nutrition Tips', desc: 'Science-backed advice for smarter eating.' },
             { icon: Utensils, title: 'Healthy Recipes', desc: 'Delicious meals that nourish your body.' },
             { icon: Brain, title: 'Mental Health', desc: 'Calm your mind and reduce daily stress.' },
-            { icon: Flower2, title: 'Yoga & Lifestyle', desc: 'Build habits that last a lifetime.' },
+            { icon: Calendar, title: 'Yoga & Lifestyle', desc: 'Build habits that last a lifetime.' },
           ].map(({ icon: Icon, title, desc }, i) => (
             <div key={title} className={`flex items-center gap-4.5 px-2 ${i > 0 ? 'md:pl-6' : ''}`}>
-              <div className="w-12 h-12 rounded-full bg-[#5c8730]/10 flex items-center justify-center shrink-0 text-[#5c8730]">
+              <div className="w-12 h-12 rounded-full bg-[#FF7A1A]/10 flex items-center justify-center shrink-0 text-[#FF7A1A]">
                 <Icon className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs font-bold text-[#5c8730] uppercase tracking-wider">{title}</span>
-                <p className="text-xs text-[#2c4033] font-semibold mt-0.5 leading-relaxed max-w-[190px]">{desc}</p>
+                <span className="text-xs font-bold text-[#004B57] uppercase tracking-wider">{title}</span>
+                <p className="text-xs text-[#5F6B6E] font-semibold mt-0.5 leading-relaxed max-w-[190px]">{desc}</p>
               </div>
             </div>
           ))}
         </motion.div>
-      </Container>
-
-      <img
-        src="/images/leaf.png"
-        alt=""
-        className="absolute right-0 bottom-0 w-36 sm:w-48 lg:w-60 h-auto pointer-events-none select-none opacity-95 z-0 translate-y-6"
-      />
+      </div>
     </section>
   );
 }

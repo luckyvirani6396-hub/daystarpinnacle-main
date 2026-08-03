@@ -58,9 +58,9 @@ const challenges = [
 
 export default function OurApproach() {
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] bg-white overflow-hidden isolate">
+    <section className="relative w-full bg-white overflow-hidden isolate py-16 md:py-24">
       {/* Soft logo-color glows on white */}
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 py-16 md:py-20 min-h-screen min-h-[100dvh] flex flex-col justify-center">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left intro */}

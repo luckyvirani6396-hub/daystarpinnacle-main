@@ -36,14 +36,14 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] bg-white overflow-hidden">
+    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
         <div className="absolute left-[-8%] bottom-[12%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 py-16 md:py-20 min-h-screen min-h-[100dvh] flex flex-col justify-center">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -24 }}

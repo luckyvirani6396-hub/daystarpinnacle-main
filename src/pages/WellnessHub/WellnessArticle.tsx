@@ -27,9 +27,9 @@ export default function WellnessArticle() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mb-5">
             <Link
               to="/health-hub"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-secondary transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-[#FF7A1A] transition-colors"
             >
-              ← Back to Health Hub
+              ← Back to Blog
             </Link>
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
               {post.category}

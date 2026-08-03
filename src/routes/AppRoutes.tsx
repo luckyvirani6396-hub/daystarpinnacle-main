@@ -1,7 +1,7 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
-import Loading from '../components/common/Loading';
+import SmoothSuspense from '../components/common/SmoothSuspense';
 
 const Home = lazy(() => import('../pages/Home/Home'));
 const About = lazy(() => import('../pages/About/About'));
@@ -18,7 +18,7 @@ const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
 export default function AppRoutes() {
   return (
-    <Suspense fallback={<Loading />}>
+    <SmoothSuspense>
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
@@ -30,11 +30,13 @@ export default function AppRoutes() {
           <Route path="faq" element={<FAQ />} />
           <Route path="health-hub" element={<WellnessHub />} />
           <Route path="health-hub/:slug" element={<WellnessArticle />} />
+          <Route path="resources" element={<WellnessHub />} />
+          <Route path="resources/:slug" element={<WellnessArticle />} />
           <Route path="success-stories" element={<SuccessStories />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </Suspense>
+    </SmoothSuspense>
   );
 }
