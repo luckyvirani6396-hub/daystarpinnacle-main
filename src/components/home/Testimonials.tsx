@@ -112,6 +112,8 @@ export default function Testimonials() {
                           <img
                             src={active.image}
                             alt={active.name}
+                            loading="lazy"
+                            decoding="async"
                             className="w-14 h-14 rounded-2xl object-cover border-2 border-white shadow-md"
                           />
                           <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#72A93B] border-2 border-white flex items-center justify-center">
@@ -163,6 +165,8 @@ export default function Testimonials() {
                     <img
                       src={item.image}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
                       className={`w-8 h-8 rounded-full object-cover border-2 ${
                         i === current ? 'border-[#FF7A1A]' : 'border-[#E2E8E4]'
                       }`}

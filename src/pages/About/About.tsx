@@ -1,15 +1,17 @@
+import { lazy, Suspense } from 'react';
 import AboutHero from '../../components/about/AboutHero';
-import AboutVisionApproach from '../../components/about/AboutVisionApproach';
-import AboutTeam from '../../components/about/AboutTeam';
-import AboutCTA from '../../components/about/AboutCTA';
+
+const AboutVisionApproach = lazy(() => import('../../components/about/AboutVisionApproach'));
+const AboutCTA = lazy(() => import('../../components/about/AboutCTA'));
 
 export default function About() {
   return (
     <>
       <AboutHero />
-      <AboutVisionApproach />
-      <AboutTeam />
-      <AboutCTA />
+      <Suspense fallback={<div className="min-h-[100px]" />}>
+        <AboutVisionApproach />
+        <AboutCTA />
+      </Suspense>
     </>
   );
 }

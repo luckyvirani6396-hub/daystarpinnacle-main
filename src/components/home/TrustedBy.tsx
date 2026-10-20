@@ -111,6 +111,7 @@ function LogoCard({ logo }: { logo: LogoItem }) {
             : 'max-h-[56px] max-w-[168px] object-contain'
           }
           loading="lazy"
+          decoding="async"
           draggable={false}
         />
       ) : (

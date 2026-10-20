@@ -263,6 +263,8 @@ export default function Services() {
                     <img
                       src={activeDim.image}
                       alt={activeDim.title}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </Link>

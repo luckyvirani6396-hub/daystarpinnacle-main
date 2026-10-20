@@ -130,6 +130,8 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
                 <img
                   src={heroImage}
                   alt={service.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />

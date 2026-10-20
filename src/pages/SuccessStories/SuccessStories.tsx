@@ -1,22 +1,26 @@
+import { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
 import { successStories } from '../../assets/data/content';
 import SuccessStoriesHero from '../../components/success-stories/SuccessStoriesHero';
 import TransformationCards from '../../components/success-stories/TransformationCards';
-import VideoTestimonials from '../../components/success-stories/VideoTestimonials';
-import Testimonials from '../../components/home/Testimonials';
 import Container from '../../components/common/Container';
 import SectionDecorations from '../../components/common/SectionDecorations';
 import { fadeUp } from '../../utils/animations';
+
+const VideoTestimonials = lazy(() => import('../../components/success-stories/VideoTestimonials'));
+const Testimonials = lazy(() => import('../../components/home/Testimonials'));
 
 export default function SuccessStories() {
   return (
     <>
       <SuccessStoriesHero />
       <TransformationCards stories={successStories} />
-      <Testimonials />
-      <VideoTestimonials />
+      <Suspense fallback={<div className="min-h-[100px]" />}>
+        <Testimonials />
+        <VideoTestimonials />
+      </Suspense>
 
       {/* CTA Banner */}
       <section className="py-14 md:py-18 relative overflow-hidden z-10 bg-[#F8FAF6]/30">

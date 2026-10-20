@@ -17,6 +17,7 @@ function LogoMark({ className = '' }: { className?: string }) {
         src={logo}
         alt={`${SITE_NAME} logo`}
         draggable={false}
+        decoding="async"
         className={`object-contain ${className}`}
       />
     </span>

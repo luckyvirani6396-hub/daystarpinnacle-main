@@ -193,6 +193,8 @@ export default function EngagementPrograms() {
                   <img
                     src={active.image}
                     alt={active.label}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />

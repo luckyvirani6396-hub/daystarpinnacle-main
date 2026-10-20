@@ -32,6 +32,8 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <span className="absolute top-5 left-5 bg-[#FF7A1A] text-white text-[10px] font-extrabold uppercase tracking-widest px-4 py-2 rounded-full shadow-lg">

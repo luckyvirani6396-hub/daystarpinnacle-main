@@ -86,6 +86,8 @@ export default function SuccessStoriesHero() {
               <img
                 src={PAGE_HERO_IMAGES.successStories}
                 alt="Fitness transformation success"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-[center_35%] transition-transform duration-[4000ms] hover:scale-105"
               />
             </motion.div>

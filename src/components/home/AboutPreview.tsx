@@ -85,6 +85,8 @@ export default function AboutPreview() {
                 <img
                   src="/images/about-preview-new.png"
                   alt="Daystar Pinnacle corporate wellness team consultation workshop"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/25 via-transparent to-transparent" />

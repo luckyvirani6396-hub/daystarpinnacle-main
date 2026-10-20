@@ -34,6 +34,8 @@ export default function PageHero({
         <img
           src={bgImage}
           alt={imageAlt || title}
+          loading="eager"
+          decoding="async"
           className="w-full h-full object-cover"
           style={{ objectPosition }}
         />

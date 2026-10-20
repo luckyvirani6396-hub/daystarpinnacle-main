@@ -56,6 +56,8 @@ export default function WellnessArticle() {
               <img
                 src={post.image}
                 alt={post.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-64 sm:h-80 md:h-96 lg:h-[26rem] object-cover"
               />
             </div>

@@ -37,6 +37,8 @@ export default function VideoTestimonials() {
                 <img
                   src={video.thumbnail}
                   alt={video.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-[#153B24]/40 flex items-center justify-center group-hover:bg-[#153B24]/50 transition-colors">

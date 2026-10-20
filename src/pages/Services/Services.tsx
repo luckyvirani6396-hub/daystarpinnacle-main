@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
@@ -6,17 +7,16 @@ import SectionTitle from '../../components/common/SectionTitle';
 import SectionDecorations from '../../components/common/SectionDecorations';
 import ServiceCard from '../../components/common/ServiceCard';
 import ServicesHero from '../../components/services/ServicesHero';
-// import ServicesStatsBar from '../../components/services/ServicesStatsBar';
-import CareApproach from '../../components/services/CareApproach';
-import HowItWorks from '../../components/services/HowItWorks';
 import { clinicalServices } from '../../assets/data/clinicalServices';
 import { staggerContainer, fadeUp } from '../../utils/animations';
+
+const CareApproach = lazy(() => import('../../components/services/CareApproach'));
+const HowItWorks = lazy(() => import('../../components/services/HowItWorks'));
 
 export default function Services() {
   return (
     <>
       <ServicesHero />
-      {/* <ServicesStatsBar /> */}
 
       <section id="services-list" className="py-14 md:py-18 relative overflow-hidden z-10 bg-white">
         <SectionDecorations />
@@ -47,8 +47,10 @@ export default function Services() {
         </Container>
       </section>
 
-      <CareApproach />
-      <HowItWorks />
+      <Suspense fallback={<div className="min-h-[100px]" />}>
+        <CareApproach />
+        <HowItWorks />
+      </Suspense>
 
       {/* Consultation CTA */}
       <section className="py-14 md:py-18 relative overflow-hidden bg-[#FAF9F5]/40">

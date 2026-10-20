@@ -40,6 +40,8 @@ export default function TransformationCards({ stories }: TransformationCardsProp
                   <img
                     src={story.beforeImage}
                     alt={`${story.name} before`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <span className="absolute bottom-3 left-3 px-3 py-1 bg-[#153B24]/80 text-white text-[10px] font-extrabold uppercase tracking-widest rounded-full">
@@ -50,6 +52,8 @@ export default function TransformationCards({ stories }: TransformationCardsProp
                   <img
                     src={story.afterImage}
                     alt={`${story.name} after`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <span className="absolute bottom-3 left-3 px-3 py-1 bg-[#72A93B] text-white text-[10px] font-extrabold uppercase tracking-widest rounded-full">

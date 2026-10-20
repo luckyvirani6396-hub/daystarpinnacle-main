@@ -118,6 +118,8 @@ export default function AboutHero() {
                 <img
                   src="/images/about-hero-new.png"
                   alt="Corporate wellness team building session"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />
