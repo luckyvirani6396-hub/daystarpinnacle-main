@@ -40,19 +40,19 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
             </div>
 
             <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center relative">
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-[#FEF3E8] rounded-full px-3.5 py-1.5 w-fit mb-5">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-[#FEF3E8] rounded-full px-3.5 py-1.5 w-fit mb-5 border border-[#FF7A1A]/10">
                 {post.category}
               </span>
 
-              <h3 className="text-2xl md:text-3xl font-extrabold text-dark mb-4 leading-snug group-hover:text-[#FF7A1A] transition-colors duration-300">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#004B57] mb-4 leading-snug group-hover:text-[#FF7A1A] transition-colors duration-300">
                 {post.title}
               </h3>
 
-              <p className="text-muted text-base leading-relaxed mb-6 line-clamp-3">
+              <p className="text-[#5F6B6E] text-base leading-relaxed mb-6 line-clamp-3 font-medium">
                 {post.excerpt}
               </p>
 
-              <div className="flex items-center gap-4 text-xs text-muted mb-8 font-semibold">
+              <div className="flex items-center gap-4 text-xs text-[#5F6B6E] mb-8 font-semibold">
                 <span className="flex items-center gap-1.5">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#FF7A1A]">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -62,7 +62,7 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
                   </svg>
                   {post.date}
                 </span>
-                <span className="text-muted/30">•</span>
+                <span className="text-[#5F6B6E]/30">•</span>
                 <span className="flex items-center gap-1.5">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#FF7A1A]">
                     <circle cx="12" cy="12" r="10" />
@@ -74,19 +74,11 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
 
               <Link
                 to={`/health-hub/${post.slug}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 w-fit shadow-md shadow-[#FF7A1A]/10 hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 w-fit shadow-lg shadow-[#FF7A1A]/20 hover:scale-[1.02] hover:-translate-y-0.5"
               >
-                Read Full Article
+                <span>Read Full Article</span>
                 <HiArrowRight className="w-4 h-4" />
               </Link>
-
-              <div className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none opacity-10 text-[#FF7A1A] translate-x-4 translate-y-4">
-                <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-current">
-                  <path d="M10 90C25 75 35 50 30 20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                  <path d="M30 65C15 60 10 50 15 42C23 48 27 55 30 65Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  <path d="M31 62C44 52 46 44 38 36C31 42 30 52 31 62Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </svg>
-              </div>
             </div>
           </div>
         </motion.article>

@@ -134,141 +134,109 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-function articleBody(excerpt: string, focus: string): string[] {
-  return [
-    excerpt,
-    focus,
-    'Daystar Pinnacle combines clinical nutrition expertise with practical coaching so you can apply what you learn in everyday life — at home, at work, and on the go.',
-    'If you have a medical condition or take regular medication, check with your healthcare provider before changing your diet, supplements, or exercise plan.',
-  ];
-}
 
 const blogPostsData: BlogPost[] = [
   {
     id: '1',
-    slug: '10-superfoods-for-boosting-immunity-naturally',
-    title: '10 Superfoods for Boosting Immunity Naturally',
-    category: 'Nutrition Tips',
-    excerpt: 'Discover the power of nutrient-dense foods that strengthen your immune system.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
-    date: 'Jun 15, 2025',
-    readTime: '5 min read',
-    content: articleBody(
-      'Discover the power of nutrient-dense foods that strengthen your immune system.',
-      'Berries, leafy greens, citrus fruits, garlic, ginger, yogurt, nuts, seeds, turmeric, and green tea are among the most researched foods for immune support. Aim to include a variety of colors on your plate each day.',
-    ),
+    slug: 'building-a-high-impact-corporate-wellness-program',
+    title: 'Building a High-Impact Corporate Wellness Program: The Executive Playbook',
+    category: 'Workplace Wellness',
+    excerpt: 'How modern enterprises design structured health initiatives that measurably decrease burnout, reduce unplanned absenteeism, and elevate workforce retention.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop',
+    date: 'Oct 14, 2026',
+    readTime: '6 min read',
+    content: [
+      'Designing a successful corporate wellness program is no longer about offering gym discounts or occasional fruit bowls. Modern HR leaders recognize that high-performing organizations require structured, continuous health ecosystems that address physical, mental, and ergonomic wellbeing.',
+      'The most successful programs begin with an organizational diagnostic. Surveying employees to understand real pain points—whether it is high screen fatigue, irregular lunch habits, or post-pandemic burnout—allows companies to tailor initiatives that employees actively look forward to.',
+      'A key factor in long-term participation is leadership endorsement. When department heads and team leads actively join guided mindfulness sessions or block out lunch hours for physical movement, it grants organizational permission for team members to prioritize their own health without career anxiety.',
+      'Finally, measurement is crucial. Tracking quarterly engagement rates, health risk assessment metrics, and correlating them with reduced sick days provides clear data on the tangible return on investment from workforce wellness initiatives.',
+      'Daystar Pinnacle partners with corporate leadership teams across India to implement turnkey wellness roadmaps, live interactive sessions, and executive coaching tailored to modern workforces.',
+    ],
   },
   {
     id: '2',
-    slug: 'morning-yoga-routine-for-beginners',
-    title: 'Morning Yoga Routine for Beginners',
-    category: 'Yoga Practices',
-    excerpt: 'Start your day with these simple yet effective yoga poses for energy and flexibility.',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
-    date: 'Jun 12, 2025',
-    readTime: '7 min read',
-    content: articleBody(
-      'Start your day with these simple yet effective yoga poses for energy and flexibility.',
-      'A 15-minute flow of cat-cow, downward dog, sun salutations, and gentle twists can wake up your spine and improve circulation without needing advanced flexibility.',
-    ),
+    slug: 'combating-workplace-burnout-mindfulness-stress-resilience',
+    title: 'Combating Workplace Burnout: Stress Resilience Frameworks for High-Pressure Teams',
+    category: 'Stress & Burnout',
+    excerpt: 'Proven cognitive resilience techniques, mindful breathing habits, and leadership practices to protect mental health in demanding corporate environments.',
+    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=500&fit=crop',
+    date: 'Oct 10, 2026',
+    readTime: '5 min read',
+    content: [
+      'Workplace burnout rarely happens overnight. It manifests as a slow, insidious depletion of emotional reserves, characterized by persistent exhaustion, feelings of cynicism towards projects, and reduced professional efficacy.',
+      'Daystar Pinnacle\'s corporate stress management sessions introduce micro-resilience tools that professionals can practice right at their desks. Box breathing—four seconds in, four seconds hold, four seconds exhale, and four seconds hold—physiologically triggers the parasympathetic nervous system to down-regulate acute fight-or-flight spikes during intense deadlines.',
+      'Equally vital is structuring buffer zones between back-to-back virtual meetings. Encouraging teams to finish calls 5 minutes early gives minds time to reset, hydrate, and maintain cognitive bandwidth throughout the workday.',
+      'When organizations invest in structured mental wellbeing workshops, they cultivate psychological safety, enabling employees to vocalize workload bottlenecks before they spiral into severe burnout or medical leave.',
+      'Daystar Pinnacle delivers interactive stress resilience seminars and 1-on-1 confidential executive mental health coaching to empower teams under pressure.',
+    ],
   },
   {
     id: '3',
-    slug: 'managing-stress-through-mindful-breathing',
-    title: 'Managing Stress Through Mindful Breathing',
-    category: 'Stress Management',
-    excerpt: 'Learn breathing techniques that calm your nervous system in minutes.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-    date: 'Jun 11, 2025',
-    readTime: '4 min read',
-    content: articleBody(
-      'Learn breathing techniques that calm your nervous system in minutes.',
-      'Box breathing (inhale 4 counts, hold 4, exhale 4, hold 4) and extended exhales activate the parasympathetic nervous system and can lower heart rate within a few cycles.',
-    ),
+    slug: 'desk-ergonomics-and-posture-correction-for-office-workers',
+    title: 'Desk Ergonomics & Posture Correction for Long Screen Hours',
+    category: 'Ergonomics',
+    excerpt: 'Practical workstation adjustments and desk-mobility stretches that eliminate chronic neck, shoulder, and lower-back strain for corporate teams.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop',
+    date: 'Oct 06, 2026',
+    readTime: '5 min read',
+    content: [
+      'Sedentary desk work is one of the leading contributors to musculoskeletal disorders among corporate professionals today. Hours spent hunched over laptops with forward-head posture create immense strain on the cervical spine and trapezoid muscle groups.',
+      'Workplace ergonomic audits reveal that simple alterations yield monumental relief: adjusting monitor eye-level so the top third of the screen meets straight-ahead gaze, positioning keyboards to allow a relaxed 90-degree elbow bend, and maintaining feet flat on the ground.',
+      'Incorporating 5-minute seated yoga stretches—such as seated cat-cow movements, gentle spinal twists, and doorway pectoral stretches—breaks prolonged static postures and promotes lymphatic drainage.',
+      'Organizations implementing regular ergonomic workshops see an immediate decline in repetitive strain complaints, leading to elevated comfort and sharper daily focus.',
+      'Daystar Pinnacle conducts on-site workstation ergonomics audits, desk posture workshops, and guided desk yoga flows designed for corporate offices.',
+    ],
   },
   {
     id: '4',
-    slug: 'quinoa-buddha-bowl-recipe',
-    title: 'Quinoa Buddha Bowl Recipe',
-    category: 'Healthy Recipes',
-    excerpt: 'A colorful, protein-packed bowl perfect for lunch or dinner.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
-    date: 'Jun 8, 2026',
+    slug: 'corporate-nutrition-beating-the-afternoon-energy-slump',
+    title: 'Corporate Nutrition: Beating the 3 PM Office Energy Slump',
+    category: 'Corporate Nutrition',
+    excerpt: 'Science-backed dietary strategies to stabilize blood glucose, eliminate post-lunch brain fog, and fuel sustained productivity across afternoon meetings.',
+    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=500&fit=crop',
+    date: 'Sep 29, 2026',
     readTime: '6 min read',
-    content: articleBody(
-      'A colorful, protein-packed bowl perfect for lunch or dinner.',
-      'Layer cooked quinoa with roasted sweet potato, chickpeas, avocado, shredded cabbage, and a lemon-tahini dressing for balanced macros and lasting energy.',
-    ),
+    content: [
+      'The dreaded 3 PM corporate energy crash is rarely a lack of willpower; it is almost always a metabolic reaction to refined carbohydrates, insulin spikes, and inadequate cellular hydration.',
+      'When lunch consists predominantly of simple starches and sugary drinks, blood glucose surges and subsequently plummets, starving the brain of its steady fuel source and causing profound drowsiness and executive fatigue.',
+      'Our corporate clinical nutritionists recommend the Balanced Desk Plate formula: pairing high-fiber leafy greens or cruciferous vegetables with clean lean proteins and healthy fats like nuts, seeds, or avocado. This slows gastric emptying and provides an even, sustained release of glucose over 4 to 5 hours.',
+      'Replacing sugary pantry snacks with raw almonds, roasted chickpeas, and green tea keeps energy levels consistent, allowing team members to breeze through afternoon strategy sessions with clarity.',
+      'Daystar Pinnacle provides corporate cafeteria nutrition audits, employee nutrition masterclasses, and personalized meal planning for busy professionals.',
+    ],
   },
   {
     id: '5',
-    slug: 'the-science-of-sleep-and-weight-loss',
-    title: 'The Science of Sleep and Weight Loss',
-    category: 'Lifestyle Habits',
-    excerpt: 'How quality sleep impacts your metabolism and weight management goals.',
-    image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-    date: 'Jun 5, 2026',
-    readTime: '8 min read',
-    content: articleBody(
-      'How quality sleep impacts your metabolism and weight management goals.',
-      'Poor sleep disrupts hunger hormones ghrelin and leptin, increases cravings for high-calorie foods, and reduces insulin sensitivity — making weight management harder even with a good diet.',
-    ),
+    slug: 'executive-sleep-hygiene-and-cognitive-performance',
+    title: 'Executive Sleep Hygiene: Sleep Optimization for Strategic Decision-Making',
+    category: 'Leadership Health',
+    excerpt: 'How restorative sleep cycles safeguard executive mental acuity, emotional regulation, and high-stakes problem solving for corporate leaders.',
+    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&h=500&fit=crop',
+    date: 'Sep 22, 2026',
+    readTime: '6 min read',
+    content: [
+      'In fast-paced corporate landscapes, late-night emails and sleep deprivation have historically been worn as misguided badges of honor. Neuroscience, however, confirms that sleep loss directly impairs the prefrontal cortex—the command center for risk calculation, ethical judgment, and emotional stability.',
+      'During deep non-REM and REM sleep phases, the brain\'s glymphatic system flushes out metabolic neurotoxins accumulated during intense analytical work, effectively consolidating strategic memory and creative problem-solving capabilities.',
+      'Executive wellness coaching focuses on non-negotiable sleep hygiene protocols: digital sunsetting 60 minutes before bed, dimming blue-light emitting devices, keeping the sleeping room cool and dark, and replacing midnight screen time with restorative breathwork.',
+      'When leadership prioritizes high-quality sleep, decision latency decreases, irritability subsides, and executive teams set a sustainable precedent for the entire company.',
+      'Daystar Pinnacle offers targeted executive wellness coaching, circadian rhythm restoration, and lifestyle leadership retreats.',
+    ],
   },
   {
     id: '6',
-    slug: 'building-mental-resilience-daily',
-    title: 'Building Mental Resilience Daily',
-    category: 'Mental Health',
-    excerpt: 'Practical strategies to strengthen your mental health and emotional well-being.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-    date: 'Jun 3, 2026',
-    readTime: '6 min read',
-    content: articleBody(
-      'Practical strategies to strengthen your mental health and emotional well-being.',
-      'Journaling, gratitude practice, movement breaks, and setting boundaries on screen time are simple habits that compound into greater emotional stability over weeks and months.',
-    ),
-  },
-  {
-    id: '7',
-    slug: 'anti-inflammatory-meal-prep-guide',
-    title: 'Anti-Inflammatory Meal Prep Guide',
-    category: 'Healthy Recipes',
-    excerpt: 'Weekly meal prep ideas that fight inflammation and boost energy.',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop',
-    date: 'Jun 1, 2026',
-    readTime: '10 min read',
-    content: articleBody(
-      'Weekly meal prep ideas that fight inflammation and boost energy.',
-      'Batch-cook salmon, roasted vegetables, brown rice, and a big jar of olive-oil dressing on Sunday so weekday meals center on omega-3 fats, fiber, and antioxidant-rich produce.',
-    ),
-  },
-  {
-    id: '8',
-    slug: '5-minute-desk-stretches-for-office-workers',
-    title: '5-Minute Desk Stretches for Office Workers',
-    category: 'Yoga Practices',
-    excerpt: 'Quick stretches to relieve tension and improve posture at your desk.',
-    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop',
-    date: 'May 28, 2026',
-    readTime: '3 min read',
-    content: articleBody(
-      'Quick stretches to relieve tension and improve posture at your desk.',
-      'Neck rolls, seated spinal twists, chest openers, and wrist stretches every hour can reduce stiffness and support better posture during long work sessions.',
-    ),
-  },
-  {
-    id: '9',
-    slug: 'understanding-macronutrients',
-    title: 'Understanding Macronutrients',
-    category: 'Nutrition Tips',
-    excerpt: 'A beginner-friendly guide to proteins, carbs, and fats for optimal health.',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=400&fit=crop',
-    date: 'May 25, 2026',
-    readTime: '7 min read',
-    content: articleBody(
-      'A beginner-friendly guide to proteins, carbs, and fats for optimal health.',
-      'Protein supports repair and satiety, carbohydrates fuel activity and brain function, and healthy fats aid hormone production and nutrient absorption — balance matters more than eliminating any one group.',
-    ),
+    slug: 'hybrid-team-wellness-keeping-remote-workforces-connected',
+    title: 'Hybrid Team Wellness: Keeping Distributed Workforces Connected & Active',
+    category: 'Workplace Wellness',
+    excerpt: 'Strategies to combat remote isolation, promote physical activity, and foster community through digital wellness challenges and virtual wellness sessions.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop',
+    date: 'Sep 15, 2026',
+    readTime: '5 min read',
+    content: [
+      'While hybrid and remote work models offer undeniable flexibility, they often introduce unexpected workplace challenges: blurred work-life boundaries, sedentary habits from staying indoors, and subtle feelings of social isolation.',
+      'Virtual wellness programs bridge this physical gap by bringing distributed colleagues together for live-streamed, interactive experiences. Group desk yoga, guided breathwork, and virtual coffee-and-nutrition talks create casual social touchpoints outside of project deadlines.',
+      'Gamified monthly fitness and step challenges organized through digital leaderboards encourage friendly inter-departmental competition, motivating employees to take walking breaks during their workdays.',
+      'By investing in dedicated hybrid wellness initiatives, organizations demonstrate genuine care for remote staff, driving stronger cultural cohesion and mutual loyalty regardless of geographic distance.',
+      'Daystar Pinnacle delivers high-definition virtual fitness, meditation streams, and pan-India multi-location hybrid corporate wellness packages.',
+    ],
   },
 ];
 
@@ -282,9 +250,11 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
 export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
   const current = getBlogPostBySlug(slug);
   if (!current) return [];
-  return allBlogPosts
-    .filter((post) => post.slug !== slug && post.category === current.category)
-    .slice(0, limit);
+  const sameCategory = allBlogPosts.filter((post) => post.slug !== slug && post.category === current.category);
+  if (sameCategory.length > 0) {
+    return sameCategory.slice(0, limit);
+  }
+  return allBlogPosts.filter((post) => post.slug !== slug).slice(0, limit);
 }
 
 export const nutritionServices: Service[] = [

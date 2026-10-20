@@ -26,30 +26,16 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
 
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-r from-primary/[0.06] to-secondary/[0.08] rounded-2xl border border-border ${
+      className={`relative overflow-hidden bg-[#FAF9F5] rounded-2xl border border-[#E2E8E4]/80 ${
         compact ? 'p-5' : 'p-6 md:p-8 lg:p-10'
       }`}
     >
-      {!compact && (
-        <div className="absolute left-0 bottom-0 w-[120px] h-[200px] pointer-events-none opacity-30 text-secondary">
-          <svg viewBox="0 0 100 200" fill="none" className="w-full h-full">
-            <path d="M15 200C30 170 38 120 28 50" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-            <path d="M28 155C10 148 5 138 12 128C22 136 26 146 28 155Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M29 150C45 136 48 126 38 116C30 124 28 138 29 150Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M28 105C12 98 8 88 15 78C25 86 26 96 28 105Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M28 100C44 86 47 76 37 66C29 74 27 88 28 100Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M28 55C18 42 16 32 23 22C28 29 27 44 28 55Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M28 55C38 42 40 32 33 22C28 29 29 44 28 55Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      )}
-
       <div className="relative z-10">
-      <h3 className={`font-semibold text-dark mb-2 ${compact ? 'text-base' : 'text-lg md:text-xl'}`}>
+      <h3 className={`font-serif font-bold text-[#004B57] mb-2 ${compact ? 'text-base' : 'text-lg md:text-xl'}`}>
         Stay Updated
       </h3>
       <p
-        className={`text-muted leading-relaxed ${
+        className={`text-[#5F6B6E] font-medium leading-relaxed ${
           compact ? 'text-sm mb-5' : 'text-sm md:text-base mb-6 max-w-2xl'
         }`}
       >
@@ -60,7 +46,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-secondary font-medium text-sm"
+          className="text-[#FF7A1A] font-bold text-sm"
         >
           Thank you for subscribing!
         </motion.p>
@@ -73,9 +59,9 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
                 required: 'Email is required',
                 pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' },
               })}
-              className={`w-full min-w-0 px-4 py-3 rounded-xl border bg-white text-dark placeholder:text-muted/70 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors ${
+              className={`w-full min-w-0 px-4 py-3 rounded-xl border bg-white text-[#1a2e32] placeholder:text-[#5F6B6E]/60 focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/20 transition-colors ${
                 compact ? '' : 'sm:flex-1'
-              } ${errors.email ? 'border-red-400' : 'border-border'}`}
+              } ${errors.email ? 'border-red-400' : 'border-[#E2E8E4]'}`}
               placeholder="Enter your email"
             />
             <Button
@@ -83,7 +69,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
               variant="primary"
               disabled={isSubmitting}
               fullWidth={compact}
-              className={compact ? '' : 'sm:px-10 shrink-0'}
+              className={compact ? '' : 'sm:px-10 shrink-0 bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold shadow-md shadow-[#FF7A1A]/20'}
             >
               {isSubmitting ? '...' : 'Subscribe'}
             </Button>

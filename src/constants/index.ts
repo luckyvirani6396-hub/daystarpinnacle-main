@@ -8,8 +8,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Corporate Programs', path: '/programs' },
-  { label: 'Industries', path: '/#industries' },
-  { label: 'Resources', path: '/resources' },
+  // { label: 'Industries', path: '/#industries' },
+  { label: 'Blog', path: '/health-hub' },
   { label: 'Contact Us', path: '/contact' },
 ];
 
@@ -31,10 +31,9 @@ export const SOCIAL_LINKS = [
 
 export const HEALTH_CATEGORIES = [
   'All',
-  'Nutrition Tips',
-  'Healthy Recipes',
-  'Mental Health',
-  'Yoga Practices',
-  'Lifestyle Habits',
-  'Stress Management',
+  'Workplace Wellness',
+  'Corporate Nutrition',
+  'Stress & Burnout',
+  'Ergonomics',
+  'Leadership Health',
 ] as const;

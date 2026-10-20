@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import {
   cardOnCream,
   sectionBody,
@@ -7,6 +9,7 @@ import {
   sectionIntroBadge,
   sectionIntroBlock,
   sectionIntroHeading,
+  btnSecondary,
 } from '../home/sectionStyles';
 
 const teamMembers = [
@@ -72,7 +75,7 @@ export default function AboutTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className={`group ${cardOnCream} overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow duration-300 border border-[#E2E8E4]/60`}
+                className={`group ${cardOnCream} overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 hover:border-[#FF7A1A]/30 transition-all duration-300 border border-[#E2E8E4]/70`}
               >
                 {/* Team member portrait banner */}
                 <div className="w-full h-64 relative overflow-hidden bg-gray-50 border-b border-[#E2E8E4]/60 shrink-0">
@@ -90,7 +93,7 @@ export default function AboutTeam() {
                     <span className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#FF7A1A] mb-1.5 block">
                       {member.role}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0C1D37] leading-snug mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0C1D37] leading-snug mb-3 group-hover:text-[#FF7A1A] transition-colors">
                       {member.name}
                     </h3>
                   </div>
@@ -103,6 +106,20 @@ export default function AboutTeam() {
             );
           })}
         </div>
+
+        {/* Team action strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <Link to="/contact" className={`${btnSecondary} shadow-sm inline-flex items-center gap-2`}>
+            <Sparkles className="w-4 h-4 text-[#FF7A1A]" />
+            <span>Request a Specialist Session for Your Company</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

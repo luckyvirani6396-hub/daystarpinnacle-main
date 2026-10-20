@@ -28,8 +28,14 @@ interface SmoothSuspenseProps {
 export default function SmoothSuspense({ children }: SmoothSuspenseProps) {
   const [visible, setVisible] = useState(true);
   const [exiting, setExiting] = useState(false);
-  const shownAt = useRef(Date.now());
+  const shownAt = useRef<number>(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => {
+    if (shownAt.current === 0) {
+      shownAt.current = Date.now();
+    }
+  }, []);
 
   const handleSuspend = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);

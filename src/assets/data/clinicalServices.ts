@@ -87,7 +87,7 @@ export const clinicalServices: ClinicalService[] = [
       'Stress Reduction Coping Tools',
       'Self-Care Resource Playbooks',
     ],
-    image: '/images/solution-social.png',
+    image: '/images/solution-emotional.png',
   },
   {
     id: 'social-wellbeing',
@@ -131,7 +131,7 @@ export const clinicalServices: ClinicalService[] = [
       'Hybrid Work Boundary Guidelines',
       'Self-Care Planning Checklists',
     ],
-    image: '/images/solution-holistic.png',
+    image: '/images/solution-balance.png',
   },
   {
     id: 'financial-wellness',
@@ -153,7 +153,7 @@ export const clinicalServices: ClinicalService[] = [
       'Debt Reduction Workshops',
       'Resource Calculators & Tools',
     ],
-    image: '/images/solution-preventive.png',
+    image: '/images/solution-financial.png',
   },
   {
     id: 'preventive-healthcare',
@@ -197,7 +197,7 @@ export const clinicalServices: ClinicalService[] = [
       'Workplace Health & Safety Seminars',
       'Eco-Friendly Office Design Guides',
     ],
-    image: '/images/solution-holistic.png',
+    image: '/images/solution-environmental.png',
   },
   {
     id: 'holistic-wellness',
@@ -228,5 +228,16 @@ export function getServiceBySlug(slug: string): ClinicalService | undefined {
 }
 
 export function getRelatedServices(slug: string, limit = 3): ClinicalService[] {
-  return clinicalServices.filter((s) => s.slug !== slug).slice(0, limit);
+  const currentIndex = clinicalServices.findIndex((s) => s.slug === slug);
+  if (currentIndex === -1) {
+    return clinicalServices.slice(0, limit);
+  }
+  const related: ClinicalService[] = [];
+  for (let i = 1; i < clinicalServices.length && related.length < limit; i++) {
+    const nextService = clinicalServices[(currentIndex + i) % clinicalServices.length];
+    if (nextService && nextService.slug !== slug) {
+      related.push(nextService);
+    }
+  }
+  return related;
 }

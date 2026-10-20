@@ -26,6 +26,7 @@ import {
 const dimensions = [
   {
     id: 'physical',
+    slug: 'physical-wellness',
     title: 'Physical Wellness',
     tagline: 'Encourage active lifestyles',
     icon: Activity,
@@ -36,6 +37,7 @@ const dimensions = [
   },
   {
     id: 'mental',
+    slug: 'mental-wellbeing',
     title: 'Mental Wellbeing',
     tagline: 'Support emotional resilience',
     icon: Brain,
@@ -46,6 +48,7 @@ const dimensions = [
   },
   {
     id: 'nutrition',
+    slug: 'nutrition-healthy-living',
     title: 'Nutrition & Healthy Living',
     tagline: 'Promote healthier habits',
     icon: Flame,
@@ -56,16 +59,18 @@ const dimensions = [
   },
   {
     id: 'emotional',
+    slug: 'emotional-wellness',
     title: 'Emotional Wellness',
     tagline: 'Build employee resilience',
     icon: Heart,
     color: '#E74C3C',
     bg: '#FDEDEC',
-    image: '/images/solution-social.png',
+    image: '/images/solution-emotional.png',
     bullets: ['Emotional Intelligence Training', 'Confidence Building', 'Positive Psychology Workshops', 'Stress Coping Techniques'],
   },
   {
     id: 'social',
+    slug: 'social-wellbeing',
     title: 'Social Wellbeing',
     tagline: 'Strengthen workplace relationships',
     icon: HeartHandshake,
@@ -76,26 +81,29 @@ const dimensions = [
   },
   {
     id: 'balance',
+    slug: 'work-life-balance',
     title: 'Work-Life Balance',
     tagline: 'Support healthier work habits',
     icon: Smile,
     color: '#2980B9',
     bg: '#EBF5FB',
-    image: '/images/solution-holistic.png',
+    image: '/images/solution-balance.png',
     bullets: ['Flexible Wellness Programs', 'Hybrid Wellness Sessions', 'Time Management Workshops', 'Wellness Break Initiatives'],
   },
   {
     id: 'financial',
+    slug: 'financial-wellness',
     title: 'Financial Wellness',
     tagline: 'Build financial confidence',
     icon: DollarSign,
     color: '#27AE60',
     bg: '#EAFAF1',
-    image: '/images/solution-preventive.png',
+    image: '/images/solution-financial.png',
     bullets: ['Budget Planning Workshops', 'Retirement Planning Sessions', 'Financial Literacy Programs', 'Debt Management Education'],
   },
   {
     id: 'preventive',
+    slug: 'preventive-healthcare',
     title: 'Preventive Healthcare',
     tagline: 'Encourage proactive health',
     icon: Shield,
@@ -106,16 +114,18 @@ const dimensions = [
   },
   {
     id: 'environmental',
+    slug: 'environmental-wellness',
     title: 'Environmental Wellness',
     tagline: 'Create healthier workplaces',
     icon: Leaf,
     color: '#16A085',
     bg: '#E8F8F5',
-    image: '/images/solution-holistic.png',
+    image: '/images/solution-environmental.png',
     bullets: ['Ergonomic Assessments', 'Healthy Office Design', 'Green Workplace Initiatives', 'Sustainability Awareness'],
   },
   {
     id: 'holistic',
+    slug: 'holistic-wellness',
     title: 'Holistic Wellness',
     tagline: 'Support complete wellbeing',
     icon: RefreshCw,
@@ -131,10 +141,9 @@ export default function Services() {
   const activeDim = dimensions.find((d) => d.id === active) ?? dimensions[0];
 
   return (
-    <section id="services" className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
+    <section id="services" className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[15%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[10%] w-[40%] h-[40%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[15%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
@@ -168,8 +177,8 @@ export default function Services() {
                 type="button"
                 onClick={() => setActive(dim.id)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl text-left shrink-0 lg:shrink transition-all duration-300 ${active === dim.id
-                    ? 'bg-white shadow-[0_4px_20px_rgba(0,75,87,0.08)] border border-[#004B57]/20'
-                    : 'bg-white/70 border border-[#E2E8E4]/80 hover:bg-white'
+                  ? 'bg-white shadow-[0_4px_20px_rgba(0,75,87,0.08)] border border-[#004B57]/20'
+                  : 'bg-white/70 border border-[#E2E8E4]/80 hover:bg-white'
                   }`}
               >
                 <div
@@ -208,7 +217,7 @@ export default function Services() {
                           <activeDim.icon className="w-7 h-7" strokeWidth={1.8} />
                         </div>
                         <div>
-                          <h3 className="text-xl sm:text-2xl font-serif font-medium text-[#004B57] mb-1">
+                          <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#004B57] mb-1">
                             {activeDim.title}
                           </h3>
                           <p className="text-xs sm:text-sm text-[#5F6B6E] font-medium">{activeDim.tagline}</p>
@@ -228,26 +237,35 @@ export default function Services() {
                       </ul>
                     </div>
 
-                    <div className="pt-2">
+                    <div className="pt-4 flex flex-wrap items-center gap-3">
+                      <Link
+                        to={`/services/${activeDim.slug}`}
+                        className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-[#004B57] text-white hover:bg-[#003842] shadow-sm transition-all duration-300 group"
+                      >
+                        <span>Explore {activeDim.title}</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
                       <Link
                         to="/contact"
-                        className="inline-flex items-center gap-2 text-sm font-bold text-[#FF7A1A] hover:text-[#E86800] transition-colors group"
+                        className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#FF7A1A] hover:text-[#E86800] px-4 py-2.5 sm:py-3 rounded-xl border border-[#FF7A1A]/30 hover:border-[#FF7A1A] bg-white transition-all duration-300"
                       >
-                        <span>Request a Custom Program</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                        <span>Book Consultation</span>
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
 
                   {/* Right Column: Image illustration */}
-                  <div className="md:col-span-5 relative min-h-[220px] md:min-h-full rounded-2xl overflow-hidden shadow-sm border border-gray-100/50">
+                  <Link
+                    to={`/services/${activeDim.slug}`}
+                    className="md:col-span-5 relative min-h-[220px] md:min-h-full rounded-2xl overflow-hidden shadow-sm border border-gray-100/50 group block cursor-pointer"
+                  >
                     <img
                       src={activeDim.image}
                       alt={activeDim.title}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
-                  </div>
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>

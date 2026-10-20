@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import {
+  ArrowRight,
   ClipboardList,
   FileText,
   Lightbulb,
@@ -7,6 +8,7 @@ import {
   Rocket,
 } from 'lucide-react';
 import {
+  btnPrimary,
   cardDescription,
   cardTitle,
   sectionDotGrid,
@@ -128,6 +130,21 @@ export default function HowItWorks() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-12 md:mt-14"
+        >
+          <a
+            href="#register"
+            className={`${btnPrimary} shadow-sm inline-flex items-center gap-2`}
+          >
+            <span>Start With Step 1 — Register Interest</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

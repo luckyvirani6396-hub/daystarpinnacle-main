@@ -59,7 +59,7 @@ export const iconAccentCycle = [
 
 export function sectionDotGrid(opacity = 0.22) {
   return {
-    backgroundImage: 'radial-gradient(circle, #004B570A 1px, transparent 1px)',
+    backgroundImage: 'radial-gradient(circle, #00000008 1px, transparent 1px)',
     backgroundSize: '36px 36px',
     opacity,
   };

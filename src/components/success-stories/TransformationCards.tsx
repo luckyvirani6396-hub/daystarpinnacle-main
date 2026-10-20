@@ -76,13 +76,6 @@ export default function TransformationCards({ stories }: TransformationCardsProp
                   </svg>
                   {story.result}
                 </p>
-
-                <div className="absolute bottom-0 right-0 w-20 h-20 pointer-events-none opacity-10 text-secondary translate-x-2 translate-y-2">
-                  <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-current">
-                    <path d="M10 90C25 75 35 50 30 20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                    <path d="M30 65C15 60 10 50 15 42C23 48 27 55 30 65Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                  </svg>
-                </div>
               </div>
             </motion.article>
           ))}

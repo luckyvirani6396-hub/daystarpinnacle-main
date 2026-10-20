@@ -88,10 +88,9 @@ export default function EngagementPrograms() {
   const active = programs.find((p) => p.id === activeId) ?? programs[0];
 
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[12%] w-[40%] h-[40%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[12%] w-[38%] h-[38%] rounded-full bg-[#72A93B]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[12%] w-[40%] h-[40%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
@@ -122,8 +121,8 @@ export default function EngagementPrograms() {
                 type="button"
                 onClick={() => setActiveId(program.id)}
                 className={`relative rounded-2xl md:rounded-3xl px-4 py-5 md:py-7 text-center font-bold text-sm sm:text-base md:text-lg transition-all duration-300 cursor-pointer border-2 ${isActive
-                    ? 'scale-[1.03] shadow-md'
-                    : 'border-transparent opacity-85 hover:opacity-100 hover:scale-[1.02]'
+                  ? 'scale-[1.03] shadow-md'
+                  : 'border-transparent opacity-85 hover:opacity-100 hover:scale-[1.02]'
                   }`}
                 style={{
                   backgroundColor: isActive ? active.activeText : 'white',
@@ -216,7 +215,7 @@ export default function EngagementPrograms() {
                     </p>
                   </div>
                   <Link to="/contact" className={`${btnPrimary} w-full text-sm`}>
-                    Book a Consultation
+                    Book Consultation
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

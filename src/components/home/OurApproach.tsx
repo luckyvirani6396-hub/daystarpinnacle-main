@@ -58,11 +58,11 @@ const challenges = [
 
 export default function OurApproach() {
   return (
-    <section className="relative w-full bg-white overflow-hidden isolate py-16 md:py-24">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden isolate py-16 md:py-24">
       {/* Soft logo-color glows on white */}
       <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left intro */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -115,7 +115,7 @@ export default function OurApproach() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                    
+
                     {/* Floating badge for card index number */}
                     <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] px-2.5 py-1 rounded-md shadow-sm border border-white/50">
                       0{index + 1}

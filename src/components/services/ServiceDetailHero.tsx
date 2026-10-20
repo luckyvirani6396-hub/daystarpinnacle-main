@@ -29,7 +29,7 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           {/* Left details info column */}

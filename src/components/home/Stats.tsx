@@ -40,8 +40,7 @@ export default function Stats() {
   return (
     <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/6 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[10%] w-[40%] h-[40%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.18)} />
       </div>
 
@@ -96,10 +95,10 @@ export default function Stats() {
               return (
                 <motion.div
                   key={benefit.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 28, y: 10 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  transition={{ duration: 0.5, delay: index * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
                   className={`group ${cardOnCream} p-5`}
                 >
                   <div className="flex items-center gap-3">

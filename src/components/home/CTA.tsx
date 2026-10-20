@@ -9,7 +9,7 @@ export default function CTA() {
       <div className="absolute inset-0 bg-[#004B57]" />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-5%] top-[-10%] w-[50%] h-[60%] rounded-full bg-[#FF7A1A]/15 blur-[120px]" />
-        <div className="absolute left-[-5%] bottom-[-10%] w-[45%] h-[55%] rounded-full bg-[#72A93B]/12 blur-[100px]" />
+        <div className="absolute left-[-5%] bottom-[-10%] w-[45%] h-[55%] rounded-full bg-white/5 blur-[100px]" />
         <div
           className="absolute inset-0 opacity-[0.08]"
           style={{

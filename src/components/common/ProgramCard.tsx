@@ -127,7 +127,7 @@ export default function ProgramCard({
               : 'bg-[#FAF9F5] hover:bg-[#FF7A1A] hover:text-white text-[#004B57] hover:text-white border border-[#E2E8E4] shadow-sm'
           }`}
         >
-          <span>Request Pricing</span>
+          <span>Book Consultation</span>
           <HiArrowRight className="w-4 h-4" />
         </div>
       </div>

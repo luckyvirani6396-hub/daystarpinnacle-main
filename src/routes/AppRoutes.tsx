@@ -8,7 +8,8 @@ const About = lazy(() => import('../pages/About/About'));
 const Services = lazy(() => import('../pages/Services/Services'));
 const ServiceDetail = lazy(() => import('../pages/Services/ServiceDetail'));
 const Programs = lazy(() => import('../pages/Programs/Programs'));
-const FAQ = lazy(() => import('../pages/FAQ/FAQ'));
+const PrivacyPolicy = lazy(() => import('../pages/Legal/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('../pages/Legal/TermsOfService'));
 const WellnessHub = lazy(() => import('../pages/WellnessHub/WellnessHub'));
 const WellnessArticle = lazy(() => import('../pages/WellnessHub/WellnessArticle'));
 const SuccessStories = lazy(() => import('../pages/SuccessStories/SuccessStories'));
@@ -27,9 +28,12 @@ export default function AppRoutes() {
           <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="programs" element={<Programs />} />
           <Route path="why-wellness" element={<WhyWellness />} />
-          <Route path="faq" element={<FAQ />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-of-service" element={<TermsOfService />} />
           <Route path="health-hub" element={<WellnessHub />} />
           <Route path="health-hub/:slug" element={<WellnessArticle />} />
+          <Route path="blog" element={<WellnessHub />} />
+          <Route path="blog/:slug" element={<WellnessArticle />} />
           <Route path="resources" element={<WellnessHub />} />
           <Route path="resources/:slug" element={<WellnessArticle />} />
           <Route path="success-stories" element={<SuccessStories />} />

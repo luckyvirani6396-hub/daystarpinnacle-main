@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronDown, MessageCircle } from 'lucide-react';
 import {
   btnPrimary,
-  btnSecondary,
   cardOnCream,
   sectionBody,
   sectionDotGrid,
@@ -49,10 +48,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[8%] w-[42%] h-[42%] rounded-full bg-[#72A93B]/6 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[8%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/6 blur-[90px]" />
+        <div className="absolute left-[-8%] bottom-[8%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/4 blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.16)} />
       </div>
 
@@ -87,12 +85,9 @@ export default function FAQ() {
                 for your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/contact" className={`${btnPrimary} text-xs sm:text-sm px-5 py-3`}>
-                  Contact Us
+                <Link to="/contact" className={`${btnPrimary} text-xs sm:text-sm px-6 py-3.5`}>
+                  <span>Ask a Question</span>
                   <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link to="/faq" className={`${btnSecondary} text-xs sm:text-sm px-5 py-3`}>
-                  View All FAQs
                 </Link>
               </div>
             </div>
@@ -108,9 +103,8 @@ export default function FAQ() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-30px' }}
                   transition={{ duration: 0.4, delay: index * 0.06 }}
-                  className={`${cardOnCream} overflow-hidden ${
-                    isOpen ? 'border-[#FF7A1A]/30 shadow-[0_8px_32px_rgba(255, 122, 26, 0.08)]' : ''
-                  }`}
+                  className={`${cardOnCream} overflow-hidden ${isOpen ? 'border-[#FF7A1A]/30 shadow-[0_8px_32px_rgba(255, 122, 26, 0.08)]' : ''
+                    }`}
                 >
                   <button
                     type="button"
@@ -119,11 +113,10 @@ export default function FAQ() {
                     aria-expanded={isOpen}
                   >
                     <span
-                      className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-[10px] font-extrabold tracking-wider transition-colors duration-300 ${
-                        isOpen
+                      className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-[10px] font-extrabold tracking-wider transition-colors duration-300 ${isOpen
                           ? 'bg-[#FF7A1A] text-white'
                           : 'bg-[#E6F2F4] text-[#004B57] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
-                      }`}
+                        }`}
                     >
                       {String(index + 1).padStart(2, '0')}
                     </span>
@@ -135,11 +128,10 @@ export default function FAQ() {
                     </span>
 
                     <span
-                      className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                        isOpen
+                      className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen
                           ? 'bg-[#FF7A1A]/10 text-[#FF7A1A] rotate-180'
                           : 'bg-[#FAF9F5] text-[#5F6B6E] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
-                      }`}
+                        }`}
                     >
                       <ChevronDown className="w-5 h-5" strokeWidth={2.2} />
                     </span>

@@ -32,8 +32,7 @@ export default function Testimonials() {
   return (
     <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/6 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[10%] w-[40%] h-[40%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.2)} />
       </div>
 
@@ -121,9 +120,6 @@ export default function Testimonials() {
                         </div>
                         <div className="text-left">
                           <p className="font-bold text-[#004B57] text-base">{active.name}</p>
-                          <span className="inline-block mt-1 text-[10px] font-extrabold uppercase tracking-wider text-[#FF7A1A] bg-[#FEF3E8] border border-[#FF7A1A]/20 px-2.5 py-1 rounded-full">
-                            {active.role}
-                          </span>
                         </div>
                       </div>
 

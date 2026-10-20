@@ -51,20 +51,20 @@ export default function WellnessTips() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="lg:col-span-4 flex flex-col items-start">
-            <span className="text-[12px] font-extrabold uppercase tracking-widest text-[#72A93B] mb-3">
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-[#FEF3E8] px-3.5 py-1.5 rounded-full border border-[#FF7A1A]/10 mb-3.5">
               Why Read Here
             </span>
-            <h2 className="text-3xl md:text-[38px] font-serif font-medium text-[#0e261a] leading-tight">
+            <h2 className="text-3xl md:text-[38px] font-serif font-medium text-[#004B57] leading-tight">
               Trusted Health <br className="hidden md:inline" />
               Knowledge Hub
             </h2>
-            <p className="text-muted text-sm md:text-base leading-relaxed mt-4 max-w-sm">
+            <p className="text-[#5F6B6E] text-sm md:text-base leading-relaxed mt-4 max-w-sm font-medium">
               Curated content designed to help you make informed decisions about your health and daily habits.
             </p>
           </div>
 
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               {tips.map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -72,14 +72,14 @@ export default function WellnessTips() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex gap-4.5 bg-[#F8FAF6]/60 rounded-2xl p-5 border border-[#E2E8E4]/50 hover:border-secondary/30 transition-colors duration-300"
+                  className="flex gap-4.5 bg-[#FAF9F5] rounded-2xl p-6 border border-[#E2E8E4]/80 hover:border-[#FF7A1A]/30 hover:shadow-lg hover:shadow-[#FF7A1A]/5 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#5c8730]/10 flex items-center justify-center text-[#5c8730] shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] shrink-0 border border-[#FF7A1A]/15 shadow-xs">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-base md:text-[17px] text-[#0e261a]">{item.title}</h3>
-                    <p className="text-sm text-[#4d5e53] font-semibold mt-1.5 leading-relaxed">{item.description}</p>
+                    <h3 className="font-bold text-base md:text-[17px] text-[#004B57]">{item.title}</h3>
+                    <p className="text-sm text-[#5F6B6E] font-medium mt-1.5 leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

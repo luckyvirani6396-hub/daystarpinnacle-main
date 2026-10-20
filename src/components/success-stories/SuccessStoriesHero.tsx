@@ -111,12 +111,6 @@ export default function SuccessStoriesHero() {
           ))}
         </motion.div>
       </Container>
-
-      <img
-        src="/images/leaf.png"
-        alt=""
-        className="absolute right-0 bottom-0 w-36 sm:w-48 lg:w-60 h-auto pointer-events-none select-none opacity-95 z-0 translate-y-6"
-      />
     </section>
   );
 }

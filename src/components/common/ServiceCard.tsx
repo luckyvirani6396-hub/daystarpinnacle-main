@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
-import { fadeUp } from '../../utils/animations';
-
-const MotionLink = motion.create(Link);
 
 interface ServiceCardProps {
   title: string;
@@ -44,7 +40,7 @@ export default function ServiceCard({ title, description, to, image }: ServiceCa
         {/* Accent line — expands on hover */}
         <div className="w-8 h-0.5 bg-[#FF7A1A] rounded-full mb-4 transition-all duration-500 group-hover:w-14 group-hover:bg-[#FF7A1A]" />
 
-        <h3 className="text-xl md:text-[22px] font-serif font-medium text-[#004B57] mb-2.5 transition-colors duration-300 group-hover:text-[#FF7A1A]">
+        <h3 className="text-xl md:text-[22px] font-serif font-bold text-[#004B57] mb-2.5 transition-colors duration-300 group-hover:text-[#FF7A1A]">
           {title}
         </h3>
         <p className="text-[#5F6B6E] leading-relaxed text-[13px] sm:text-sm flex-1 font-medium">{description}</p>
@@ -52,21 +48,13 @@ export default function ServiceCard({ title, description, to, image }: ServiceCa
     </>
   );
 
-  const motionProps = {
-    variants: fadeUp,
-  };
-
   if (to) {
     return (
-      <MotionLink to={to} className={cardClass} {...motionProps}>
+      <Link to={to} className={cardClass}>
         {cardContent}
-      </MotionLink>
+      </Link>
     );
   }
 
-  return (
-    <motion.div className={cardClass} {...motionProps}>
-      {cardContent}
-    </motion.div>
-  );
+  return <div className={cardClass}>{cardContent}</div>;
 }

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Crown, Rocket, Sparkles, Star } from 'lucide-react';
 import {
   btnPrimary,
@@ -26,7 +25,7 @@ const packages = [
       'Employee Wellness Resources',
       'Basic Reporting',
     ],
-    cta: 'Request Pricing',
+    cta: 'Book Consultation',
     featured: false,
   },
   {
@@ -44,7 +43,7 @@ const packages = [
       'Employee Participation Reports',
       'Wellness Challenges',
     ],
-    cta: 'Request Pricing',
+    cta: 'Book Consultation',
     featured: true,
   },
   {
@@ -156,8 +155,8 @@ export default function Programs() {
                 ))}
               </ul>
 
-              <Link
-                to="/#register"
+              <a
+                href="#register"
                 className={`inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${
                   pkg.featured
                     ? 'bg-[#FF7A1A] hover:bg-[#E86800] text-white shadow-lg'
@@ -166,7 +165,7 @@ export default function Programs() {
               >
                 <span>{pkg.cta}</span>
                 <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -192,10 +191,10 @@ export default function Programs() {
               </p>
             </div>
           </div>
-          <Link to="/#register" className={`${btnPrimary} shrink-0`}>
+          <a href="#register" className={`${btnPrimary} shrink-0`}>
             <span>Request a Custom Proposal</span>
             <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

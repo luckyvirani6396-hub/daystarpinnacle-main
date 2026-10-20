@@ -56,7 +56,7 @@ export default function ContactHero() {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <Container className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+      <Container className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* Left Content */}
           <div className="col-span-1 lg:col-span-7 flex flex-col items-start text-left relative z-10">
@@ -186,12 +186,6 @@ export default function ContactHero() {
           </div>
         </motion.div>
       </Container>
-
-      <img
-        src="/images/leaf.png"
-        alt=""
-        className="absolute right-0 bottom-0 w-36 sm:w-48 lg:w-60 h-auto pointer-events-none select-none opacity-95 z-0 translate-y-6"
-      />
     </section>
   );
 }

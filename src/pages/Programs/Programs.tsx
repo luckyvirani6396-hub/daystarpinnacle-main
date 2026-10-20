@@ -1,14 +1,35 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Target, Brain, ChevronRight, Building2, Shield, TrendingUp, ClipboardList, Calendar } from 'lucide-react';
+import {
+  ArrowRight,
+  Users,
+  Target,
+  Brain,
+  ChevronRight,
+  ChevronDown,
+  Building2,
+  Shield,
+  TrendingUp,
+  ClipboardList,
+  Calendar,
+  Laptop,
+  Smartphone,
+  UserCheck,
+  Check,
+  PhoneCall,
+  Sparkles,
+} from 'lucide-react';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import ProgramCard from '../../components/common/ProgramCard';
 import { pagePrograms } from '../../assets/data/content';
 import { PAGE_HERO_IMAGES } from '../../constants/pageImages';
+import { CONTACT_PHONE, CONTACT_PHONE_TEL } from '../../constants';
 import { fadeUp, staggerContainer } from '../../utils/animations';
 import {
   btnPrimary,
+  btnSecondary,
   sectionBody,
   sectionDotGrid,
   sectionIntroBadge,
@@ -19,11 +40,75 @@ import {
   cardDescription,
 } from '../../components/home/sectionStyles';
 
+const deliveryFormats = [
+  {
+    icon: Building2,
+    badge: 'Onsite',
+    title: 'Workplace Sessions',
+    desc: 'Hands-on yoga instructors, ergonomic workstation desk audits, and onsite health check camps conducted at your offices.',
+    features: ['Physical presence & live engagement', 'Custom equipment & audio setup', 'Ergonomic audit checklists'],
+    accent: '#FF7A1A',
+    bg: '#FEF3E8',
+  },
+  {
+    icon: Laptop,
+    badge: 'Virtual & Hybrid',
+    title: 'Live Interactive Streams',
+    desc: 'High-definition interactive webinars and meditation sessions for remote, hybrid, and pan-India distributed workforces.',
+    features: ['Interactive Q&A and polls', 'HD recording library access', 'Zero geographical limitations'],
+    accent: '#004B57',
+    bg: '#E6F2F4',
+  },
+  {
+    icon: Smartphone,
+    badge: 'Digital Tools',
+    title: 'Self-Care & Habit Kits',
+    desc: 'Self-care playbooks, weekly micro-habit challenges, hydration trackers, and desk stretch cheat sheets.',
+    features: ['Monthly employee newsletters', 'Step & fitness challenge sheets', 'Practical recipe & diet planners'],
+    accent: '#72A93B',
+    bg: '#F1F9EB',
+  },
+  {
+    icon: UserCheck,
+    badge: 'Executive',
+    title: 'Leadership 1-on-1s',
+    desc: 'Confidential coaching on executive stress management, peak cognitive performance, and sustainable work-life rhythms.',
+    features: ['Direct founder/director access', 'Tailored burnout prevention', 'Leadership resilience frameworks'],
+    accent: '#8E44AD',
+    bg: '#F5EEF8',
+  },
+];
+
+
+const programFaqs = [
+  {
+    q: 'How do we select the right package for our organization?',
+    a: 'We evaluate your workforce size, current hybrid or onsite distribution, and core wellness priorities. Our consultants offer a free 30-minute discovery call to recommend or customize a package that matches your HR timeline and budget.',
+  },
+  {
+    q: 'Can sessions be delivered across multiple branch offices or remote staff?',
+    a: 'Yes. All our packages feature flexible hybrid delivery. Sessions can be conducted onsite at your head office while simultaneously live-streamed with interactive Q&A for remote and regional branch teams across India.',
+  },
+  {
+    q: 'How much lead time is required to launch our first wellness session?',
+    a: 'We typically onboard new corporate clients and launch their first session within 5 to 7 business days. This gives us time to align on topics, provide digital promotional teasers for your employees, and confirm logistics.',
+  },
+  {
+    q: 'Are all facilitators certified wellness professionals?',
+    a: 'Absolutely. All yoga masters, corporate meditation coaches, clinical nutritionists, and ergonomic specialists are certified, experienced corporate wellness facilitators vetted by Daystar Pinnacle.',
+  },
+  {
+    q: 'How do you measure and report employee participation?',
+    a: 'After every session and campaign, we compile participation counts, post-session feedback scores, and key behavioral takeaways into an executive summary report for your HR leadership team.',
+  },
+];
+
 export default function Programs() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
     <>
-      {/* ── Corporate Programs Hero (Standardized Subpage Hero) ─────────────────────────────── */}
+      {/* ── Corporate Programs Hero ─────────────────────────────── */}
       <section className="relative w-full bg-[#FAF9F5] overflow-hidden isolate">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute right-[-8%] top-[8%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/6 blur-[100px]" />
@@ -31,13 +116,12 @@ export default function Programs() {
           <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
         </div>
 
-        <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+        <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-            
+
             {/* Left Content Column */}
             <div className="col-span-1 lg:col-span-7 flex flex-col items-start text-left relative z-10">
-              
-              {/* Breadcrumbs with Chevron Icon */}
+              {/* Breadcrumbs */}
               <motion.nav
                 variants={fadeUp}
                 initial="hidden"
@@ -123,6 +207,9 @@ export default function Programs() {
                   <span>Explore Our Packages</span>
                   <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
                 </a>
+                <Link to="/contact" className={btnSecondary}>
+                  <span>Book Consultation</span>
+                </Link>
               </motion.div>
             </div>
 
@@ -142,7 +229,7 @@ export default function Programs() {
                 <div className="relative rounded-[24px] overflow-hidden border-[3px] border-white shadow-[0_24px_60px_rgba(0,75,87,0.12)]">
                   <img
                     src={PAGE_HERO_IMAGES.programs}
-                    alt="Yoga and mindfulness health group"
+                    alt="Corporate wellness team session"
                     className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />
@@ -207,12 +294,6 @@ export default function Programs() {
             </div>
           </motion.div>
         </div>
-
-        <img
-          src="/images/leaf.png"
-          alt=""
-          className="absolute right-0 bottom-0 w-36 sm:w-48 lg:w-60 h-auto pointer-events-none select-none opacity-95 z-0 translate-y-6"
-        />
       </section>
 
       {/* ── Programs List Section ─────────────────────────── */}
@@ -247,8 +328,73 @@ export default function Programs() {
         </Container>
       </section>
 
-      {/* ── What's Included Section ─────────────────────────── */}
-      <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/40 z-10">
+      {/* ── SECTION: Flexible Delivery Formats ────────────────── */}
+      <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/70 z-10">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute right-[-6%] top-[15%] w-[40%] h-[40%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
+          <div className="absolute left-[-6%] bottom-[15%] w-[38%] h-[38%] rounded-full bg-[#004B57]/4 blur-[100px]" />
+          <div className="absolute inset-0" style={sectionDotGrid(0.12)} />
+        </div>
+
+        <Container className="relative z-10">
+          <SectionTitle
+            subtitle="Execution Flexibility"
+            title="Designed for Every Workplace Model"
+            description="Whether your teams work from a central corporate office, remote home setups, or a hybrid schedule, our programs integrate seamlessly."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {deliveryFormats.map((item, idx) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                className="bg-white rounded-3xl p-7 border border-[#E2E8E4] shadow-sm hover:shadow-lg hover:border-[#FF7A1A]/30 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border"
+                      style={{ backgroundColor: item.bg, color: item.accent, borderColor: `${item.accent}25` }}
+                    >
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <span
+                      className="text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border"
+                      style={{ backgroundColor: item.bg, color: item.accent, borderColor: `${item.accent}30` }}
+                    >
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-bold text-[#004B57] mb-2.5 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium mb-6">
+                    {item.desc}
+                  </p>
+
+                  <ul className="space-y-2.5 pt-4 border-t border-[#E2E8E4]/80">
+                    {item.features.map((feat) => (
+                      <li key={feat} className="flex items-start gap-2 text-xs font-semibold text-[#1A2E32]/85">
+                        <Check className="w-3.5 h-3.5 text-[#FF7A1A] shrink-0 mt-0.5" strokeWidth={2.5} />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+
+      {/* ── SECTION: Fully Supported Journeys ─────────────────────── */}
+      <section className="py-20 md:py-28 relative overflow-hidden bg-white z-10">
         <div className="absolute left-0 top-1/4 w-[280px] h-[450px] bg-gradient-to-r from-[#FEF3E8]/55 to-transparent rounded-r-full blur-xl -z-10 pointer-events-none" />
         <div className="absolute right-0 top-1/3 w-[280px] h-[450px] bg-gradient-to-l from-[#FEF3E8]/55 to-transparent rounded-l-full blur-xl -z-10 pointer-events-none" />
 
@@ -287,13 +433,13 @@ export default function Programs() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-white rounded-[24px] border border-[#E2E8E4]/60 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-[24px] border border-[#E2E8E4]/80 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#004B57] to-[#004B57]/80 flex items-center justify-center text-white mb-4 shadow-sm shadow-[#004B57]/15">
                     {card.icon}
                   </div>
-                  <h4 className="text-lg font-serif font-medium text-[#004B57] mb-3">{card.title}</h4>
+                  <h4 className="text-lg font-bold text-[#004B57] mb-3 leading-snug">{card.title}</h4>
                   <ul className="space-y-2">
                     {card.features.map((feat) => (
                       <li key={feat} className="text-xs text-[#4d5e53] font-semibold flex items-center gap-2">
@@ -310,7 +456,7 @@ export default function Programs() {
       </section>
 
       {/* ── Process Timeline Section ─────────────────────────── */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden z-10">
+      <section className="py-20 md:py-28 bg-[#FAF9F5]/60 relative overflow-hidden z-10">
         <Container className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -320,9 +466,11 @@ export default function Programs() {
           >
             <span className={sectionIntroBadge}>Process</span>
             <h2 className={sectionIntroHeading}>
-              Your Program{' '}
-              <span className={sectionHeadingAccent}>Launch Path</span>
+              Your Program <span className={sectionHeadingAccent}>Launch Path</span>
             </h2>
+            <p className={`${sectionBody} mt-2`}>
+              From discovery call to measurable workforce impact in under two weeks.
+            </p>
           </motion.div>
 
           {/* Desktop Steps Layout */}
@@ -418,6 +566,165 @@ export default function Programs() {
               </motion.div>
             ))}
           </div>
+        </Container>
+      </section>
+
+      {/* ── SECTION: Corporate Programs FAQ ───────────────────────── */}
+      <section className="py-20 md:py-28 relative overflow-hidden bg-white z-10">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* Left FAQ intro */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="lg:col-span-5 text-center lg:text-left"
+            >
+              <span className={sectionIntroBadge}>Corporate FAQ</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-serif font-medium text-[#004B57] leading-tight mb-4">
+                Got Questions About <span className="text-[#FF7A1A] italic">Our Packages?</span>
+              </h2>
+              <p className="text-sm text-[#5F6B6E] leading-relaxed font-medium mb-8">
+                Everything you need to know about pricing, customization, lead times, and pan-India hybrid execution.
+              </p>
+
+              <div className="bg-[#FAF9F5] rounded-2xl p-6 border border-[#E2E8E4] flex flex-col gap-4 text-left">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
+                    <PhoneCall className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#004B57]">Need Direct Assistance?</p>
+                    <a
+                      href={`tel:${CONTACT_PHONE_TEL}`}
+                      className="text-sm font-bold text-[#FF7A1A] hover:underline"
+                    >
+                      {CONTACT_PHONE}
+                    </a>
+                  </div>
+                </div>
+                <p className="text-[11px] text-[#5F6B6E] font-medium leading-relaxed">
+                  Our corporate advisors are available Monday to Saturday to answer questions or review your annual wellness calendar.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Accordion */}
+            <div className="lg:col-span-7 space-y-4">
+              {programFaqs.map((faq, index) => {
+                const isOpen = openFaq === index;
+                return (
+                  <motion.div
+                    key={faq.q}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: index * 0.06 }}
+                    className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                      isOpen
+                        ? 'bg-[#FAF9F5] border-[#FF7A1A]/30 shadow-md'
+                        : 'bg-white border-[#E2E8E4] hover:border-[#004B57]/20'
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? null : index)}
+                      className="w-full py-4.5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer"
+                    >
+                      <span className="font-bold text-sm sm:text-base text-[#004B57]">
+                        {faq.q}
+                      </span>
+                      <span
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                          isOpen ? 'bg-[#FF7A1A] text-white rotate-180' : 'bg-[#E6F2F4] text-[#004B57]'
+                        }`}
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </span>
+                    </button>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium"
+                        >
+                          {faq.a}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ── SECTION: Final High-Impact Consultation CTA Banner ────── */}
+      <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/70 z-10">
+        <Container>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-[#004B57] via-[#004B57] to-[#003840] rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center md:text-left relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10"
+          >
+            {/* Ambient background glows */}
+            <div className="absolute right-0 top-0 w-96 h-96 rounded-full bg-[#FF7A1A]/15 blur-3xl pointer-events-none" />
+            <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-[#72A93B]/10 blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 max-w-2xl">
+              <span className="inline-flex items-center gap-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 border border-white/15 mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                Custom Corporate Proposals
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-white tracking-tight leading-tight mb-4">
+                Ready to Build a Healthier, <span className="text-[#FF7A1A] italic">More Engaged</span> Workforce?
+              </h2>
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed font-medium mb-6">
+                Receive a tailored wellness proposal matching your team headcount, office locations, and annual budget within 24 hours.
+              </p>
+
+              {/* Trust badges */}
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-white/90">
+                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
+                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
+                  Free 30-Min Consultation
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
+                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
+                  Flexible Hybrid Delivery
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
+                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
+                  Zero Long-Term Lock-In
+                </span>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full sm:w-auto shrink-0">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 shadow-lg shadow-[#FF7A1A]/30 hover:scale-[1.02]"
+              >
+                <span>Request Custom Proposal</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href={`tel:${CONTACT_PHONE_TEL}`}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs border border-white/20 transition-all duration-300"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-[#FF7A1A]" />
+                <span>Call Directly: {CONTACT_PHONE}</span>
+              </a>
+            </div>
+          </motion.div>
         </Container>
       </section>
     </>

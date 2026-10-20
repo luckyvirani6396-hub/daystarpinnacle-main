@@ -19,7 +19,7 @@ export default function WellnessHubHero() {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <div className="col-span-1 lg:col-span-7 flex flex-col items-start text-left relative z-10">
             <motion.nav
@@ -68,11 +68,11 @@ export default function WellnessHubHero() {
               animate="visible"
               className="text-xl md:text-2xl font-bold text-[#FF7A1A] mb-4 leading-snug font-heading"
             >
-              Learn, Grow, and Thrive Every Day.
+              Workplace Vitality &amp; Employee Performance.
             </motion.h2>
 
             <motion.p variants={fadeUp} initial="hidden" animate="visible" className={`${sectionBody} mb-6 max-w-2xl`}>
-              Explore expert articles, nourishing recipes, and practical tips to support your health journey — all in one place.
+              Expert frameworks, workplace nutrition strategies, and stress resilience guides to elevate corporate productivity and workforce health.
             </motion.p>
 
             <motion.div
@@ -83,9 +83,9 @@ export default function WellnessHubHero() {
             >
               <div className="absolute top-7 left-12 right-12 sm:top-8 sm:left-14 sm:right-14 h-[1.8px] bg-[#FF7A1A]/20 z-0" />
               {[
-                { key: 'nutrition', icon: Utensils, label: <>Nutrition<br />Tips</> },
-                { key: 'mental', icon: Brain, label: <>Mental<br />Wellbeing</> },
-                { key: 'lifestyle', icon: BookOpen, label: <>Healthy<br />Lifestyle</> },
+                { key: 'workplace', icon: ClipboardList, label: <>Corporate<br />Wellness</> },
+                { key: 'stress', icon: Brain, label: <>Stress &amp;<br />Resilience</> },
+                { key: 'nutrition', icon: Utensils, label: <>Desk<br />Nutrition</> },
               ].map(({ key, icon: Icon, label }) => (
                 <div key={key} className="flex flex-col items-center z-10 w-24 sm:w-28">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FEF3E8] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FDF2E9] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
@@ -114,7 +114,7 @@ export default function WellnessHubHero() {
               <div className="relative rounded-[24px] overflow-hidden border-[3px] border-white shadow-[0_24px_60px_rgba(0,75,87,0.12)]">
                 <img
                   src={PAGE_HERO_IMAGES.wellnessHub}
-                  alt="Meditation and mental health"
+                  alt="Corporate wellness team"
                   className="w-full aspect-[4/3] sm:aspect-[5/4] object-cover object-center transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />
@@ -130,10 +130,10 @@ export default function WellnessHubHero() {
           className="mt-16 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-6 lg:p-8.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full z-20 md:divide-x md:divide-gray-150"
         >
           {[
-            { icon: ClipboardList, title: 'Nutrition Tips', desc: 'Science-backed advice for smarter eating.' },
-            { icon: Utensils, title: 'Healthy Recipes', desc: 'Delicious meals that nourish your body.' },
-            { icon: Brain, title: 'Mental Health', desc: 'Calm your mind and reduce daily stress.' },
-            { icon: Calendar, title: 'Yoga & Lifestyle', desc: 'Build habits that last a lifetime.' },
+            { icon: ClipboardList, title: 'Corporate Wellness', desc: 'Strategic roadmaps that reduce sick leaves.' },
+            { icon: Utensils, title: 'Workplace Nutrition', desc: 'Sustained energy and metabolic health at work.' },
+            { icon: Brain, title: 'Stress & Resilience', desc: 'Mindfulness tools to prevent team burnout.' },
+            { icon: Calendar, title: 'Desk Ergonomics', desc: 'Posture habits and mobility for screen work.' },
           ].map(({ icon: Icon, title, desc }, i) => (
             <div key={title} className={`flex items-center gap-4.5 px-2 ${i > 0 ? 'md:pl-6' : ''}`}>
               <div className="w-12 h-12 rounded-full bg-[#FF7A1A]/10 flex items-center justify-center shrink-0 text-[#FF7A1A]">

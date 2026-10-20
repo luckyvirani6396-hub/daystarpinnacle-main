@@ -36,10 +36,9 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[12%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
@@ -67,7 +66,7 @@ export default function WhyChooseUs() {
             </p>
 
             <Link to="/contact" className={btnPrimary}>
-              <span>Book a Corporate Consultation</span>
+              <span>Book Consultation</span>
               <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
             </Link>
           </motion.div>
@@ -78,11 +77,11 @@ export default function WhyChooseUs() {
               return (
                 <motion.div
                   key={reason.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: index * 0.06 }}
-                  className={`flex items-start gap-3 p-4 ${cardOnCream}`}
+                  initial={{ opacity: 0, x: 28, y: 10 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
+                  className={`flex items-start gap-3 p-4 ${cardOnCream} group hover:border-[#FF7A1A]/30 hover:shadow-md transition-all duration-300 cursor-default`}
                 >
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform"
@@ -90,7 +89,7 @@ export default function WhyChooseUs() {
                   >
                     <reason.icon className="w-5 h-5" strokeWidth={2} />
                   </div>
-                  <p className={`${cardTitle} leading-snug pt-0.5`}>{reason.label}</p>
+                  <p className={`${cardTitle} leading-snug pt-0.5 group-hover:text-[#FF7A1A] transition-colors`}>{reason.label}</p>
                 </motion.div>
               );
             })}

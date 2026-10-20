@@ -11,16 +11,8 @@ import {
   quoteText,
 } from './sectionStyles';
 
-const logoBase = '/Partner Images/';
-const govtLogoBase = '/Government Images/';
-
-function logoPath(filename: string) {
-  return encodeURI(`${logoBase}${filename}`);
-}
-
-function govtLogoPath(filename: string) {
-  return encodeURI(`${govtLogoBase}${filename}`);
-}
+const privateLogoBase = '/clients/private/';
+const govtLogoBase = '/clients/gov/';
 
 interface LogoItem {
   name: string;
@@ -30,43 +22,54 @@ interface LogoItem {
 }
 
 const companyLogos: LogoItem[] = [
-  { name: 'Panasonic', path: logoPath('Anchor_by_Panasonic_logo.svg 1.png') },
-  { name: 'Bosch', path: logoPath('img_bosch_logo_svg_1.png') },
-  { name: 'Check Point', path: logoPath('img_check_point_logo_2022_svg.png') },
-  { name: 'Cisco', path: logoPath('img_cisco_partner_logo.png') },
-  { name: 'Commscope', path: logoPath('Commscope 1.png') },
-  { name: 'CP Plus', path: logoPath('CP Plus 1.png') },
-  { name: 'D-Link', path: logoPath('D-Link-Logo 1.png') },
-  { name: 'Delta Electronics', path: logoPath('img_delta_electronics_logo.png') },
-  { name: 'Hitachi', path: logoPath('img_hitachi_1.png') },
-  { name: 'Honeywell', path: logoPath('Honeywell 1.png') },
-  { name: 'Ingram', path: logoPath('Ingram 1.png') },
-  { name: 'Microsoft', path: logoPath('img_microsoft_logo.png') },
-  { name: 'Motadata', path: logoPath('motadata-logo 1.png') },
-  { name: 'Netrack', path: logoPath('netrack-logo-trans 1.png') },
-  { name: 'Nokia', path: logoPath('img_nokia_logo_1.png') },
-  { name: 'RAH Infotech', path: logoPath('RAH-Infotech-1536x257-1 1.png') },
-  { name: 'Rittal', path: logoPath('rittal-logo-6ACACE401C-seeklogo.com 1.png') },
-  { name: 'Vehant', path: logoPath('Vehant Logo 1200x1200 - Vehant Technologies 1.png') },
-  { name: 'VMware', path: logoPath('img_vmware_logo_transparent.png') },
+  { name: 'Airtel', path: `${privateLogoBase}airtel.webp` },
+  { name: 'Amdocs', path: `${privateLogoBase}amdocs.webp` },
+  { name: 'Amnex', path: `${privateLogoBase}amnex.webp` },
+  { name: 'Anchor Panasonic', path: `${privateLogoBase}anchor-panasonic.webp` },
+  { name: 'Arceus Infotech', path: `${privateLogoBase}arceus-infotech.webp` },
+  { name: 'Bosch', path: `${privateLogoBase}bosch.webp` },
+  { name: 'Britannia', path: `${privateLogoBase}britannia.webp` },
+  { name: 'Camedu', path: `${privateLogoBase}camedu.webp` },
+  { name: 'Capgemini', path: `${privateLogoBase}capgemini.webp` },
+  { name: 'Check Point', path: `${privateLogoBase}checkpoint.webp` },
+  { name: 'Cisco', path: `${privateLogoBase}cisco.webp` },
+  { name: 'CommScope', path: `${privateLogoBase}commscope.webp` },
+  { name: 'CP Plus', path: `${privateLogoBase}cpplus.webp` },
+  { name: 'Delta Electronics', path: `${privateLogoBase}delta-electronics.webp` },
+  { name: 'D-Link', path: `${privateLogoBase}dlink.webp` },
+  { name: 'GIZ', path: `${privateLogoBase}giz.webp` },
+  { name: 'Goodyear', path: `${privateLogoBase}goodyear.webp` },
+  { name: 'Hitachi', path: `${privateLogoBase}hitachi.webp` },
+  { name: 'Honeywell', path: `${privateLogoBase}honeywell.webp` },
+  { name: 'Ingram Micro', path: `${privateLogoBase}ingram.webp` },
+  { name: 'Maple Logistics', path: `${privateLogoBase}maple-logistics.webp` },
+  { name: 'Mavenir', path: `${privateLogoBase}mavenir.webp` },
+  { name: 'Microsoft', path: `${privateLogoBase}microsoft.webp` },
+  { name: 'Motadata', path: `${privateLogoBase}motadata.webp` },
+  { name: 'Netrack', path: `${privateLogoBase}netrack.webp` },
+  { name: 'Nokia', path: `${privateLogoBase}nokia.webp` },
+  { name: 'Panasonic', path: `${privateLogoBase}panasonic.webp` },
+  { name: 'Prime Cabs', path: `${privateLogoBase}prime-cabs.webp` },
+  { name: 'PV Lumens', path: `${privateLogoBase}pv-lumens.webp` },
+  { name: 'RAH Infotech', path: `${privateLogoBase}rah-infotech.webp` },
+  { name: 'Redington', path: `${privateLogoBase}redington.webp` },
+  { name: 'Rittal', path: `${privateLogoBase}rittal.webp` },
+  { name: 'Synergy', path: `${privateLogoBase}synergy.webp` },
+  { name: 'Vehant Technologies', path: `${privateLogoBase}vehant.webp` },
+  { name: 'VMware', path: `${privateLogoBase}vmware.webp` },
+];
+
+const governmentLogosBase: LogoItem[] = [
+  { name: 'Bharat Electronics Limited', dept: 'BEL', path: `${govtLogoBase}bel.webp` },
+  { name: 'TCIL', dept: 'TCIL', path: `${govtLogoBase}tcil.webp` },
+  { name: 'National Rural Health Mission', dept: 'NRHM', path: `${govtLogoBase}nrhm.webp` },
 ];
 
 const governmentLogos: LogoItem[] = [
-  { name: 'National Health Authority', dept: 'NHA', path: govtLogoPath('nha.png'), fullCard: true },
-  { name: 'Indian Space Research Org', dept: 'ISRO', path: govtLogoPath('isro.png'), fullCard: true },
-  { name: 'Defence Research & Dev Org', dept: 'DRDO', path: govtLogoPath('drdo.png'), fullCard: true },
-  { name: 'Oil & Natural Gas Corp', dept: 'ONGC', path: govtLogoPath('ongc.png'), fullCard: true },
-  { name: 'National Informatics Centre', dept: 'NIC', path: govtLogoPath('nic.png'), fullCard: true },
-  { name: 'Bharat Heavy Electricals', dept: 'BHEL', path: govtLogoPath('bhel.png'), fullCard: true },
-  { name: 'Indian Railways', dept: 'Railways', path: govtLogoPath('railways.png'), fullCard: true },
-  { name: 'Life Insurance Corp', dept: 'LIC', path: govtLogoPath('lic.png'), fullCard: true },
-  { name: 'Steel Authority of India', dept: 'SAIL', path: govtLogoPath('sail.png'), fullCard: true },
-  { name: 'National Health Mission', dept: 'NHM', path: govtLogoPath('nhm.png'), fullCard: true },
-  { name: 'Ministry of Ayush', dept: 'AYUSH' },
-  { name: 'Food Safety & Standards', dept: 'FSSAI' },
-  { name: 'National Thermal Power', dept: 'NTPC', path: govtLogoPath('ntpc.png'), fullCard: true },
-  { name: 'Gas Authority of India', dept: 'GAIL', path: govtLogoPath('gail.png'), fullCard: true },
-  { name: 'National Highway Authority', dept: 'NHAI' },
+  ...governmentLogosBase,
+  ...governmentLogosBase,
+  ...governmentLogosBase,
+  ...governmentLogosBase,
 ];
 
 const ngoLogos: LogoItem[] = [
@@ -95,9 +98,8 @@ const stats = [
 function LogoCard({ logo }: { logo: LogoItem }) {
   return (
     <div
-      className={`inline-flex items-center justify-center shrink-0 bg-white rounded-xl border border-[#E2E8E4] shadow-[0_2px_12px_rgba(0,75,87,0.05)] select-none hover:border-[#004B57]/20 transition-colors overflow-hidden ${
-        logo.fullCard ? 'p-0' : 'px-4'
-      }`}
+      className={`inline-flex items-center justify-center shrink-0 bg-white rounded-xl border border-[#E2E8E4] shadow-[0_2px_12px_rgba(0,75,87,0.05)] select-none hover:border-[#004B57]/20 transition-colors overflow-hidden ${logo.fullCard ? 'p-0' : 'px-4'
+        }`}
       style={{ width: '200px', height: '88px' }}
     >
       {logo.path ? (
@@ -166,8 +168,8 @@ export default function TrustedBy() {
 
   const currentLogos =
     activeTab === 'private' ? companyLogos :
-    activeTab === 'government' ? governmentLogos :
-    ngoLogos;
+      activeTab === 'government' ? governmentLogos :
+        ngoLogos;
   const mid = Math.ceil(currentLogos.length / 2);
   const row1 = currentLogos.slice(0, mid);
   const row2 = [...currentLogos.slice(mid)].reverse();
@@ -198,8 +200,7 @@ export default function TrustedBy() {
       `}</style>
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[12%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
@@ -249,9 +250,8 @@ export default function TrustedBy() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${
-                    activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
-                  }`}
+                  className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
+                    }`}
                 >
                   {activeTab === tab && (
                     <motion.div

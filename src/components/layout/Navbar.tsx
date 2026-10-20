@@ -6,7 +6,6 @@ import { FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { NAV_ITEMS, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_TEL, WHATSAPP_NUMBER } from '../../constants';
 import Logo from '../common/Logo';
 import ServicesDropdown, { MobileServicesList } from './ServicesDropdown';
-import ResourcesDropdown, { MobileResourcesList } from './ResourcesDropdown';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +31,12 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navItems = NAV_ITEMS.filter((item) => item.path !== '/faq');
+  const SHOW_TOP_BAR = false; // Set to true to re-enable the top info bar
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
-      {/* Top Info Bar (Off-White Background with Orange Icons matching Reference Mockup) */}
-      {!isScrolled && !isOpen && (
+      {/* Top Info Bar (Hidden, retained for future use) */}
+      {SHOW_TOP_BAR && !isScrolled && !isOpen && (
         <div className="hidden lg:block bg-[#FCFBF7] text-[#2c4033] text-xs py-2.5 px-6 border-b border-[#e2e8e4]/60 font-semibold pointer-events-auto select-none shadow-sm">
           <div className="max-w-8xl mx-auto flex items-center justify-between">
             {/* Left Contact Info */}
@@ -57,7 +57,7 @@ export default function Navbar() {
               </a>
               <span className="flex items-center gap-2 text-[#2c4033]/80">
                 <HiClock className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                <span>Mon - Sat: 9:30 AM - 6:30 PM</span>
               </span>
             </div>
 
@@ -94,14 +94,16 @@ export default function Navbar() {
                 >
                   <FaYoutube className="w-3.5 h-3.5" />
                 </a>
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2c4033] hover:text-[#FF7A1A] transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <FaWhatsapp className="w-3.5 h-3.5" />
+                </a>
               </div>
-              <Link
-                to="/contact"
-                className="bg-[#FF7A1A] text-white hover:bg-[#E86800] font-extrabold text-[10px] uppercase tracking-wider px-4.5 py-2 rounded transition-all duration-300 flex items-center gap-1.5"
-              >
-                <span>Book Free Consultation</span>
-                <span className="font-sans font-bold">→</span>
-              </Link>
             </div>
           </div>
         </div>
@@ -109,18 +111,13 @@ export default function Navbar() {
 
       {/* Floating White Capsule Navbar */}
       <div
-        className={`transition-all duration-300 w-[95%] max-w-8xl mx-auto pointer-events-auto ${
-          isScrolled ? 'my-2' : 'my-4'
-        }`}
+        className={`transition-all duration-300 w-[95%] max-w-8xl mx-auto pointer-events-auto ${isScrolled ? 'my-2' : 'my-4'
+          }`}
       >
         <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#e8efe9] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4">
-          {/* Logo Section — tagline only on wide screens so MacBook widths stay clean */}
+          {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0 min-w-0">
             <Logo compact />
-            <span className="hidden 2xl:block h-8 w-px bg-[#e2e8e4] shrink-0" />
-            <span className="hidden 2xl:block text-[11px] font-semibold text-[#5c6860] max-w-[120px] leading-snug text-left whitespace-normal">
-              Corporate Health &amp; Wellness Solutions
-            </span>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -129,14 +126,11 @@ export default function Navbar() {
               const isActive =
                 location.pathname === item.path ||
                 (item.path === '/services' && location.pathname.startsWith('/services')) ||
-                (item.path === '/resources' && (location.pathname.startsWith('/resources') || location.pathname.startsWith('/health-hub')));
+                ((item.path === '/health-hub' || item.path === '/resources') &&
+                  (location.pathname.startsWith('/health-hub') || location.pathname.startsWith('/resources')));
 
               if (item.path === '/services') {
                 return <ServicesDropdown key={item.path} isActive={isActive} isCapsule={true} />;
-              }
-
-              if (item.path === '/resources') {
-                return <ResourcesDropdown key={item.path} isActive={isActive} isCapsule={true} />;
               }
 
               const shortLabel =
@@ -152,9 +146,8 @@ export default function Navbar() {
                 <div key={item.path} className="relative flex flex-col items-center">
                   <Link
                     to={item.path}
-                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
-                      isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
-                    }`}
+                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
+                      }`}
                   >
                     <span className="2xl:hidden">{shortLabel}</span>
                     <span className="hidden 2xl:inline">{item.label}</span>
@@ -166,16 +159,6 @@ export default function Navbar() {
 
           {/* Right Section */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#1a2e32] hover:text-[#FF7A1A] hover:scale-105 transition-all w-8 h-8 xl:w-9 xl:h-9 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer shrink-0"
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp className="w-4 h-4 xl:w-5 xl:h-5" />
-            </a>
-
             <Link
               to="/contact"
               className="bg-[#FF7A1A] text-white hover:bg-[#E86800] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 whitespace-nowrap"
@@ -224,7 +207,9 @@ export default function Navbar() {
               {navItems.map((item) => {
                 const isActive =
                   location.pathname === item.path ||
-                  (item.path === '/services' && location.pathname.startsWith('/services'));
+                  (item.path === '/services' && location.pathname.startsWith('/services')) ||
+                  ((item.path === '/health-hub' || item.path === '/resources') &&
+                    (location.pathname.startsWith('/health-hub') || location.pathname.startsWith('/resources')));
                 const label = item.label;
 
                 if (item.path === '/services') {
@@ -237,26 +222,15 @@ export default function Navbar() {
                   );
                 }
 
-                if (item.path === '/resources') {
-                  return (
-                    <MobileResourcesList
-                      key={item.path}
-                      isResourcesActive={isActive}
-                      onNavigate={() => setIsOpen(false)}
-                    />
-                  );
-                }
-
                 return (
                   <Link
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
-                      isActive
+                    className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${isActive
                         ? 'text-[#FF7A1A] bg-[#FF7A1A]/5'
                         : 'text-[#1a2e32] hover:text-[#FF7A1A] hover:bg-gray-50'
-                    }`}
+                      }`}
                   >
                     {label}
                   </Link>

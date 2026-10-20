@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Calendar, ChevronRight } from 'lucide-react';
+import { ArrowRight, Building2, ChevronRight } from 'lucide-react';
 import {
   btnPrimary,
   btnSecondary,
@@ -37,7 +37,7 @@ export default function AboutHero() {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <motion.div
             variants={containerVariants}
@@ -91,13 +91,13 @@ export default function AboutHero() {
             </motion.p>
 
             <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/#register" className={btnPrimary}>
-                <span>Partner With Us</span>
+              <Link to="/contact" className={btnPrimary}>
+                <span>Book Consultation</span>
                 <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
-              </a>
-              <Link to="/contact" className={btnSecondary}>
-                <Calendar className="w-4 h-4" strokeWidth={2.2} />
-                <span>Book a Consultation</span>
+              </Link>
+              <Link to="/programs" className={btnSecondary}>
+                <span>Explore Programs</span>
+                <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
               </Link>
             </motion.div>
           </motion.div>

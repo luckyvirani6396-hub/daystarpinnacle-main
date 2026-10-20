@@ -60,11 +60,10 @@ const childVariants = {
 
 export default function AboutPreview() {
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden isolate py-16 md:py-24">
+    <section id="about" className="relative w-full bg-white overflow-hidden isolate py-16 md:py-24 scroll-mt-20">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />
-        <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
+        <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
+        <div className="absolute inset-0" style={sectionDotGrid(0.1)} />
       </div>
 
       <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
@@ -80,7 +79,7 @@ export default function AboutPreview() {
             <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
 
             <div className="relative">
-              <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/10 to-[#004B57]/5 rounded-[28px] blur-xl" />
+              <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/8 to-transparent rounded-[28px] blur-xl" />
 
               <div className="relative rounded-[24px] overflow-hidden border-[3px] border-white shadow-[0_24px_60px_rgba(0,75,87,0.12)]">
                 <img
@@ -169,7 +168,7 @@ export default function AboutPreview() {
               </Link>
               <Link to="/contact" className={btnSecondary}>
                 <Calendar className="w-4 h-4" strokeWidth={2.2} />
-                <span>Book a Consultation</span>
+                <span>Book Consultation</span>
               </Link>
             </motion.div>
           </motion.div>

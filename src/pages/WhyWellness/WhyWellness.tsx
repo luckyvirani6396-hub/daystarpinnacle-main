@@ -49,7 +49,7 @@ export default function WhyWellness() {
   return (
     <>
       {/* ── Hero Section ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-[#F8F7F2] to-[#EEF5E8] pt-24 pb-20 lg:pt-32 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-[#F8F7F2] to-[#EEF5E8] pt-8 pb-16 lg:pt-12 lg:pb-24">
         {/* Blurry decorations */}
         <div className="absolute left-[-120px] top-0 w-[520px] h-[520px] rounded-full bg-[#DDEFCF] blur-[140px] opacity-70" />
         <div className="absolute right-[-180px] bottom-[-150px] w-[420px] h-[420px] rounded-full bg-[#EAF4DD] blur-[120px] opacity-80" />

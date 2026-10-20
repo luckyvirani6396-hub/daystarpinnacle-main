@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Eye, Leaf, ShieldCheck, Target, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BookOpen, Eye, Headphones, Leaf, ShieldCheck, Target, Users } from 'lucide-react';
 import {
   calloutBox,
   cardDescription,
@@ -38,6 +39,11 @@ const approaches = [
     title: 'Continuous Iteration',
     description: 'We continuously improve programs based on quarterly review reports.',
     icon: BookOpen,
+  },
+  {
+    title: 'Dedicated Partnership',
+    description: 'Dedicated account manager and proactive coordination from start to finish.',
+    icon: Headphones,
   },
 ];
 
@@ -112,7 +118,7 @@ export default function AboutVisionApproach() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-30px' }}
                     transition={{ duration: 0.45, delay: index * 0.06 }}
-                    className={`group ${cardOnCream} p-5 border border-[#E2E8E4]/65 hover:shadow-[0_4px_25px_rgba(12,29,55,0.05)] transition-all duration-300`}
+                    className={`group ${cardOnCream} p-5 border border-[#E2E8E4]/65 hover:border-[#FF7A1A]/30 hover:shadow-md transition-all duration-300 cursor-default`}
                   >
                     <div className="flex items-start gap-3.5">
                       <div
@@ -125,13 +131,23 @@ export default function AboutVisionApproach() {
                         <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] mb-1 block">
                           0{index + 1}
                         </span>
-                        <h3 className={`${cardTitle} mb-1`}>{item.title}</h3>
+                        <h3 className={`${cardTitle} mb-1 group-hover:text-[#FF7A1A] transition-colors`}>{item.title}</h3>
                         <p className={cardDescription}>{item.description}</p>
                       </div>
                     </div>
                   </motion.div>
                 );
               })}
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-[#E2E8E4]/80 flex items-center justify-between">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#FF7A1A] hover:text-[#E86800] transition-colors group"
+              >
+                <span>Speak With Our Wellness Strategy Team</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </motion.div>
         </div>

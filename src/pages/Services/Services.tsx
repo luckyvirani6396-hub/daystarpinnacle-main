@@ -6,7 +6,7 @@ import SectionTitle from '../../components/common/SectionTitle';
 import SectionDecorations from '../../components/common/SectionDecorations';
 import ServiceCard from '../../components/common/ServiceCard';
 import ServicesHero from '../../components/services/ServicesHero';
-import ServicesStatsBar from '../../components/services/ServicesStatsBar';
+// import ServicesStatsBar from '../../components/services/ServicesStatsBar';
 import CareApproach from '../../components/services/CareApproach';
 import HowItWorks from '../../components/services/HowItWorks';
 import { clinicalServices } from '../../assets/data/clinicalServices';
@@ -16,7 +16,7 @@ export default function Services() {
   return (
     <>
       <ServicesHero />
-      <ServicesStatsBar />
+      {/* <ServicesStatsBar /> */}
 
       <section id="services-list" className="py-14 md:py-18 relative overflow-hidden z-10 bg-white">
         <SectionDecorations />

@@ -76,8 +76,8 @@ export default function IndustriesWeServe() {
 
   const currentIndustries =
     activeTab === 'private' ? privateIndustries :
-    activeTab === 'government' ? governmentIndustries :
-    ngoIndustries;
+      activeTab === 'government' ? governmentIndustries :
+        ngoIndustries;
 
   return (
     <section
@@ -85,8 +85,7 @@ export default function IndustriesWeServe() {
       className="relative w-full bg-white overflow-hidden py-16 md:py-24"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#004B57]/5 blur-[100px]" />
-        <div className="absolute left-[-8%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#72A93B]/6 blur-[90px]" />
+        <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.16)} />
       </div>
 
@@ -116,9 +115,8 @@ export default function IndustriesWeServe() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${
-                  activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
-                }`}
+                className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
+                  }`}
               >
                 {activeTab === tab && (
                   <motion.div

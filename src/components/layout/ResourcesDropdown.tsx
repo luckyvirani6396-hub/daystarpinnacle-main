@@ -10,8 +10,7 @@ interface ResourcesDropdownProps {
 }
 
 const resourcesItems = [
-  { label: 'Blog', path: '/health-hub' },
-  { label: 'FAQs', path: '/faq' },
+  { label: 'Wellness Blog', path: '/health-hub' },
 ];
 
 export default function ResourcesDropdown({ isActive, isLight = false, isCapsule = false }: ResourcesDropdownProps) {
@@ -60,18 +59,28 @@ export default function ResourcesDropdown({ isActive, isLight = false, isCapsule
             className="absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[200px] z-50 pointer-events-auto"
           >
             <div className="bg-white rounded-xl shadow-xl shadow-black/10 border border-border overflow-hidden">
-              {resourcesItems.map((item, index) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  onClick={closeDropdown}
-                  className={`block px-5 py-3 text-sm text-dark hover:bg-[#FF7A1A]/10 hover:text-[#FF7A1A] transition-colors ${
-                    index !== resourcesItems.length - 1 ? 'border-b border-border' : ''
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {resourcesItems.map((item, index) => {
+                const isCurrentItem = location.pathname === item.path || (item.path === '/health-hub' && location.pathname.startsWith('/health-hub'));
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    onClick={closeDropdown}
+                    className={`flex items-center justify-between px-5 py-3 text-sm transition-colors ${
+                      isCurrentItem
+                        ? 'bg-[#FEF3E8] text-[#FF7A1A] font-bold'
+                        : 'text-dark hover:bg-[#FF7A1A]/10 hover:text-[#FF7A1A]'
+                    } ${
+                      index !== resourcesItems.length - 1 ? 'border-b border-border' : ''
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    {isCurrentItem && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]" />
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}
@@ -87,6 +96,7 @@ interface MobileResourcesListProps {
 
 export function MobileResourcesList({ isResourcesActive, onNavigate }: MobileResourcesListProps) {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
 
   const handleNavigate = () => {
     setExpanded(false);
@@ -115,17 +125,29 @@ export function MobileResourcesList({ isResourcesActive, onNavigate }: MobileRes
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden pl-4 mt-1"
           >
-            {resourcesItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.path}
-                onClick={handleNavigate}
-                className="flex items-center gap-2 px-4 py-2.5 text-sm text-[#1a2e32]/85 hover:text-[#FF7A1A] transition-colors"
-              >
-                <HiChevronRight className="w-4 h-4 shrink-0" />
-                {item.label}
-              </Link>
-            ))}
+            {resourcesItems.map((item) => {
+              const isCurrentItem = location.pathname === item.path || (item.path === '/health-hub' && location.pathname.startsWith('/health-hub'));
+              return (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  onClick={handleNavigate}
+                  className={`flex items-center justify-between px-4 py-2.5 text-sm rounded-lg transition-colors ${
+                    isCurrentItem
+                      ? 'text-[#FF7A1A] font-bold bg-[#FEF3E8]'
+                      : 'text-[#1a2e32]/85 hover:text-[#FF7A1A]'
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <HiChevronRight className="w-4 h-4 shrink-0" />
+                    {item.label}
+                  </span>
+                  {isCurrentItem && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]" />
+                  )}
+                </Link>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>
