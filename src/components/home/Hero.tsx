@@ -146,28 +146,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Floating 98% Satisfaction Card: Clean slide-in on load, perfectly stationary once loaded */}
-        <motion.div
-          initial={{ opacity: 0, x: 50, scale: 0.92 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.8, ease: easeSoft }}
-          className="hidden md:flex absolute right-6 lg:right-14 bottom-24 lg:bottom-28 z-20 select-none bg-white rounded-2xl p-4 sm:p-5 shadow-[0_16px_40px_rgba(0,0,0,0.18)] border border-white/90 items-center gap-3.5"
-        >
-          <div className="w-11 h-11 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
-            <Heart className="w-5 h-5 fill-[#FF7A1A] text-[#FF7A1A]" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-[#0c222d] font-sans leading-none">98%</span>
-              <div className="flex items-end gap-1 h-3.5 mb-0.5">
-                <span className="w-1 h-1.5 bg-[#FF7A1A] rounded-t-xs" />
-                <span className="w-1 h-2.5 bg-[#FF7A1A] rounded-t-xs" />
-                <span className="w-1 h-3.5 bg-[#FF7A1A] rounded-t-xs" />
-              </div>
-            </div>
-            <p className="text-[11px] font-semibold text-[#5F6B6E] mt-1">Employee Satisfaction</p>
-          </div>
-        </motion.div>
+
       </div>
 
       {/* Bottom Feature Strip & Interactive Scroll Indicator */}

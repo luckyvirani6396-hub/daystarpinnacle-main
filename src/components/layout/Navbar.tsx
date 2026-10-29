@@ -65,7 +65,7 @@ export default function Navbar() {
             <div className="flex items-center gap-5">
               <span className="flex items-center gap-2 text-[#2c4033]/80">
                 <HiLocationMarker className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                <span>Jaipur, Rajasthan</span>
+                <span>Noida, Uttar Pradesh</span>
               </span>
               <span className="h-3.5 w-[1px] bg-gray-300" />
               <div className="flex items-center gap-2.5">

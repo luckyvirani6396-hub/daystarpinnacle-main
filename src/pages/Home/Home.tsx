@@ -10,7 +10,6 @@ const EngagementPrograms = lazy(() => import('../../components/home/EngagementPr
 const HowItWorks = lazy(() => import('../../components/home/HowItWorks'));
 const Programs = lazy(() => import('../../components/home/Programs'));
 const Stats = lazy(() => import('../../components/home/Stats'));
-const Testimonials = lazy(() => import('../../components/home/Testimonials'));
 const BlogPreview = lazy(() => import('../../components/home/BlogPreview'));
 const FAQ = lazy(() => import('../../components/home/FAQ'));
 const HomeRegistration = lazy(() => import('../../components/home/HomeRegistration'));
@@ -28,7 +27,6 @@ export default function Home() {
         <HowItWorks />
         <Programs />
         <Stats />
-        <Testimonials />
         <BlogPreview />
         <FAQ />
         <HomeRegistration />

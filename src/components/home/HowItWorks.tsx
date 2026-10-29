@@ -11,6 +11,7 @@ import {
   btnPrimary,
   cardDescription,
   cardTitle,
+  sectionBody,
   sectionDotGrid,
   sectionHeadingAccent,
   sectionIntroBadge,
@@ -58,7 +59,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
@@ -68,13 +69,16 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className={`${sectionIntroBlock} max-w-2xl`}
+          className={sectionIntroBlock}
         >
           <span className={sectionIntroBadge}>How It Works</span>
           <h2 className={sectionIntroHeading}>
             Your Path to a{' '}
             <span className={sectionHeadingAccent}>Healthier Workplace</span>
           </h2>
+          <p className={sectionBody}>
+            A seamless 5-step process from initial consultation to expert-led program execution.
+          </p>
         </motion.div>
 
         <div className="hidden lg:block relative">

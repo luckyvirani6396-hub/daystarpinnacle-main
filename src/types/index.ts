@@ -49,6 +49,15 @@ export interface Testimonial {
   image: string;
 }
 
+export interface BlogSection {
+  id: string;
+  heading: string;
+  paragraphs: string[];
+  callout?: string;
+  checklist?: string[];
+  stat?: { value: string; label: string };
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -58,7 +67,16 @@ export interface BlogPost {
   image: string;
   date: string;
   readTime: string;
+  author?: {
+    name: string;
+    role: string;
+    avatar: string;
+    credentials?: string;
+  };
+  keyTakeaways?: string[];
+  sections?: BlogSection[];
   content: string[];
+  tags?: string[];
 }
 
 export interface TimelineStep {
@@ -81,13 +99,13 @@ export interface ContactFormData {
   email: string;
   phone: string;
   companyName: string;
-  jobTitle: string;
-  industryType: string;
-  employeeCount: string;
-  wellnessProgram: string;
-  deliveryMode: string;
-  startDate: string;
-  message: string;
+  jobTitle?: string;
+  industryType?: string;
+  employeeCount?: string;
+  wellnessProgram?: string;
+  deliveryMode?: string;
+  startDate?: string;
+  message?: string;
 }
 
 export interface ConsultationFormData {

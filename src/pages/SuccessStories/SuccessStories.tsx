@@ -10,7 +10,6 @@ import SectionDecorations from '../../components/common/SectionDecorations';
 import { fadeUp } from '../../utils/animations';
 
 const VideoTestimonials = lazy(() => import('../../components/success-stories/VideoTestimonials'));
-const Testimonials = lazy(() => import('../../components/home/Testimonials'));
 
 export default function SuccessStories() {
   return (
@@ -18,7 +17,6 @@ export default function SuccessStories() {
       <SuccessStoriesHero />
       <TransformationCards stories={successStories} />
       <Suspense fallback={<div className="min-h-[100px]" />}>
-        <Testimonials />
         <VideoTestimonials />
       </Suspense>
 

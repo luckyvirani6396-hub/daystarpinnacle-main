@@ -47,7 +47,7 @@ const contactMethods = [
 
 export default function ContactSection() {
   return (
-    <section id="contact-form" className="py-14 md:py-18 relative overflow-hidden z-10 bg-white">
+    <section id="contact-form" className="py-10 md:py-14 relative overflow-hidden z-10 bg-white">
       <SectionDecorations />
 
       <Container>
@@ -123,13 +123,13 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="lg:col-span-8"
           >
-            <div className="bg-white rounded-[24px] p-8 md:p-10 border border-[#E2E8E4]/60 shadow-sm hover:shadow-xl hover:shadow-[#FF7A1A]/5 transition-shadow duration-500">
-              <div className="mb-8">
-                <span className="inline-block text-[10px] sm:text-[11px] font-extrabold tracking-[0.2em] uppercase px-3.5 py-1.5 rounded-full text-[#FF7A1A] bg-[#FEF3E8] border border-[#FF7A1A]/20 shadow-sm mb-4">
+            <div className="bg-white rounded-[24px] p-6 sm:p-7 md:p-8 border border-[#E2E8E4]/80 shadow-sm hover:shadow-xl hover:shadow-[#FF7A1A]/5 transition-shadow duration-500">
+              <div className="mb-5 pb-4 border-b border-[#E2E8E4]/60">
+                <span className="inline-block text-[10px] sm:text-[11px] font-extrabold tracking-[0.18em] uppercase px-3 py-1 rounded-full text-[#FF7A1A] bg-[#FEF3E8] border border-[#FF7A1A]/20 shadow-sm mb-2.5">
                   Registration / Inquiry Form
                 </span>
-                <h3 className="text-2xl font-serif font-medium text-[#004B57]">Register Your Interest</h3>
-                <p className="text-[#5F6B6E] text-sm mt-2 font-medium">Fill out the details below and our team will design a custom wellness strategy for your team.</p>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#004B57]">Register Your Interest</h3>
+                <p className="text-[#5F6B6E] text-xs sm:text-sm mt-1 font-medium">Fill out the brief details below and our team will design a custom wellness proposal for your team.</p>
               </div>
               <ContactForm />
             </div>

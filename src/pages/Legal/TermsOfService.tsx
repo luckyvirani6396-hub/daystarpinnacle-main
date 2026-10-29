@@ -115,7 +115,7 @@ export default function TermsOfService() {
       content: (
         <>
           <p className="text-[#1A2E32]/85 text-sm sm:text-base leading-relaxed">
-            These Terms of Service and any contractual agreements shall be governed by and construed in accordance with the laws of India. Any legal disputes arising in connection with these terms shall be subject to the exclusive jurisdiction of the competent courts in Jaipur, Rajasthan.
+            These Terms of Service and any contractual agreements shall be governed by and construed in accordance with the laws of India. Any legal disputes arising in connection with these terms shall be subject to the exclusive jurisdiction of the competent courts in Noida, Gautam Buddha Nagar, Uttar Pradesh.
           </p>
         </>
       ),

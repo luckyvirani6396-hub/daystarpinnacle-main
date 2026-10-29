@@ -69,7 +69,7 @@ const packages = [
 
 export default function Programs() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-5%] top-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-bl from-[#FEF3E8]/60 to-transparent blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.12)} />
@@ -80,7 +80,7 @@ export default function Programs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className={`${sectionIntroBlock} mb-10 md:mb-14`}
+          className={sectionIntroBlock}
         >
           <span className={sectionIntroBadge}>Corporate Packages</span>
           <h2 className={sectionIntroHeading}>
@@ -88,7 +88,7 @@ export default function Programs() {
             <span className={sectionHeadingAccent}>Every Team Size</span>
           </h2>
           <p className={sectionBody}>
-            Scalable packages designed to fit your workforce, culture, and business goals.
+            Scalable packages designed to fit your workforce size, culture, and health goals.
           </p>
         </motion.div>
 
@@ -100,11 +100,10 @@ export default function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative flex flex-col rounded-3xl border p-6 md:p-8 transition-all duration-300 ${
-                pkg.featured
+              className={`relative flex flex-col rounded-3xl border p-6 md:p-8 transition-all duration-300 ${pkg.featured
                   ? 'bg-[#004B57] border-[#004B57] text-white shadow-[0_20px_60px_rgba(0,75,87,0.2)] md:scale-[1.03] z-10 pt-8'
                   : 'bg-white border-[#E2E8E4] hover:border-[#FF7A1A]/25 hover:shadow-lg'
-              }`}
+                }`}
             >
               {pkg.featured && (
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 text-[10px] font-extrabold uppercase tracking-[0.14em] bg-[#FF7A1A] text-white px-4 py-1.5 rounded-full shadow-md shadow-[#FF7A1A]/30 whitespace-nowrap">
@@ -113,14 +112,12 @@ export default function Programs() {
               )}
 
               <div
-                className={`mb-6 pb-5 border-b ${
-                  pkg.featured ? 'border-white/15' : 'border-[#E2E8E4]/80'
-                }`}
+                className={`mb-6 pb-5 border-b ${pkg.featured ? 'border-white/15' : 'border-[#E2E8E4]/80'
+                  }`}
               >
                 <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 ${
-                    pkg.featured ? 'bg-white/12' : ''
-                  }`}
+                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 ${pkg.featured ? 'bg-white/12' : ''
+                    }`}
                   style={
                     !pkg.featured
                       ? { backgroundColor: `${pkg.accent}18`, color: pkg.accent }
@@ -131,16 +128,14 @@ export default function Programs() {
                 </div>
 
                 <h3
-                  className={`text-xl sm:text-2xl font-serif font-semibold tracking-tight leading-tight mb-2 ${
-                    pkg.featured ? 'text-white' : 'text-[#004B57]'
-                  }`}
+                  className={`text-xl sm:text-2xl font-serif font-semibold tracking-tight leading-tight mb-2 ${pkg.featured ? 'text-white' : 'text-[#004B57]'
+                    }`}
                 >
                   {pkg.name}
                 </h3>
                 <p
-                  className={`text-[11px] font-extrabold uppercase tracking-[0.16em] ${
-                    pkg.featured ? 'text-[#FF7A1A]' : 'text-[#004B57]/70'
-                  }`}
+                  className={`text-[11px] font-extrabold uppercase tracking-[0.16em] ${pkg.featured ? 'text-[#FF7A1A]' : 'text-[#004B57]/70'
+                    }`}
                 >
                   Best for {pkg.bestFor}
                 </p>
@@ -157,11 +152,10 @@ export default function Programs() {
 
               <a
                 href="#register"
-                className={`inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${
-                  pkg.featured
+                className={`inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${pkg.featured
                     ? 'bg-[#FF7A1A] hover:bg-[#E86800] text-white shadow-lg'
                     : 'bg-[#FAF9F5] hover:bg-[#FF7A1A] hover:text-white text-[#004B57] border border-[#E2E8E4]'
-                }`}
+                  }`}
               >
                 <span>{pkg.cta}</span>
                 <ArrowRight className="w-4 h-4" strokeWidth={2.2} />

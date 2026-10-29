@@ -10,15 +10,15 @@ export const brand = {
 } as const;
 
 export const sectionBadge =
-  'inline-flex text-[10px] sm:text-[11px] font-extrabold tracking-[0.2em] uppercase px-3.5 py-2 rounded-full bg-[#FEF3E8] border border-[#FF7A1A]/25 text-[#FF7A1A]';
+  'inline-flex items-center text-[10.5px] sm:text-[11px] font-extrabold tracking-[0.16em] uppercase px-3.5 py-1.5 rounded-full bg-[#FEF3E8] border border-[#FF7A1A]/25 text-[#FF7A1A]';
 
 export const sectionHeading =
-  'text-3xl sm:text-4xl lg:text-[2.6rem] xl:text-[3rem] font-serif font-medium text-[#004B57] leading-[1.12] tracking-tight';
+  'text-2xl sm:text-3xl md:text-[2.1rem] lg:text-[2.35rem] font-serif font-medium text-[#004B57] leading-[1.2] tracking-tight';
 
 export const sectionHeadingAccent = 'text-[#FF7A1A] italic font-normal';
 
 export const sectionBody =
-  'text-[13px] sm:text-sm text-[#1A2E32]/80 leading-relaxed font-medium';
+  'text-[13px] sm:text-sm md:text-[14.5px] text-[#1A2E32]/75 leading-relaxed font-medium';
 
 export const statValue =
   'text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-[#004B57] leading-none';
@@ -32,9 +32,9 @@ export const quoteText =
 export const cardTitle = 'text-sm font-bold text-[#004B57]';
 export const cardDescription = 'text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium';
 
-export const sectionIntroBadge = `${sectionBadge} mb-3`;
-export const sectionIntroHeading = `${sectionHeading} mb-2 md:mb-3`;
-export const sectionIntroBlock = 'text-center mb-4 md:mb-6 max-w-3xl mx-auto';
+export const sectionIntroBadge = `${sectionBadge} mb-2.5`;
+export const sectionIntroHeading = `${sectionHeading} mb-2.5 md:mb-3`;
+export const sectionIntroBlock = 'text-center mb-8 md:mb-10 max-w-3xl mx-auto flex flex-col items-center';
 
 export const cardOnWhite =
   'bg-white border border-[#E2E8E4] rounded-2xl shadow-[0_2px_16px_rgba(0,75,87,0.06)] hover:shadow-[0_8px_32px_rgba(0,75,87,0.1)] hover:border-[#004B57]/15 transition-all duration-300';

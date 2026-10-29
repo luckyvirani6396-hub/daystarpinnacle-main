@@ -19,7 +19,7 @@ export default function BlogPreview() {
   const previewPosts = allBlogPosts.slice(0, 3);
 
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.12)} />
@@ -31,14 +31,14 @@ export default function BlogPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className={`${sectionIntroBlock} mb-10 md:mb-14`}
+          className={sectionIntroBlock}
         >
           <span className={sectionIntroBadge}>Wellness Insights</span>
           <h2 className={sectionIntroHeading}>
             Latest <span className={sectionHeadingAccent}>Corporate Wellness</span> Articles
           </h2>
           <p className={sectionBody}>
-            Evidence-based frameworks, workplace nutrition strategies, and ergonomic insights from our certified wellness team.
+            Evidence-based frameworks, nutrition strategies, and ergonomic insights from our certified team.
           </p>
         </motion.div>
 

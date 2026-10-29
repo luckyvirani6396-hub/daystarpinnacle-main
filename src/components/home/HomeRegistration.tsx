@@ -25,7 +25,7 @@ export default function HomeRegistration() {
   return (
     <section
       id="register"
-      className="relative w-full bg-[#FAF9F5] overflow-hidden py-16 md:py-24 scroll-mt-28"
+      className="relative w-full bg-white overflow-hidden py-12 md:py-16 scroll-mt-28"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[8%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[120px]" />
@@ -104,17 +104,17 @@ export default function HomeRegistration() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
             className="lg:col-span-8"
           >
-            <div className={`${cardOnWhite} p-6 md:p-8 lg:p-10`}>
-              <div className="flex items-center gap-3 mb-6 pb-6 border-b border-[#E2E8E4]">
-                <div className="w-11 h-11 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A]">
+            <div className={`${cardOnWhite} p-6 sm:p-7 md:p-8`}>
+              <div className="flex items-center gap-3 mb-5 pb-5 border-b border-[#E2E8E4]">
+                <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <Building2 className="w-5 h-5" strokeWidth={2.2} />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-[1.65rem] font-serif font-semibold text-[#004B57] leading-tight">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004B57] leading-tight">
                     Register Your Interest
                   </h3>
-                  <p className="text-sm md:text-base text-[#1A2E32]/80 leading-relaxed font-medium mt-1">
-                    Complete the form below and we&apos;ll be in touch shortly.
+                  <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed font-medium mt-0.5">
+                    Share your company details and we&apos;ll prepare a customized wellness proposal.
                   </p>
                 </div>
               </div>

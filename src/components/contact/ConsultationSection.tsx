@@ -60,8 +60,8 @@ export default function ConsultationSection() {
 }
 
 const MAPS_API_KEY = 'AIzaSyAkUfhrldqKHWEk5wEHLrTTPSaURHcmwPQ';
-const LAT = 26.891155499279726;
-const LNG = 75.8011657;
+const LAT = 28.6019;
+const LNG = 77.3588;
 
 export function MapSection() {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -129,7 +129,7 @@ export function MapSection() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span style="font-weight: 500; color: #1a2e32;">Gandhi Nagar, Jaipur, Rajasthan</span>
+                <span style="font-weight: 500; color: #1a2e32;">2nd Floor, A-5, Sector 57, Noida, Uttar Pradesh - 201301</span>
               </div>
               
               <div style="display: flex; align-items: center; gap: 8px;">

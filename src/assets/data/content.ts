@@ -142,9 +142,83 @@ const blogPostsData: BlogPost[] = [
     title: 'Building a High-Impact Corporate Wellness Program: The Executive Playbook',
     category: 'Workplace Wellness',
     excerpt: 'How modern enterprises design structured health initiatives that measurably decrease burnout, reduce unplanned absenteeism, and elevate workforce retention.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=700&fit=crop',
     date: 'Oct 14, 2026',
     readTime: '6 min read',
+    author: {
+      name: 'Dr. Ananya Sharma',
+      role: 'Head of Preventive Healthcare & Corporate Wellness',
+      credentials: 'MD (Preventive Medicine), Certified Corporate Health Architect',
+      avatar: '/images/team-doctor.png',
+    },
+    keyTakeaways: [
+      'Superficial perks like gym passes fail to resolve root-cause burnout; organizations need structured, ongoing wellness ecosystems.',
+      'Anonymous workplace health diagnostics identify real fatigue triggers without jeopardizing employee psychological safety.',
+      'Active leadership modeling and executive participation grant implicit permission for teams to engage without career guilt.',
+      'Measure quantifiable outcomes: quarterly engagement, eNPS, and reduced sick leave days to prove real financial ROI.',
+    ],
+    tags: ['Corporate Wellness', 'Burnout Prevention', 'Executive Leadership', 'Preventative Health', 'HR Strategy'],
+    sections: [
+      {
+        id: 'beyond-superficial-perks',
+        heading: '01. Beyond Superficial Perks: The Shift to Root-Cause Wellness',
+        paragraphs: [
+          'For decades, corporate wellness was treated as a cosmetic checklist: subsidizing gym memberships that only 8% of employees utilized, stocking office breakrooms with fruit bowls, or hosting a lone annual sports day. While well-intentioned, these superficial perks fail to address the systemic drivers of workplace exhaustion.',
+          'Modern enterprises operate under unprecedented cognitive strain. Long screen hours, blurred hybrid work boundaries, irregular eating patterns, and chronic deadline pressure quietly erode employee health long before symptoms show up on medical insurance claims.',
+          'High-performing organizations recognize that workforce vitality requires a structured, preventative health ecosystem. Rather than waiting for burnout to trigger attrition or prolonged medical leave, forward-thinking leaders integrate physical ergonomics, clinical nutrition, and stress resilience into the everyday rhythm of corporate life.',
+        ],
+        callout: 'Corporate wellness fails when treated as a calendar checklist. It thrives when embedded as an organizational habit supported by executive permission.',
+      },
+      {
+        id: 'phase-1-diagnostic-discovery',
+        heading: '02. Phase 1: Diagnostic Discovery & Anonymous Health Audits',
+        paragraphs: [
+          'Every company has a unique cultural fingerprint and distinct physiological stressors. An engineering team pulling sprint deadlines experiences severe eye fatigue, cervical spine tension, and erratic sleep, whereas a field sales organization grapples with travel exhaustion and inconsistent nutrition.',
+          'A successful initiative begins with a comprehensive, 100% anonymized workplace health audit. Employees are invited to share their true pain points—ranging from 3 PM cognitive slumps to work-from-home back pain—without fear of appraisal bias.',
+          'By cross-referencing audit data with organizational shift patterns and peak business quarters, HR leaders can craft targeted quarterly calendars that employees eagerly anticipate rather than viewing as another mandatory obligation.',
+        ],
+        checklist: [
+          'Deploy an anonymous 3-minute pulse survey on physical energy, sleep, and desk strain',
+          'Identify top 3 department-specific burnout triggers without exposing individual identities',
+          'Align program delivery formats (hybrid, onsite, virtual) with actual workforce distribution',
+        ],
+      },
+      {
+        id: 'phase-2-leadership-permission',
+        heading: '03. Phase 2: Leadership Modeling & Organizational Permission',
+        paragraphs: [
+          'The single most critical factor in corporate wellness adoption is not the quality of the speaker—it is the visible participation of department leadership.',
+          'If a VP of Engineering or Head of Operations announces a mindfulness masterclass but continues scheduling back-to-back crisis meetings during that window, junior staff receive a clear implicit message: prioritize wellness and you risk being seen as uncommitted.',
+          'When leadership actively participates—blocking out calendar slots for posture workshops or speaking openly about boundary management—it dispels the stigma of taking a health break. Permission becomes cultural, and attendance surges naturally.',
+        ],
+        stat: {
+          value: '3.4x',
+          label: 'Higher employee participation rate when senior leaders actively join and endorse sessions',
+        },
+      },
+      {
+        id: 'phase-3-multidisciplinary-delivery',
+        heading: '04. Phase 3: Multidisciplinary, Non-Intrusive Delivery',
+        paragraphs: [
+          'Employees are overwhelmed by informational overload. They do not need complex biochemical lectures or extreme 60-day diet plans that disrupt their families.',
+          'Effective workplace programs deliver practical, bite-sized micro-habits that take 2 to 5 minutes: seated desk stretches to decompress the lumbar spine, evidence-based meal pairing rules to stabilize 3 PM blood glucose, and 4-second box-breathing routines to down-regulate acute meeting stress.',
+          'By rotating between certified clinical nutritionists, licensed counseling psychologists, and ergonomic specialists, organizations keep the experience fresh, holistic, and immediately applicable.',
+        ],
+      },
+      {
+        id: 'phase-4-measuring-roi',
+        heading: '05. Phase 4: Proving ROI & Quantitative Analytics',
+        paragraphs: [
+          'To sustain board-level funding and long-term momentum, corporate wellness programs must demonstrate measurable business value. HR teams should track both qualitative sentiment and quantitative health metrics.',
+          'Quarterly review decks should highlight active session attendance, Net Promoter Scores (eNPS), self-reported reductions in workday fatigue, and correlations with decreased unplanned sick leave.',
+          'When leadership observes a tangible drop in absenteeism and elevated team retention, wellbeing transitions from a perceived HR cost center into a documented strategic driver of company performance.',
+        ],
+        stat: {
+          value: '28%',
+          label: 'Average reduction in unplanned health-related sick leave across structured annual programs',
+        },
+      },
+    ],
     content: [
       'Designing a successful corporate wellness program is no longer about offering gym discounts or occasional fruit bowls. Modern HR leaders recognize that high-performing organizations require structured, continuous health ecosystems that address physical, mental, and ergonomic wellbeing.',
       'The most successful programs begin with an organizational diagnostic. Surveying employees to understand real pain points—whether it is high screen fatigue, irregular lunch habits, or post-pandemic burnout—allows companies to tailor initiatives that employees actively look forward to.',
@@ -155,30 +229,74 @@ const blogPostsData: BlogPost[] = [
   },
   {
     id: '2',
-    slug: 'combating-workplace-burnout-mindfulness-stress-resilience',
-    title: 'Combating Workplace Burnout: Stress Resilience Frameworks for High-Pressure Teams',
-    category: 'Stress & Burnout',
-    excerpt: 'Proven cognitive resilience techniques, mindful breathing habits, and leadership practices to protect mental health in demanding corporate environments.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=500&fit=crop',
-    date: 'Oct 10, 2026',
-    readTime: '5 min read',
-    content: [
-      'Workplace burnout rarely happens overnight. It manifests as a slow, insidious depletion of emotional reserves, characterized by persistent exhaustion, feelings of cynicism towards projects, and reduced professional efficacy.',
-      'Daystar Pinnacle\'s corporate stress management sessions introduce micro-resilience tools that professionals can practice right at their desks. Box breathing—four seconds in, four seconds hold, four seconds exhale, and four seconds hold—physiologically triggers the parasympathetic nervous system to down-regulate acute fight-or-flight spikes during intense deadlines.',
-      'Equally vital is structuring buffer zones between back-to-back virtual meetings. Encouraging teams to finish calls 5 minutes early gives minds time to reset, hydrate, and maintain cognitive bandwidth throughout the workday.',
-      'When organizations invest in structured mental wellbeing workshops, they cultivate psychological safety, enabling employees to vocalize workload bottlenecks before they spiral into severe burnout or medical leave.',
-      'Daystar Pinnacle delivers interactive stress resilience seminars and 1-on-1 confidential executive mental health coaching to empower teams under pressure.',
-    ],
-  },
-  {
-    id: '3',
     slug: 'desk-ergonomics-and-posture-correction-for-office-workers',
     title: 'Desk Ergonomics & Posture Correction for Long Screen Hours',
     category: 'Ergonomics',
-    excerpt: 'Practical workstation adjustments and desk-mobility stretches that eliminate chronic neck, shoulder, and lower-back strain for corporate teams.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop',
+    excerpt: 'Practical workstation adjustments, biomechanical alignment rules, and micro-stretch routines that eliminate chronic neck, shoulder, and lower back strain.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=700&fit=crop',
     date: 'Oct 06, 2026',
     readTime: '5 min read',
+    author: {
+      name: 'Rajesh Varma',
+      role: 'Lead Ergonomist & Biomechanics Specialist',
+      credentials: 'Certified Professional Ergonomist (CPE), Master of Physical Therapy',
+      avatar: '/images/team-yoga.png',
+    },
+    keyTakeaways: [
+      'Forward-head posture dramatically increases cervical spine compressive load, causing chronic tension and headaches.',
+      'Aligning workstation geometry to the 90-90-90 ergonomic rule removes passive ligament strain during screen hours.',
+      'Two-minute seated micro-stretches promote spinal decompression and lymphatic circulation without interrupting workflows.',
+      'Conducting regular department ergonomics audits prevents repetitive strain injuries and boosts daily physical vitality.',
+    ],
+    tags: ['Desk Ergonomics', 'Postural Health', 'Chair Mobility', 'Musculoskeletal Relief', 'Office Health'],
+    sections: [
+      {
+        id: 'biomechanics-forward-head',
+        heading: '01. The Modern Desk Dilemma: Biomechanics of Forward-Head Posture',
+        paragraphs: [
+          'In an era defined by dual monitors, laptops, and continuous digital communications, prolonged static sitting has emerged as a primary driver of musculoskeletal disorders in modern office environments.',
+          'The human head weighs approximately 5 kilograms in a neutral vertical position. However, as an employee leans forward by just 30 to 45 degrees to inspect spreadsheets or code, gravitational torque multiplies that effective load up to 22 to 27 kilograms on the cervical vertebrae and upper trapezius muscles.',
+          'Over weeks and months, this sustained tension leads to chronic tension headaches, cervical radiculopathy, and persistent mid-back spasms that severely degrade concentration and workday stamina.',
+        ],
+        callout: 'Every inch the head tilts forward doubles the compressive load on cervical vertebrae, turning static desk work into chronic physical trauma.',
+      },
+      {
+        id: 'workstation-geometry-rule',
+        heading: '02. Workstation Geometry: The 90-90-90 Ergonomic Rule',
+        paragraphs: [
+          'Ergonomic remediation does not require expensive luxury furniture; it requires strict adherence to natural human biomechanics.',
+          'The gold standard of ergonomic geometry is the 90-90-90 rule: elbows resting comfortably at a 90 to 100-degree open angle, hips positioned slightly above knees with a 90-degree bend, and feet planted firmly flat on the floor or an adjustable angled footrest.',
+          'Equally critical is monitor placement. The top third of the active computer display must align directly with horizontal eye gaze. When employees gaze forward without flexing their necks, the cervical spine retains its natural lordotic curve, preventing neuromuscular fatigue.',
+        ],
+        checklist: [
+          'Elevate your primary display so the top third meets straight-ahead eye level',
+          'Keep keyboard and mouse close enough to maintain relaxed, dropped shoulders',
+          'Ensure lower back lumbar support fills the natural curvature of the spine',
+        ],
+      },
+      {
+        id: 'seated-mobility-routines',
+        heading: '03. Seated Micro-Stretches: Decompressing Fascial Tension in Two Minutes',
+        paragraphs: [
+          'Even an ergonomically calibrated workstation cannot counteract continuous, motionless sitting. Static postures restrict peripheral circulation and cause muscle fascia to tighten.',
+          'Daystar Pinnacle instructs corporate teams in simple, seated micro-mobility routines that take less than 120 seconds: seated spinal twists to hydrate intervertebral discs, doorway pectoral openings to counteract hunched shoulders, and seated figure-four hip stretches.',
+          'These micro-breaks do not disrupt workflow momentum; rather, they replenish oxygen delivery to the brain, leaving professionals physically refreshed and mentally sharp for their next deliverable.',
+        ],
+        stat: {
+          value: '41%',
+          label: 'Reduction in reported lower back tension after implementing structured daily chair mobility breaks',
+        },
+      },
+      {
+        id: 'ergonomic-office-audits',
+        heading: '04. Conducting High-Impact Workplace Ergonomic Audits',
+        paragraphs: [
+          'Progressive organizations make workstation assessments an integral component of employee onboarding and annual health reviews.',
+          'Through expert-led on-site posture clinics or live virtual desk consultations, certified ergonomists identify individualized risk factors—such as improper chair heights, glare reflections, and reach strain—providing instant, customized adjustments.',
+          'By proactively protecting employee physical health, companies witness an immediate reduction in ergonomic complaints and an enduring rise in overall workplace satisfaction.',
+        ],
+      },
+    ],
     content: [
       'Sedentary desk work is one of the leading contributors to musculoskeletal disorders among corporate professionals today. Hours spent hunched over laptops with forward-head posture create immense strain on the cervical spine and trapezoid muscle groups.',
       'Workplace ergonomic audits reveal that simple alterations yield monumental relief: adjusting monitor eye-level so the top third of the screen meets straight-ahead gaze, positioning keyboards to allow a relaxed 90-degree elbow bend, and maintaining feet flat on the ground.',
@@ -188,14 +306,75 @@ const blogPostsData: BlogPost[] = [
     ],
   },
   {
-    id: '4',
+    id: '3',
     slug: 'corporate-nutrition-beating-the-afternoon-energy-slump',
-    title: 'Corporate Nutrition: Beating the 3 PM Office Energy Slump',
+    title: 'Corporate Nutrition: Beating the 3 PM Office Energy Crash',
     category: 'Corporate Nutrition',
     excerpt: 'Science-backed dietary strategies to stabilize blood glucose, eliminate post-lunch brain fog, and fuel sustained productivity across afternoon meetings.',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=700&fit=crop',
     date: 'Sep 29, 2026',
     readTime: '6 min read',
+    author: {
+      name: 'Pooja Sundaram',
+      role: 'Senior Clinical Nutritionist & Metabolic Health Lead',
+      credentials: 'Registered Dietitian (RD), M.Sc. Clinical Nutrition & Dietetics',
+      avatar: '/images/team-nutritionist.png',
+    },
+    keyTakeaways: [
+      'The 3 PM energy slump is a physiological consequence of rapid glycemic swings, not a personal lack of motivation.',
+      'Structuring lunches around the Balanced Desk Plate formula maintains steady glucose and prevents reactive hypoglycemia.',
+      'Proactive cellular hydration directly prevents the cognitive fatigue commonly mistaken for afternoon hunger.',
+      'Replacing refined office pantry snacks with nutrient-dense alternatives stabilizes metabolic stamina all afternoon.',
+    ],
+    tags: ['Corporate Nutrition', 'Metabolic Health', 'Blood Sugar Balance', 'Energy Optimization', 'Healthy Snacking'],
+    sections: [
+      {
+        id: 'biology-afternoon-slump',
+        heading: '01. The Biology of the Afternoon Slump: Glycemic Spikes & Crashes',
+        paragraphs: [
+          'Almost every corporate professional is familiar with the dreaded 3 PM energy crash: heavy eyelids, sluggish cognitive processing, and an overwhelming craving for sugary snacks or another shot of espresso.',
+          'This afternoon dip is rarely an issue of discipline; it is a direct metabolic reaction to lunch composition. When a meal contains excess refined starches, simple sugars, or heavy fried items without sufficient dietary fiber and protein, blood glucose surges rapidly.',
+          'In response, the pancreas secretes a substantial bolus of insulin to clear the bloodstream. This rapid clearance triggers reactive hypoglycemia, plunging cellular energy levels and depriving the brain of its steady glucose supply right when high-stakes afternoon meetings begin.',
+        ],
+        callout: 'The afternoon slump is not a failure of willpower or lack of coffee. It is a predictable metabolic crash triggered by refined lunch starches and dehydration.',
+      },
+      {
+        id: 'balanced-desk-plate',
+        heading: '02. The Balanced Desk Plate Formula: Sustained 4-Hour Cellular Fuel',
+        paragraphs: [
+          'To maintain steady executive performance, professionals must learn to engineer their workday meals for slow, sustained energy release.',
+          'The clinical foundation is the Balanced Desk Plate framework: half the plate dedicated to colorful fibrous vegetables or raw salads, one quarter devoted to high-quality lean protein (such as grilled paneer, lentils, tofu, chicken, or eggs), and the final quarter reserved for complex slow-burning carbohydrates like quinoa, brown rice, or whole grain rotis.',
+          'Protein and soluble fiber slow gastric emptying and blunt the insulin curve, providing an even, consistent stream of cellular energy for four to five hours without the post-prandial stupor.',
+        ],
+        checklist: [
+          'Anchor your lunch with 25 to 30 grams of clean protein to prevent insulin surges',
+          'Fill half your meal container with fiber-dense vegetables and fresh greens',
+          'Drink 500 ml of water 20 minutes before eating to support digestive enzymatic function',
+        ],
+      },
+      {
+        id: 'pantry-desk-snack-audit',
+        heading: '03. Pantry & Desk Snack Audits: Swapping Sugar for High-Density Fuel',
+        paragraphs: [
+          'When fatigue hits, convenient office vending machines offering biscuits, chips, and sugary beverages exacerbate the metabolic rollercoaster.',
+          'Our corporate nutrition masterclasses guide teams through practical pantry upgrades: stocking desk drawers with dry-roasted chickpeas, raw almonds, pumpkin seeds, walnuts, and single-origin dark chocolate.',
+          'These whole-food options supply magnesium, healthy omega fats, and trace minerals that support neurotransmitter synthesis and sustained mental clarity throughout long strategy sessions.',
+        ],
+        stat: {
+          value: '35%',
+          label: 'Improvement in self-reported afternoon cognitive focus following metabolic meal restructuring',
+        },
+      },
+      {
+        id: 'corporate-cafeteria-partnerships',
+        heading: '04. Corporate Cafeteria Partnerships: Healthy Food Accessibility at Scale',
+        paragraphs: [
+          'Individual intention is powerful, but environmental design is paramount. Organizations that partner with cafeteria caterers to offer clean, wholesome meal choices see widespread, effortless health adoption.',
+          'Daystar Pinnacle conducts corporate cafeteria nutrition audits, curating balanced meal tags, clean salad bars, and healthy beverage stations that make the nourishing choice the easiest choice for employees.',
+          'When nutritious food is readily accessible across campus, workforce vitality, immunity, and overall productivity thrive simultaneously.',
+        ],
+      },
+    ],
     content: [
       'The dreaded 3 PM corporate energy crash is rarely a lack of willpower; it is almost always a metabolic reaction to refined carbohydrates, insulin spikes, and inadequate cellular hydration.',
       'When lunch consists predominantly of simple starches and sugary drinks, blood glucose surges and subsequently plummets, starving the brain of its steady fuel source and causing profound drowsiness and executive fatigue.',
@@ -204,56 +383,16 @@ const blogPostsData: BlogPost[] = [
       'Daystar Pinnacle provides corporate cafeteria nutrition audits, employee nutrition masterclasses, and personalized meal planning for busy professionals.',
     ],
   },
-  {
-    id: '5',
-    slug: 'executive-sleep-hygiene-and-cognitive-performance',
-    title: 'Executive Sleep Hygiene: Sleep Optimization for Strategic Decision-Making',
-    category: 'Leadership Health',
-    excerpt: 'How restorative sleep cycles safeguard executive mental acuity, emotional regulation, and high-stakes problem solving for corporate leaders.',
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&h=500&fit=crop',
-    date: 'Sep 22, 2026',
-    readTime: '6 min read',
-    content: [
-      'In fast-paced corporate landscapes, late-night emails and sleep deprivation have historically been worn as misguided badges of honor. Neuroscience, however, confirms that sleep loss directly impairs the prefrontal cortex—the command center for risk calculation, ethical judgment, and emotional stability.',
-      'During deep non-REM and REM sleep phases, the brain\'s glymphatic system flushes out metabolic neurotoxins accumulated during intense analytical work, effectively consolidating strategic memory and creative problem-solving capabilities.',
-      'Executive wellness coaching focuses on non-negotiable sleep hygiene protocols: digital sunsetting 60 minutes before bed, dimming blue-light emitting devices, keeping the sleeping room cool and dark, and replacing midnight screen time with restorative breathwork.',
-      'When leadership prioritizes high-quality sleep, decision latency decreases, irritability subsides, and executive teams set a sustainable precedent for the entire company.',
-      'Daystar Pinnacle offers targeted executive wellness coaching, circadian rhythm restoration, and lifestyle leadership retreats.',
-    ],
-  },
-  {
-    id: '6',
-    slug: 'hybrid-team-wellness-keeping-remote-workforces-connected',
-    title: 'Hybrid Team Wellness: Keeping Distributed Workforces Connected & Active',
-    category: 'Workplace Wellness',
-    excerpt: 'Strategies to combat remote isolation, promote physical activity, and foster community through digital wellness challenges and virtual wellness sessions.',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop',
-    date: 'Sep 15, 2026',
-    readTime: '5 min read',
-    content: [
-      'While hybrid and remote work models offer undeniable flexibility, they often introduce unexpected workplace challenges: blurred work-life boundaries, sedentary habits from staying indoors, and subtle feelings of social isolation.',
-      'Virtual wellness programs bridge this physical gap by bringing distributed colleagues together for live-streamed, interactive experiences. Group desk yoga, guided breathwork, and virtual coffee-and-nutrition talks create casual social touchpoints outside of project deadlines.',
-      'Gamified monthly fitness and step challenges organized through digital leaderboards encourage friendly inter-departmental competition, motivating employees to take walking breaks during their workdays.',
-      'By investing in dedicated hybrid wellness initiatives, organizations demonstrate genuine care for remote staff, driving stronger cultural cohesion and mutual loyalty regardless of geographic distance.',
-      'Daystar Pinnacle delivers high-definition virtual fitness, meditation streams, and pan-India multi-location hybrid corporate wellness packages.',
-    ],
-  },
 ];
 
-export const blogPosts: BlogPost[] = blogPostsData.slice(0, 3);
+export const blogPosts: BlogPost[] = blogPostsData;
 export const allBlogPosts: BlogPost[] = blogPostsData;
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return allBlogPosts.find((post) => post.slug === slug);
 }
 
-export function getRelatedBlogPosts(slug: string, limit = 3): BlogPost[] {
-  const current = getBlogPostBySlug(slug);
-  if (!current) return [];
-  const sameCategory = allBlogPosts.filter((post) => post.slug !== slug && post.category === current.category);
-  if (sameCategory.length > 0) {
-    return sameCategory.slice(0, limit);
-  }
+export function getRelatedBlogPosts(slug: string, limit = 2): BlogPost[] {
   return allBlogPosts.filter((post) => post.slug !== slug).slice(0, limit);
 }
 

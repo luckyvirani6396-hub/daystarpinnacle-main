@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, ChevronRight } from 'lucide-react';
+import { ArrowRight, Award, Building2, ChevronRight } from 'lucide-react';
 import {
   btnPrimary,
   btnSecondary,
   sectionBody,
   sectionDotGrid,
   sectionIntroBadge,
-  statLabel,
-  statValue,
 } from '../home/sectionStyles';
 
 const containerVariants = {
@@ -37,8 +35,8 @@ export default function AboutHero() {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -48,7 +46,7 @@ export default function AboutHero() {
             <motion.nav
               variants={childVariants}
               aria-label="Breadcrumb"
-              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-5"
+              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-4"
             >
               <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
                 Home
@@ -67,27 +65,24 @@ export default function AboutHero() {
 
             <motion.h1
               variants={childVariants}
-              className="text-[2rem] sm:text-5xl md:text-[3.25rem] lg:text-[3.5rem] font-serif font-medium text-[#004B57] leading-[1.1] tracking-tight mb-4 sm:mb-5 max-w-2xl"
+              className="text-2xl sm:text-4xl lg:text-[2.65rem] font-serif font-medium text-[#004B57] leading-[1.15] tracking-tight mb-3 sm:mb-4 max-w-2xl"
             >
               Building Healthier{' '}
-              <span className="text-[#FF7A1A] italic font-normal">Workplaces</span>
+              <span className="text-[#FF7A1A] italic font-normal">Workplaces</span> Together
             </motion.h1>
 
-            <motion.div variants={childVariants} className="flex items-center gap-3 mb-5 sm:mb-6">
+            <motion.div variants={childVariants} className="flex items-center gap-3 mb-4 sm:mb-5">
               <div className="h-px w-10 bg-[#FF7A1A]/40" />
               <div className="h-1.5 w-1.5 rounded-full bg-[#FF7A1A]" />
               <div className="h-px flex-1 max-w-[120px] bg-[#004B57]/15" />
             </motion.div>
 
-            <motion.p variants={childVariants} className={`${sectionBody} mb-4 max-w-2xl`}>
-              Our mission is to help organizations create workplaces where employees can thrive
-              physically, mentally, and emotionally.
+            <motion.p variants={childVariants} className={`${sectionBody} mb-3.5 max-w-2xl`}>
+              We empower modern organizations to create high-performing workplaces where employees thrive physically, mentally, and nutritionally.
             </motion.p>
 
-            <motion.p variants={childVariants} className={`${sectionBody} mb-8 max-w-2xl`}>
-              We specialize in designing corporate wellness programs that are practical, scalable,
-              and aligned with business goals — with long-term impact through consistent engagement
-              and measurable outcomes.
+            <motion.p variants={childVariants} className={`${sectionBody} mb-7 max-w-2xl`}>
+              By combining clinical expertise with seamless corporate delivery, we help HR teams reduce burnout, boost retention, and drive lasting wellness impact.
             </motion.p>
 
             <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -125,20 +120,19 @@ export default function AboutHero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#004B57]/30 via-transparent to-transparent" />
               </div>
 
-              <div className="absolute -bottom-5 left-4 right-4 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl border border-white shadow-[0_12px_40px_rgba(0,75,87,0.08)] px-5 py-4 flex items-center justify-around gap-3 z-30">
-                {[
-                  { value: '500+', label: 'Corporate Clients' },
-                  { value: '50K+', label: 'Employees Impacted' },
-                  { value: '98%', label: 'Satisfaction' },
-                ].map((stat, i) => (
-                  <div key={stat.label} className="text-center flex-1 relative">
-                    {i > 0 && (
-                      <div className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-px bg-[#E2E8E4]" />
-                    )}
-                    <p className={`${statValue} text-xl sm:text-2xl`}>{stat.value}</p>
-                    <p className={`${statLabel} mt-1`}>{stat.label}</p>
-                  </div>
-                ))}
+              {/* Experienced Wellness Specialists Floating Badge (No specific numbers) */}
+              <div className="absolute -bottom-4 left-4 right-4 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl border border-white shadow-[0_12px_40px_rgba(0,75,87,0.10)] px-4 py-3 sm:px-5 sm:py-3.5 flex items-center gap-3 z-30">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
+                  <Award className="w-5 h-5 text-[#FF7A1A]" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-[#004B57] leading-tight">
+                    Experienced Wellness Specialists
+                  </p>
+                  <p className="text-[10.5px] sm:text-xs text-[#2c4033]/70 font-medium mt-0.5 truncate">
+                    Customized health &amp; wellbeing solutions
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

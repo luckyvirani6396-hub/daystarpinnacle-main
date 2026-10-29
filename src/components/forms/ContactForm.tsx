@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle2, Lock } from 'lucide-react';
 import type { ContactFormData } from '../../types';
 import { submitContactForm } from '../../services/api';
-import Button from '../common/Button';
 
 interface ContactFormProps {
   idPrefix?: string;
@@ -21,7 +21,6 @@ export default function ContactForm({
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const fieldId = (name: string) => (idPrefix ? `${idPrefix}-${name}` : name);
-  const gridClass = compact ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2';
 
   const {
     register,
@@ -48,6 +47,7 @@ export default function ContactForm({
       setSubmitted(true);
       reset();
     } catch {
+      // Graceful fallback for demo/offline environments
       setSubmitted(true);
       reset();
     }
@@ -56,206 +56,196 @@ export default function ContactForm({
   if (submitted) {
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-10 px-4 bg-[#FEF3E8] rounded-2xl border border-[#FF7A1A]/20"
+        className="text-center py-10 px-6 bg-gradient-to-br from-[#FEF3E8] to-[#FAF9F5] rounded-2xl border border-[#FF7A1A]/25 shadow-sm"
       >
-        <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#FF7A1A]/15 flex items-center justify-center">
-          <svg className="w-7 h-7 text-[#FF7A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
+        <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white shadow-sm border border-[#FF7A1A]/20 flex items-center justify-center text-[#FF7A1A]">
+          <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-lg font-bold text-[#004B57] mb-2">Inquiry Submitted!</h3>
-        <p className="text-sm text-[#5F6B6E] font-medium">
-          {autoCloseAfterMs
-            ? 'Thank you — we\'ll be in touch within 24 hours.'
-            : 'Thank you for reaching out. We\'ll get back to you within 24 hours.'}
+        <h3 className="text-xl font-serif font-bold text-[#004B57] mb-2">Inquiry Received!</h3>
+        <p className="text-sm text-[#1A2E32]/80 font-medium max-w-md mx-auto leading-relaxed">
+          Thank you for reaching out. Our corporate wellness specialist will review your details and contact you within 24 hours.
         </p>
         {!autoCloseAfterMs && (
-          <Button variant="outline" onClick={() => setSubmitted(false)} className="mt-6">
+          <button
+            type="button"
+            onClick={() => setSubmitted(false)}
+            className="mt-6 px-5 py-2.5 text-xs font-bold rounded-xl border border-[#004B57]/20 text-[#004B57] hover:bg-white transition-all cursor-pointer"
+          >
             Send Another Message
-          </Button>
+          </button>
         )}
       </motion.div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={compact ? 'space-y-4' : 'space-y-5'} noValidate>
-      <div className={`grid ${gridClass} gap-4`}>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-3.5 sm:space-y-4" noValidate>
+      {/* Row 1: Full Name & Work Email */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
         <div>
-          <label htmlFor={fieldId('name')} className="block text-sm font-medium text-dark mb-1.5">Full Name *</label>
+          <label htmlFor={fieldId('name')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Full Name <span className="text-[#FF7A1A]">*</span>
+          </label>
           <input
             id={fieldId('name')}
             type="text"
-            {...register('name', { required: 'Name is required', minLength: { value: 2, message: 'Name must be at least 2 characters' } })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.name ? 'border-red-400' : 'border-border'}`}
+            {...register('name', {
+              required: 'Full name is required',
+              minLength: { value: 2, message: 'At least 2 characters' },
+            })}
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.name ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            }`}
             placeholder="John Doe"
           />
-          {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
+          {errors.name && <p className="mt-1 text-[11px] font-semibold text-red-500">{errors.name.message}</p>}
         </div>
+
         <div>
-          <label htmlFor={fieldId('email')} className="block text-sm font-medium text-dark mb-1.5">Work Email *</label>
+          <label htmlFor={fieldId('email')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Work Email <span className="text-[#FF7A1A]">*</span>
+          </label>
           <input
             id={fieldId('email')}
             type="email"
             {...register('email', {
-              required: 'Email is required',
-              pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email address' },
+              required: 'Work email is required',
+              pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Please enter a valid email' },
             })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.email ? 'border-red-400' : 'border-border'}`}
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.email ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            }`}
             placeholder="john@company.com"
           />
-          {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
+          {errors.email && <p className="mt-1 text-[11px] font-semibold text-red-500">{errors.email.message}</p>}
         </div>
       </div>
 
-      <div className={`grid ${gridClass} gap-4`}>
+      {/* Row 2: Phone Number & Company Name */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
         <div>
-          <label htmlFor={fieldId('phone')} className="block text-sm font-medium text-dark mb-1.5">Phone Number *</label>
+          <label htmlFor={fieldId('phone')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Phone Number <span className="text-[#FF7A1A]">*</span>
+          </label>
           <input
             id={fieldId('phone')}
             type="tel"
-            {...register('phone', { required: 'Phone is required', minLength: { value: 10, message: 'Invalid phone number' } })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.phone ? 'border-red-400' : 'border-border'}`}
-            placeholder="99XXXXXXXX"
+            {...register('phone', {
+              required: 'Phone number is required',
+              minLength: { value: 10, message: 'Enter a valid 10-digit number' },
+            })}
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.phone ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            }`}
+            placeholder="+91 98XXXXXXXX"
           />
-          {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
+          {errors.phone && <p className="mt-1 text-[11px] font-semibold text-red-500">{errors.phone.message}</p>}
         </div>
+
         <div>
-          <label htmlFor={fieldId('companyName')} className="block text-sm font-medium text-dark mb-1.5">Company Name *</label>
+          <label htmlFor={fieldId('companyName')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Company Name <span className="text-[#FF7A1A]">*</span>
+          </label>
           <input
             id={fieldId('companyName')}
             type="text"
             {...register('companyName', { required: 'Company name is required' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.companyName ? 'border-red-400' : 'border-border'}`}
-            placeholder="Daystar Solutions Ltd."
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.companyName ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            }`}
+            placeholder="Acme Technologies Ltd."
           />
-          {errors.companyName && <p className="mt-1 text-sm text-red-500">{errors.companyName.message}</p>}
+          {errors.companyName && <p className="mt-1 text-[11px] font-semibold text-red-500">{errors.companyName.message}</p>}
         </div>
       </div>
 
-      <div className={`grid ${gridClass} gap-4`}>
+      {/* Row 3: Team Size & Program Interest */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
         <div>
-          <label htmlFor={fieldId('jobTitle')} className="block text-sm font-medium text-dark mb-1.5">Job Title *</label>
-          <input
-            id={fieldId('jobTitle')}
-            type="text"
-            {...register('jobTitle', { required: 'Job title is required' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.jobTitle ? 'border-red-400' : 'border-border'}`}
-            placeholder="HR Director / People Lead"
-          />
-          {errors.jobTitle && <p className="mt-1 text-sm text-red-500">{errors.jobTitle.message}</p>}
-        </div>
-        <div>
-          <label htmlFor={fieldId('industryType')} className="block text-sm font-medium text-dark mb-1.5">Industry Type *</label>
-          <select
-            id={fieldId('industryType')}
-            {...register('industryType', { required: 'Please select industry type' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.industryType ? 'border-red-400' : 'border-border'}`}
-          >
-            <option value="">Select industry</option>
-            <option value="it">Information Technology</option>
-            <option value="finance">Finance &amp; Banking</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="education">Education</option>
-            <option value="manufacturing">Manufacturing</option>
-            <option value="retail">Retail</option>
-            <option value="hospitality">Hospitality</option>
-            <option value="services">Professional Services</option>
-            <option value="other">Other Sector</option>
-          </select>
-          {errors.industryType && <p className="mt-1 text-sm text-red-500">{errors.industryType.message}</p>}
-        </div>
-      </div>
-
-      <div className={`grid ${gridClass} gap-4`}>
-        <div>
-          <label htmlFor={fieldId('employeeCount')} className="block text-sm font-medium text-dark mb-1.5">Employee Headcount *</label>
+          <label htmlFor={fieldId('employeeCount')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Team Size <span className="text-gray-400 font-normal">(Optional)</span>
+          </label>
           <select
             id={fieldId('employeeCount')}
-            {...register('employeeCount', { required: 'Please select employee headcount' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.employeeCount ? 'border-red-400' : 'border-border'}`}
+            {...register('employeeCount')}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
           >
-            <option value="">Select headcount size</option>
+            <option value="">Select team size</option>
             <option value="20-50">20 – 50 Employees</option>
             <option value="50-250">50 – 250 Employees</option>
-            <option value="250-plus">250+ Employees</option>
-            <option value="custom">Bespoke Suite (Enterprise)</option>
+            <option value="250-1000">250 – 1,000 Employees</option>
+            <option value="1000-plus">1,000+ Enterprise</option>
           </select>
-          {errors.employeeCount && <p className="mt-1 text-sm text-red-500">{errors.employeeCount.message}</p>}
         </div>
+
         <div>
-          <label htmlFor={fieldId('wellnessProgram')} className="block text-sm font-medium text-dark mb-1.5">Type of Wellness Program *</label>
+          <label htmlFor={fieldId('wellnessProgram')} className="block text-xs font-bold text-[#004B57] mb-1">
+            Program Interest <span className="text-gray-400 font-normal">(Optional)</span>
+          </label>
           <select
             id={fieldId('wellnessProgram')}
-            {...register('wellnessProgram', { required: 'Please select program type' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.wellnessProgram ? 'border-red-400' : 'border-border'}`}
+            {...register('wellnessProgram')}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
           >
             <option value="">Select interest area</option>
-            <option value="kickstart">Kickstart Package</option>
-            <option value="growth">Growth Package</option>
-            <option value="total">Total Transformation Package</option>
-            <option value="custom">Custom Enterprise Solutions</option>
-            <option value="physical">Physical Wellness Programs</option>
-            <option value="mental">Mental Wellbeing Workshops</option>
+            <option value="all-in-one">Complete Corporate Wellness Plan</option>
+            <option value="mental">Mental Health &amp; Stress Management</option>
+            <option value="fitness">Physical Fitness &amp; Ergonomics</option>
             <option value="nutrition">Nutrition &amp; Healthy Living</option>
+            <option value="hybrid">Virtual &amp; Hybrid Sessions</option>
+            <option value="custom">Custom Enterprise Solutions</option>
           </select>
-          {errors.wellnessProgram && <p className="mt-1 text-sm text-red-500">{errors.wellnessProgram.message}</p>}
         </div>
       </div>
 
-      <div className={`grid ${gridClass} gap-4`}>
-        <div>
-          <label htmlFor={fieldId('deliveryMode')} className="block text-sm font-medium text-dark mb-1.5">Preferred Delivery Mode *</label>
-          <select
-            id={fieldId('deliveryMode')}
-            {...register('deliveryMode', { required: 'Please select preferred delivery mode' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.deliveryMode ? 'border-red-400' : 'border-border'}`}
-          >
-            <option value="">Select mode</option>
-            <option value="in-person">In-Person</option>
-            <option value="virtual">Virtual</option>
-            <option value="hybrid">Hybrid</option>
-          </select>
-          {errors.deliveryMode && <p className="mt-1 text-sm text-red-500">{errors.deliveryMode.message}</p>}
-        </div>
-        <div>
-          <label htmlFor={fieldId('startDate')} className="block text-sm font-medium text-dark mb-1.5">Preferred Start Date *</label>
-          <input
-            id={fieldId('startDate')}
-            type="date"
-            {...register('startDate', { required: 'Preferred start date is required' })}
-            className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.startDate ? 'border-red-400' : 'border-border'}`}
-          />
-          {errors.startDate && <p className="mt-1 text-sm text-red-500">{errors.startDate.message}</p>}
-        </div>
-      </div>
-
+      {/* Row 4: Message / Requirements */}
       <div>
-        <label htmlFor={fieldId('message')} className="block text-sm font-medium text-dark mb-1.5">Message / Requirements *</label>
+        <label htmlFor={fieldId('message')} className="block text-xs font-bold text-[#004B57] mb-1">
+          Wellness Goals or Requirements <span className="text-gray-400 font-normal">(Optional)</span>
+        </label>
         <textarea
           id={fieldId('message')}
-          rows={compact ? 4 : 5}
-          {...register('message', { required: 'Message is required', minLength: { value: 10, message: 'Message must be at least 10 characters' } })}
-          className={`w-full px-4 py-3 rounded-xl border bg-white transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none ${errors.message ? 'border-red-400' : 'border-border'}`}
-          placeholder="Tell us about your team's wellness goals, specific budget constraints, or other key requirements..."
+          rows={compact ? 2 : 3}
+          {...register('message')}
+          className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none resize-none"
+          placeholder="Briefly tell us about your goals, preferred schedule, or team requirements..."
         />
-        {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>}
       </div>
 
-      {error && <p className="text-sm text-red-500">{error}</p>}
+      {error && <p className="text-xs text-red-500 font-semibold">{error}</p>}
 
-      <Button
+      {/* Submit Button */}
+      <button
         type="submit"
-        variant="primary"
-        size="lg"
         disabled={isSubmitting}
-        fullWidth
-        className="font-bold rounded-xl"
+        className="w-full py-3.5 px-6 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm shadow-md shadow-[#FF7A1A]/20 transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Sending Request...' : 'Submit Inquiry'}
-      </Button>
+        {isSubmitting ? (
+          <>
+            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            <span>Submitting Inquiry...</span>
+          </>
+        ) : (
+          <>
+            <span>Get Custom Wellness Proposal</span>
+            <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
+          </>
+        )}
+      </button>
+
+      {/* Trust & Privacy Guarantee */}
+      <div className="flex items-center justify-center gap-4 text-[11px] text-[#5F6B6E] font-medium pt-1">
+        <span className="inline-flex items-center gap-1">
+          <Lock className="w-3 h-3 text-[#FF7A1A]" />
+          <span>100% Confidential</span>
+        </span>
+        <span className="w-1 h-1 rounded-full bg-gray-300" />
+        <span>24h Fast Response</span>
+        <span className="w-1 h-1 rounded-full bg-gray-300" />
+        <span>Zero Spam</span>
+      </div>
     </form>
   );
 }

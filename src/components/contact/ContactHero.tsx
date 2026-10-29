@@ -36,7 +36,7 @@ const contactQuickInfo = [
   },
   {
     label: 'Location',
-    value: 'Gandhi Nagar, Jaipur, Rajasthan 302015',
+    value: '2nd Floor, A-5, Sector 57, Noida, Uttar Pradesh - 201301',
     href: '#map',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
@@ -56,7 +56,7 @@ export default function ContactHero() {
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />
       </div>
 
-      <Container className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 md:pb-20 lg:pb-24">
+      <Container className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8 pt-6 sm:pt-8 lg:pt-10 pb-10 sm:pb-12 md:pb-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* Left Content */}
           <div className="col-span-1 lg:col-span-7 flex flex-col items-start text-left relative z-10">
@@ -163,7 +163,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-16 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-5 sm:p-6 lg:p-7 w-full z-20"
+          className="mt-8 sm:mt-10 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-5 sm:p-6 lg:p-7 w-full z-20"
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x sm:divide-[#E2E8E4]/70">
             {contactQuickInfo.map(({ label, value, href, icon }) => (

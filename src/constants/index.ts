@@ -14,12 +14,12 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const WHATSAPP_NUMBER = '1204414400';
-export const CONTACT_EMAIL = 'info@daystarpinnacle.in';
+export const CONTACT_EMAIL = 'pinnacledaystar@gmail.com';
 export const CONTACT_PHONE = '0120 - 4414400';
 export const CONTACT_PHONE_TEL = '01204414400';
 export const COMPANY_NAME = 'Daystar Pinnacle Pvt. Ltd.';
-export const STREET_ADDRESS = 'Plot No.46, Lal Kothi, Satya Vihar Colony, Gandhi Naga, Jaipur - 302015, Rajasthan';
-export const CONTACT_ADDRESS = `${COMPANY_NAME} ${STREET_ADDRESS}`;
+export const STREET_ADDRESS = '2nd Floor, A-5, Sector 57, Noida, Gautam Buddha Nagar, Uttar Pradesh - 201301';
+export const CONTACT_ADDRESS = `${COMPANY_NAME}, ${STREET_ADDRESS}`;
 
 export const SOCIAL_LINKS = [
   { label: 'Facebook', href: 'https://facebook.com', icon: 'FaFacebook' },

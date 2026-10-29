@@ -48,14 +48,14 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[-8%] bottom-[8%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/4 blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.16)} />
       </div>
 
       <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,7 +68,7 @@ export default function FAQ() {
               Questions{' '}
               <span className={sectionHeadingAccent}>HR Teams</span> Ask
             </h2>
-            <p className={`${sectionBody} mb-8`}>
+            <p className={`${sectionBody} mb-6`}>
               Clear answers about how our corporate wellness programs work — from customization
               and delivery to scale and scheduling.
             </p>
@@ -114,8 +114,8 @@ export default function FAQ() {
                   >
                     <span
                       className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-[10px] font-extrabold tracking-wider transition-colors duration-300 ${isOpen
-                          ? 'bg-[#FF7A1A] text-white'
-                          : 'bg-[#E6F2F4] text-[#004B57] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                        ? 'bg-[#FF7A1A] text-white'
+                        : 'bg-[#E6F2F4] text-[#004B57] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
                         }`}
                     >
                       {String(index + 1).padStart(2, '0')}
@@ -129,8 +129,8 @@ export default function FAQ() {
 
                     <span
                       className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen
-                          ? 'bg-[#FF7A1A]/10 text-[#FF7A1A] rotate-180'
-                          : 'bg-[#FAF9F5] text-[#5F6B6E] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                        ? 'bg-[#FF7A1A]/10 text-[#FF7A1A] rotate-180'
+                        : 'bg-[#FAF9F5] text-[#5F6B6E] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
                         }`}
                     >
                       <ChevronDown className="w-5 h-5" strokeWidth={2.2} />
