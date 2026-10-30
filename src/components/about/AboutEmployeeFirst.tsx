@@ -25,7 +25,7 @@ const supportPillars = [
       'We reject rigid diets and extreme fitness mandates. Instead, we introduce simple, actionable 2-to-5 minute daily habits that employees actually sustain.',
     icon: Heart,
     color: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
   },
   {
     title: '100% Confidential & Safe',
@@ -33,7 +33,7 @@ const supportPillars = [
       'Employees can openly discuss personal stress, burnout, and health queries. Individual feedback and biometric queries are never disclosed to management.',
     icon: ShieldCheck,
     color: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
   },
   {
     title: 'Inclusive for Hybrid & Desk Teams',
@@ -41,15 +41,15 @@ const supportPillars = [
       'Whether your teams work from an office desk, home setup, or on-field roles, our sessions adapt seamlessly with live virtual and onsite formats.',
     icon: Laptop,
     color: '#72A93B',
-    bg: '#EEF6E6',
+    bg: '#FAF9F5',
   },
   {
     title: 'Empathetic, Jargon-Free Delivery',
     description:
       'Our clinical faculty speaks the language of everyday workplace life. We prioritize warm empathy and practical advice over dry medical lectures.',
     icon: Smile,
-    color: '#0066CC',
-    bg: '#E6F0FA',
+    color: '#004B57',
+    bg: '#FAF9F5',
   },
   {
     title: 'Tailored for Diverse Demographics',
@@ -57,7 +57,7 @@ const supportPillars = [
       'From young associates to senior leadership, our modules respect varied fitness levels, dietary backgrounds, and individual work pressures.',
     icon: Layers,
     color: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
   },
   {
     title: 'Continuous Follow-Through',
@@ -65,13 +65,13 @@ const supportPillars = [
       'Workshops include downloadable micro-habit guides, desk stretch cards, and weekly nudges so wellness awareness translates into lasting culture.',
     icon: Clock,
     color: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
   },
 ];
 
 export default function AboutEmployeeFirst() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16 border-t border-[#E2E8E4]/60">
+    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[-6%] top-[10%] w-[38%] h-[38%] rounded-full bg-[#004B57]/4 blur-[100px]" />
         <div className="absolute right-[-6%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/4 blur-[90px]" />
@@ -111,7 +111,7 @@ export default function AboutEmployeeFirst() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
-                className={`${cardOnWhite} p-6 sm:p-7 flex flex-col justify-between border border-[#E2E8E4]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_8px_30px_rgba(12,29,55,0.07)] hover:border-[#FF7A1A]/30 transition-all duration-300`}
+                className={`${cardOnWhite} p-6 sm:p-7 flex flex-col justify-between border border-[#FAF9F5]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_8px_30px_rgba(12,29,55,0.07)] hover:border-[#FF7A1A]/30 transition-all duration-300`}
               >
                 <div>
                   <div
@@ -121,11 +121,11 @@ export default function AboutEmployeeFirst() {
                     <Icon className="w-6 h-6" strokeWidth={2.2} />
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-[#1A2E32] mb-2 leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-[#004B57] mb-2 leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed font-medium">
                     {item.description}
                   </p>
                 </div>
@@ -140,7 +140,7 @@ export default function AboutEmployeeFirst() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
-          className="rounded-2xl bg-gradient-to-r from-[#FEF3E8]/70 via-[#FAF9F5] to-[#E6F2F4]/70 border border-[#E2E8E4] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+          className="rounded-2xl bg-gradient-to-r from-[#FAF9F5]/70 via-[#FAF9F5] to-[#FAF9F5]/70 border border-[#FAF9F5] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="max-w-2xl">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] block mb-1">
@@ -149,13 +149,13 @@ export default function AboutEmployeeFirst() {
             <h4 className="text-lg font-bold text-[#004B57] mb-1">
               Maximum Employee Engagement, Zero HR Overhead
             </h4>
-            <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed font-medium">
+            <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed font-medium">
               From creative email teaser templates and calendar invitations to automated post-session surveys
               and attendance analytics, we take complete care of logistics so your HR team never has to stress.
             </p>
           </div>
 
-          <div className="shrink-0 flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-[#E2E8E4] shadow-sm">
+          <div className="shrink-0 flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-[#FAF9F5] shadow-sm">
             <div className="w-3 h-3 rounded-full bg-[#72A93B] animate-pulse" />
             <span className="text-xs font-bold text-[#004B57]">
               Turnkey Program Delivery

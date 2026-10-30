@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.45, delay: index * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
-                className="group relative bg-white border border-[#E2E8E4] rounded-2xl p-6 md:p-7 shadow-[0_2px_16px_rgba(0,75,87,0.05)] hover:shadow-[0_12px_36px_rgba(0,75,87,0.1)] hover:border-[#FF7A1A]/35 transition-all duration-300 flex flex-col justify-between"
+                className="group relative bg-white border border-[#FAF9F5] rounded-2xl p-6 md:p-7 shadow-[0_2px_16px_rgba(0,75,87,0.05)] hover:shadow-[0_12px_36px_rgba(0,75,87,0.1)] hover:border-[#FF7A1A]/35 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="mb-5">
@@ -123,12 +123,12 @@ export default function WhyChooseUs() {
                     {reason.title}
                   </h3>
 
-                  <p className="text-[13px] sm:text-sm text-[#1A2E32]/75 leading-relaxed font-medium">
+                  <p className="text-[13px] sm:text-sm text-[#004B57]/75 leading-relaxed font-medium">
                     {reason.description}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-5 border-t border-[#E2E8E4]/70 flex items-center text-xs font-bold text-[#004B57]/80 group-hover:text-[#FF7A1A] transition-colors">
+                <div className="pt-4 mt-5 border-t border-[#FAF9F5]/70 flex items-center text-xs font-bold text-[#004B57]/80 group-hover:text-[#FF7A1A] transition-colors">
                   <span
                     className="w-1.5 h-1.5 rounded-full mr-2 shrink-0"
                     style={{ backgroundColor: colors.accent }}
@@ -146,13 +146,13 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-12 md:mt-16 bg-white border border-[#E2E8E4] rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_rgba(0,75,87,0.06)] flex flex-col sm:flex-row items-center justify-between gap-6"
+          className="mt-12 md:mt-16 bg-white border border-[#FAF9F5] rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_rgba(0,75,87,0.06)] flex flex-col sm:flex-row items-center justify-between gap-6"
         >
           <div className="text-center sm:text-left">
             <h3 className="text-lg md:text-xl font-serif font-bold text-[#004B57]">
               Ready to build a healthier, more engaged workforce?
             </h3>
-            <p className="text-xs sm:text-sm text-[#5F6B6E] font-medium mt-1">
+            <p className="text-xs sm:text-sm text-[#004B57] font-medium mt-1">
               Speak with our corporate wellness consultants to craft a plan for your organization.
             </p>
           </div>

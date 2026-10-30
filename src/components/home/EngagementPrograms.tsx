@@ -16,7 +16,7 @@ const programs = [
   {
     id: 'virtual',
     label: 'Virtual',
-    color: '#FEF3E8',
+    color: '#FAF9F5',
     activeText: '#FF7A1A',
     icon: Monitor,
     tagline: 'Engage remote and distributed teams from anywhere.',
@@ -33,7 +33,7 @@ const programs = [
   {
     id: 'in-office',
     label: 'In Office',
-    color: '#E6F2F4',
+    color: '#FAF9F5',
     activeText: '#004B57',
     icon: Building2,
     tagline: 'Bring wellness directly into your workplace.',
@@ -50,7 +50,7 @@ const programs = [
   {
     id: 'hybrid',
     label: 'Hybrid',
-    color: '#F1F9EB',
+    color: '#FAF9F5',
     activeText: '#72A93B',
     icon: Layers,
     tagline: "Flexible delivery for today's hybrid workforce.",
@@ -67,8 +67,8 @@ const programs = [
   {
     id: 'team-outing',
     label: 'Team Outing',
-    color: '#FDEDEC',
-    activeText: '#E74C3C',
+    color: '#FAF9F5',
+    activeText: '#FF7A1A',
     icon: MapPin,
     tagline: 'Strengthen culture through shared experiences.',
     image: '/images/engagement-outing.png',
@@ -126,8 +126,8 @@ export default function EngagementPrograms() {
                   }`}
                 style={{
                   backgroundColor: isActive ? active.activeText : 'white',
-                  color: isActive ? 'white' : '#1A2E32',
-                  borderColor: isActive ? active.activeText : '#E2E8E4',
+                  color: isActive ? 'white' : '#004B57',
+                  borderColor: isActive ? active.activeText : '#FAF9F5',
                   boxShadow: isActive ? `0 12px 28px ${active.activeText}25` : undefined,
                 }}
                 aria-pressed={isActive}
@@ -145,7 +145,7 @@ export default function EngagementPrograms() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-            className="rounded-3xl border border-[#E2E8E4] bg-white overflow-hidden shadow-[0_8px_40px_rgba(0,75,87,0.05)]"
+            className="rounded-3xl border border-[#FAF9F5] bg-white overflow-hidden shadow-[0_8px_40px_rgba(0,75,87,0.05)]"
           >
             <div
               className="h-1.5"
@@ -167,7 +167,7 @@ export default function EngagementPrograms() {
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004B57]">
                         {active.label} Programs
                       </h3>
-                      <p className="text-sm text-[#5F6B6E] font-medium mt-0.5">{active.tagline}</p>
+                      <p className="text-sm text-[#004B57] font-medium mt-0.5">{active.tagline}</p>
                     </div>
                   </div>
 
@@ -180,7 +180,7 @@ export default function EngagementPrograms() {
                         >
                           <Check className="w-3 h-3 text-[#004B57]" strokeWidth={3} />
                         </span>
-                        <span className="text-sm text-[#1A2E32]/85 font-medium leading-snug">
+                        <span className="text-sm text-[#004B57]/85 font-medium leading-snug">
                           {item}
                         </span>
                       </li>
@@ -202,11 +202,11 @@ export default function EngagementPrograms() {
 
                 {/* Column 3: Best for card */}
                 <div
-                  className="w-full lg:w-72 shrink-0 rounded-2xl p-6 border border-[#E2E8E4]/80 bg-[#FAF9F5] flex flex-col justify-between"
+                  className="w-full lg:w-72 shrink-0 rounded-2xl p-6 border border-[#FAF9F5]/80 bg-[#FAF9F5] flex flex-col justify-between"
                   style={{ borderTopColor: active.activeText, borderTopWidth: 3 }}
                 >
                   <div>
-                    <p className="text-xs font-extrabold uppercase tracking-wider text-[#5F6B6E] mb-2">
+                    <p className="text-xs font-extrabold uppercase tracking-wider text-[#004B57] mb-2">
                       Best for
                     </p>
                     <p className="text-sm font-bold text-[#004B57] leading-relaxed mb-5">

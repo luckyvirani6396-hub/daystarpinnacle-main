@@ -63,10 +63,10 @@ export default function AboutVisionApproach() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5"
           >
-            <div className={`${cardOnCream} p-8 md:p-10 h-full bg-[#FAF9F5] border border-[#E2E8E4]/60 shadow-[0_4px_20px_rgba(12,29,55,0.02)]`}>
+            <div className={`${cardOnCream} p-8 md:p-10 h-full bg-[#FAF9F5] border border-[#FAF9F5]/60 shadow-[0_4px_20px_rgba(12,29,55,0.02)]`}>
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-                style={{ backgroundColor: '#FEF3E8', color: '#FF7A1A' }}
+                style={{ backgroundColor: '#FAF9F5', color: '#FF7A1A' }}
               >
                 <Eye className="w-6 h-6" strokeWidth={2.2} />
               </div>
@@ -118,7 +118,7 @@ export default function AboutVisionApproach() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-30px' }}
                     transition={{ duration: 0.45, delay: index * 0.06 }}
-                    className={`group ${cardOnCream} p-5 border border-[#E2E8E4]/65 hover:border-[#FF7A1A]/30 hover:shadow-md transition-all duration-300 cursor-default`}
+                    className={`group ${cardOnCream} p-5 border border-[#FAF9F5]/65 hover:border-[#FF7A1A]/30 hover:shadow-md transition-all duration-300 cursor-default`}
                   >
                     <div className="flex items-start gap-3.5">
                       <div
@@ -140,10 +140,10 @@ export default function AboutVisionApproach() {
               })}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#E2E8E4]/80 flex items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-[#FAF9F5]/80 flex items-center justify-between">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#FF7A1A] hover:text-[#E86800] transition-colors group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#FF7A1A] hover:text-[#FF7A1A] transition-colors group"
               >
                 <span>Speak With Our Wellness Strategy Team</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

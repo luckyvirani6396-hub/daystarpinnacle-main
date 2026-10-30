@@ -80,7 +80,7 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
 
   const linkClass = isCapsule
     ? `inline-flex items-center gap-0.5 px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
-        isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
+        isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
       }`
     : `inline-flex items-center gap-1 px-3.5 xl:px-4.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
         isActive
@@ -117,14 +117,14 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-white rounded-2xl shadow-2xl shadow-black/15 border border-[#E2E8E4] overflow-hidden"
+              className="bg-white rounded-2xl shadow-2xl shadow-black/15 border border-[#FAF9F5] overflow-hidden"
             >
               {/* Top micro-header */}
-              <div className="px-5 py-2.5 bg-[#FAF9F5] border-b border-[#E2E8E4] flex items-center justify-between">
+              <div className="px-5 py-2.5 bg-[#FAF9F5] border-b border-[#FAF9F5] flex items-center justify-between">
                 <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#004B57]">
                   Corporate Wellness Dimensions
                 </span>
-                <span className="text-[11px] font-bold text-[#FF7A1A] bg-[#FEF3E8] px-2 py-0.5 rounded-full">
+                <span className="text-[11px] font-bold text-[#FF7A1A] bg-[#FAF9F5] px-2 py-0.5 rounded-full">
                   10 Programs
                 </span>
               </div>
@@ -142,15 +142,15 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                         onClick={closeDropdown}
                         className={`group flex items-center gap-3 p-2.5 rounded-xl transition-all duration-200 border ${
                           isCurrentService
-                            ? 'bg-[#FEF3E8] border-[#FF7A1A]/40 shadow-xs'
-                            : 'hover:bg-[#FAF9F5] border-transparent hover:border-[#E2E8E4]/70'
+                            ? 'bg-[#FAF9F5] border-[#FF7A1A]/40 shadow-xs'
+                            : 'hover:bg-[#FAF9F5] border-transparent hover:border-[#FAF9F5]/70'
                         }`}
                       >
                         <div
                           className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-200 ${
                             isCurrentService
                               ? 'bg-[#FF7A1A] text-white shadow-sm shadow-[#FF7A1A]/25'
-                              : 'bg-[#FEF3E8] group-hover:bg-[#FF7A1A] text-[#FF7A1A] group-hover:text-white'
+                              : 'bg-[#FAF9F5] group-hover:bg-[#FF7A1A] text-[#FF7A1A] group-hover:text-white'
                           }`}
                         >
                           <Icon className="w-4 h-4" strokeWidth={2.2} />
@@ -159,7 +159,7 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                           <div className="flex items-center justify-between gap-1">
                             <p
                               className={`text-[13px] font-bold transition-colors leading-snug truncate ${
-                                isCurrentService ? 'text-[#FF7A1A]' : 'text-[#1A2E32] group-hover:text-[#FF7A1A]'
+                                isCurrentService ? 'text-[#FF7A1A]' : 'text-[#004B57] group-hover:text-[#FF7A1A]'
                               }`}
                             >
                               {service.title}
@@ -170,7 +170,7 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                           </div>
                           <p
                             className={`text-[11px] font-medium leading-tight truncate mt-0.5 ${
-                              isCurrentService ? 'text-[#004B57]/80' : 'text-[#5F6B6E]'
+                              isCurrentService ? 'text-[#004B57]/80' : 'text-[#004B57]'
                             }`}
                           >
                             {service.desc}
@@ -183,8 +183,8 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
               </div>
 
               {/* Bottom Footer Action */}
-              <div className="px-5 py-3 bg-[#FAF9F5] border-t border-[#E2E8E4] flex items-center justify-between">
-                <span className="text-[12px] text-[#5F6B6E] font-medium">
+              <div className="px-5 py-3 bg-[#FAF9F5] border-t border-[#FAF9F5] flex items-center justify-between">
+                <span className="text-[12px] text-[#004B57] font-medium">
                   Looking for customized wellness strategies?
                 </span>
                 <Link
@@ -230,7 +230,7 @@ export function MobileServicesList({ isServicesActive, onNavigate }: MobileServi
         className={`flex items-center justify-between w-full px-4 py-3 rounded-xl text-base font-medium transition-colors ${
           isServicesActive
             ? 'text-[#FF7A1A] bg-[#FF7A1A]/5'
-            : 'text-[#1a2e32] hover:text-[#FF7A1A] hover:bg-gray-50'
+            : 'text-[#004B57] hover:text-[#FF7A1A] hover:bg-gray-50'
         }`}
       >
         Services
@@ -260,8 +260,8 @@ export function MobileServicesList({ isServicesActive, onNavigate }: MobileServi
                       onClick={handleNavigate}
                       className={`flex items-center justify-between px-4 py-2.5 text-sm rounded-lg transition-colors ${
                         isCurrentService
-                          ? 'text-[#FF7A1A] font-bold bg-[#FEF3E8]'
-                          : 'text-[#1a2e32]/85 hover:text-[#FF7A1A]'
+                          ? 'text-[#FF7A1A] font-bold bg-[#FAF9F5]'
+                          : 'text-[#004B57]/85 hover:text-[#FF7A1A]'
                       }`}
                     >
                       <span className="flex items-center gap-2">
@@ -281,8 +281,8 @@ export function MobileServicesList({ isServicesActive, onNavigate }: MobileServi
                   onClick={handleNavigate}
                   className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-colors ${
                     location.pathname === '/services'
-                      ? 'text-[#FF7A1A] bg-[#FEF3E8]'
-                      : 'text-[#FF7A1A] hover:text-[#E86800]'
+                      ? 'text-[#FF7A1A] bg-[#FAF9F5]'
+                      : 'text-[#FF7A1A] hover:text-[#FF7A1A]'
                   }`}
                 >
                   <HiChevronRight className="w-4 h-4 shrink-0" />

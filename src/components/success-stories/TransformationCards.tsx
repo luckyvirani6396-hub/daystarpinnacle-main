@@ -11,7 +11,7 @@ interface TransformationCardsProps {
 
 export default function TransformationCards({ stories }: TransformationCardsProps) {
   return (
-    <section id="transformations" className="py-14 md:py-18 relative overflow-hidden z-10 bg-[#F8FAF6]/30">
+    <section id="transformations" className="py-14 md:py-18 relative overflow-hidden z-10 bg-[#FAF9F5]/30">
       <SectionDecorations />
 
       <Container>
@@ -33,7 +33,7 @@ export default function TransformationCards({ stories }: TransformationCardsProp
               key={story.id}
               variants={fadeUp}
               whileHover={{ y: -8 }}
-              className="bg-white rounded-[24px] overflow-hidden border border-[#E2E8E4]/60 hover:border-secondary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/12 group"
+              className="bg-white rounded-[24px] overflow-hidden border border-[#FAF9F5]/60 hover:border-secondary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/12 group"
             >
               <div className="grid grid-cols-2 relative">
                 <div className="relative overflow-hidden">
@@ -44,7 +44,7 @@ export default function TransformationCards({ stories }: TransformationCardsProp
                     decoding="async"
                     className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <span className="absolute bottom-3 left-3 px-3 py-1 bg-[#153B24]/80 text-white text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+                  <span className="absolute bottom-3 left-3 px-3 py-1 bg-[#004B57]/80 text-white text-[10px] font-extrabold uppercase tracking-widest rounded-full">
                     Before
                   </span>
                 </div>
@@ -68,13 +68,13 @@ export default function TransformationCards({ stories }: TransformationCardsProp
               </div>
 
               <div className="p-7 relative">
-                <span className="inline-block text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#E8F2EA] rounded-full px-3.5 py-1.5 mb-3">
+                <span className="inline-block text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#FAF9F5] rounded-full px-3.5 py-1.5 mb-3">
                   {story.program}
                 </span>
                 <h3 className="text-lg font-extrabold text-dark mb-2 group-hover:text-[#72A93B] transition-colors">
                   {story.name}
                 </h3>
-                <p className="text-[#5c8730] font-bold text-sm flex items-center gap-2">
+                <p className="text-[#72A93B] font-bold text-sm flex items-center gap-2">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>

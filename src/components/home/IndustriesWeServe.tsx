@@ -110,12 +110,12 @@ export default function IndustriesWeServe() {
 
         {/* Tabs switcher matching TrustedBy component design */}
         <div className="flex justify-center mb-10 md:mb-12">
-          <div className="inline-flex bg-[#FAF9F5] p-1.5 rounded-full border border-[#E2E8E4] relative shadow-[0_2px_12px_rgba(0,75,87,0.03)]">
+          <div className="inline-flex bg-[#FAF9F5] p-1.5 rounded-full border border-[#FAF9F5] relative shadow-[0_2px_12px_rgba(0,75,87,0.03)]">
             {(['private', 'government', 'ngo'] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
+                className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#004B57] hover:text-[#004B57]'
                   }`}
               >
                 {activeTab === tab && (

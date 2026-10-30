@@ -32,8 +32,8 @@ export default function ConsultationSection() {
                 'Wellness program recommendations tailored to headcount',
                 'No obligation — completely free discovery call',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-[#2c4033] font-semibold">
-                  <div className="w-5 h-5 rounded-full bg-[#FEF3E8] flex items-center justify-center shrink-0 border border-[#FF7A1A]/15">
+                <li key={item} className="flex items-center gap-3 text-sm text-[#004B57] font-semibold">
+                  <div className="w-5 h-5 rounded-full bg-[#FAF9F5] flex items-center justify-center shrink-0 border border-[#FF7A1A]/15">
                     <svg viewBox="0 0 24 24" fill="none" stroke="#FF7A1A" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
@@ -49,7 +49,7 @@ export default function ConsultationSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-white rounded-[24px] p-8 md:p-10 border border-[#E2E8E4]/50 shadow-sm"
+            className="bg-white rounded-[24px] p-8 md:p-10 border border-[#FAF9F5]/50 shadow-sm"
           >
             <ConsultationForm />
           </motion.div>
@@ -113,23 +113,23 @@ export function MapSection() {
       // Premium info window with the company logo and elegant card layout in brand colors
       const infoWindow = new google.maps.InfoWindow({
         content: `
-          <div style="font-family: 'Poppins', 'Inter', sans-serif; padding: 20px; max-width: 400px; color: #1a2e32; line-height: 1.5;">
+          <div style="font-family: 'Poppins', 'Inter', sans-serif; padding: 20px; max-width: 400px; color: #004B57; line-height: 1.5;">
             
             <div style="display: flex; align-items: center; gap: 12px; margin-bottom:12px;">
-              <img src="${resolvedLogoUrl}" alt="Daystar Pinnacle" width="48" height="48" style="border-radius: 12px; object-fit: contain; background: #faf9f5; padding: 4px; border: 1.5px solid #e2e8e4;" />
+              <img src="${resolvedLogoUrl}" alt="Daystar Pinnacle" width="48" height="48" style="border-radius: 12px; object-fit: contain; background: #FAF9F5; padding: 4px; border: 1.5px solid #FAF9F5;" />
               <div>
                 <h4 style="margin: 0 0 2px 0; font-size: 16px; font-weight: 700; color: #004B57; letter-spacing: -0.01em;">Daystar Pinnacle</h4>
                 <p style="margin: 0; font-size: 11px; color: #FF7A1A; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Corporate Wellness Solutions</p>
               </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #5f6b6e;">
+            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #004B57;">
               <div style="display: flex; align-items: center; gap: 8px;">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#FF7A1A" stroke-width="2" style="flex-shrink: 0;">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span style="font-weight: 500; color: #1a2e32;">2nd Floor, A-5, Sector 57, Noida, Uttar Pradesh - 201301</span>
+                <span style="font-weight: 500; color: #004B57;">2nd Floor, A-5, Sector 57, Noida, Uttar Pradesh - 201301</span>
               </div>
               
               <div style="display: flex; align-items: center; gap: 8px;">
@@ -137,7 +137,7 @@ export function MapSection() {
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
-                <span style="font-weight: 500; color: #1a2e32;">Mon – Sat: 9:00 AM – 7:00 PM</span>
+                <span style="font-weight: 500; color: #004B57;">Mon – Sat: 9:00 AM – 7:00 PM</span>
               </div>
 
               <div style="display: flex; align-items: center; gap: 8px;">
@@ -146,7 +146,7 @@ export function MapSection() {
               </div>
             </div>
 
-            <a href="https://maps.google.com/?q=${LAT},${LNG}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 14px; background: linear-gradient(135deg, #FF7A1A 0%, #E86800 100%); color: #ffffff; text-align: center; padding: 9px 16px; border-radius: 10px; font-size: 12.5px; font-weight: 600; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.2s;">
+            <a href="https://maps.google.com/?q=${LAT},${LNG}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 14px; background: linear-gradient(135deg, #FF7A1A 0%, #FF7A1A 100%); color: #FAF9F5; text-align: center; padding: 9px 16px; border-radius: 10px; font-size: 12.5px; font-weight: 600; text-decoration: none; letter-spacing: 0.02em; transition: opacity 0.2s;">
               Get Directions →
             </a>
           </div>
@@ -221,7 +221,7 @@ export function MapSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="rounded-[24px] overflow-hidden border border-[#E2E8E4]/60 shadow-sm relative bg-[#FAF9F5]"
+          className="rounded-[24px] overflow-hidden border border-[#FAF9F5]/60 shadow-sm relative bg-[#FAF9F5]"
           style={{ height: '450px' }}
         >
           {error ? (

@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
 
-/* Brand palette — matched to Daystar Pinnacle logo */
+/* Daystar brand palette: leaf green, deep green, cream, and orange */
 @theme {
   --color-primary: #004B57;
-  --color-primary-dark: #003840;
-  --color-primary-light: #006575;
+  --color-primary-dark: #004B57;
+  --color-primary-light: #72A93B;
   --color-secondary: #72A93B;
-  --color-secondary-dark: #5C8730;
-  --color-secondary-light: #8BC34A;
+  --color-secondary-dark: #004B57;
+  --color-secondary-light: #72A93B;
   --color-accent: #FF7A1A;
-  --color-accent-dark: #E86800;
-  --color-accent-light: #FF9A52;
-  --color-background: #F8FAF6;
-  --color-surface: #FFFFFF;
-  --color-dark: #1A2E32;
-  --color-muted: #5F6B6E;
-  --color-border: #E2E8E4;
+  --color-accent-dark: #FF7A1A;
+  --color-accent-light: #FF7A1A;
+  --color-background: #FAF9F5;
+  --color-surface: #FAF9F5;
+  --color-dark: #004B57;
+  --color-muted: color-mix(in srgb, #004B57 68%, #FAF9F5);
+  --color-border: color-mix(in srgb, #004B57 14%, #FAF9F5);
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -76,7 +76,7 @@ option {
 input::placeholder,
 textarea::placeholder {
   font-family: 'Poppins', sans-serif !important;
-  color: #9ca3af !important;
+  color: #004B57 !important;
   opacity: 0.85 !important;
   font-weight: 400 !important;
 }
@@ -84,7 +84,7 @@ textarea::placeholder {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font-family: 'Poppins', sans-serif !important;
-  color: #9ca3af !important;
+  color: #004B57 !important;
   opacity: 0.85 !important;
   font-weight: 400 !important;
 }
@@ -92,7 +92,7 @@ textarea::-webkit-input-placeholder {
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   font-family: 'Poppins', sans-serif !important;
-  color: #9ca3af !important;
+  color: #004B57 !important;
   opacity: 0.85 !important;
   font-weight: 400 !important;
 }
@@ -100,7 +100,7 @@ textarea::-moz-placeholder {
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   font-family: 'Poppins', sans-serif !important;
-  color: #9ca3af !important;
+  color: #004B57 !important;
   opacity: 0.85 !important;
   font-weight: 400 !important;
 }
@@ -122,7 +122,7 @@ select:focus {
 }
 
 .skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, #FAF9F5 25%, color-mix(in srgb, #72A93B 18%, #FAF9F5) 50%, #FAF9F5 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

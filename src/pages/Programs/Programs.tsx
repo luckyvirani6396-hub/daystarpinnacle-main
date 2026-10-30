@@ -48,7 +48,7 @@ const deliveryFormats = [
     desc: 'Hands-on yoga instructors, ergonomic workstation desk audits, and onsite health check camps conducted at your offices.',
     features: ['Physical presence & live engagement', 'Custom equipment & audio setup', 'Ergonomic audit checklists'],
     accent: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
   },
   {
     icon: Laptop,
@@ -57,7 +57,7 @@ const deliveryFormats = [
     desc: 'High-definition interactive webinars and meditation sessions for remote, hybrid, and pan-India distributed workforces.',
     features: ['Interactive Q&A and polls', 'HD recording library access', 'Zero geographical limitations'],
     accent: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
   },
   {
     icon: Smartphone,
@@ -66,7 +66,7 @@ const deliveryFormats = [
     desc: 'Self-care playbooks, weekly micro-habit challenges, hydration trackers, and desk stretch cheat sheets.',
     features: ['Monthly employee newsletters', 'Step & fitness challenge sheets', 'Practical recipe & diet planners'],
     accent: '#72A93B',
-    bg: '#F1F9EB',
+    bg: '#FAF9F5',
   },
   {
     icon: UserCheck,
@@ -74,8 +74,8 @@ const deliveryFormats = [
     title: 'Leadership 1-on-1s',
     desc: 'Confidential coaching on executive stress management, peak cognitive performance, and sustainable work-life rhythms.',
     features: ['Direct founder/director access', 'Tailored burnout prevention', 'Leadership resilience frameworks'],
-    accent: '#8E44AD',
-    bg: '#F5EEF8',
+    accent: '#72A93B',
+    bg: '#FAF9F5',
   },
 ];
 
@@ -127,7 +127,7 @@ export default function Programs() {
                 initial="hidden"
                 animate="visible"
                 aria-label="Breadcrumb"
-                className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-5 flex-wrap"
+                className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#004B57] mb-5 flex-wrap"
               >
                 <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
                   Home
@@ -193,7 +193,7 @@ export default function Programs() {
                   { key: 'analytics', icon: TrendingUp, label: <>Engagement<br />Analytics</> },
                 ].map(({ key, icon: Icon, label }) => (
                   <div key={key} className="flex flex-col items-center z-10 w-24 sm:w-28">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FEF3E8] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FDF2E9] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FAF9F5] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FAF9F5] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
                       <Icon className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.8} />
                     </div>
                     <span className="text-[11.5px] sm:text-[12.5px] font-bold text-[#004B57] text-center mt-3.5 leading-snug tracking-wide">{label}</span>
@@ -253,7 +253,7 @@ export default function Programs() {
               </div>
               <div>
                 <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-wider">Tailored Programs</span>
-                <p className="text-xs text-[#2c4033] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
+                <p className="text-xs text-[#004B57] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
                   Programs designed for your workforce size.
                 </p>
               </div>
@@ -265,7 +265,7 @@ export default function Programs() {
               </div>
               <div>
                 <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-wider">Expert Coaching</span>
-                <p className="text-xs text-[#2c4033] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
+                <p className="text-xs text-[#004B57] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
                   Guidance from certified professionals.
                 </p>
               </div>
@@ -277,7 +277,7 @@ export default function Programs() {
               </div>
               <div>
                 <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-wider">Proactive Care</span>
-                <p className="text-xs text-[#2c4033] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
+                <p className="text-xs text-[#004B57] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
                   Workshops and screenings that prevent risks.
                 </p>
               </div>
@@ -289,7 +289,7 @@ export default function Programs() {
               </div>
               <div>
                 <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-wider">Measurable Impact</span>
-                <p className="text-xs text-[#2c4033] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
+                <p className="text-xs text-[#004B57] font-semibold mt-0.5 leading-relaxed max-w-[190px]">
                   Track engagement levels and feedback.
                 </p>
               </div>
@@ -354,7 +354,7 @@ export default function Programs() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.08 }}
-                className="bg-white rounded-3xl p-7 border border-[#E2E8E4] shadow-sm hover:shadow-lg hover:border-[#FF7A1A]/30 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-3xl p-7 border border-[#FAF9F5] shadow-sm hover:shadow-lg hover:border-[#FF7A1A]/30 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
@@ -375,13 +375,13 @@ export default function Programs() {
                   <h3 className="text-lg sm:text-xl font-bold text-[#004B57] mb-2.5 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium mb-6">
+                  <p className="text-xs sm:text-sm text-[#004B57] leading-relaxed font-medium mb-6">
                     {item.desc}
                   </p>
 
-                  <ul className="space-y-2.5 pt-4 border-t border-[#E2E8E4]/80">
+                  <ul className="space-y-2.5 pt-4 border-t border-[#FAF9F5]/80">
                     {item.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2 text-xs font-semibold text-[#1A2E32]/85">
+                      <li key={feat} className="flex items-start gap-2 text-xs font-semibold text-[#004B57]/85">
                         <Check className="w-3.5 h-3.5 text-[#FF7A1A] shrink-0 mt-0.5" strokeWidth={2.5} />
                         <span>{feat}</span>
                       </li>
@@ -397,8 +397,8 @@ export default function Programs() {
 
       {/* ── SECTION: Fully Supported Journeys ─────────────────────── */}
       <section className="py-20 md:py-28 relative overflow-hidden bg-white z-10">
-        <div className="absolute left-0 top-1/4 w-[280px] h-[450px] bg-gradient-to-r from-[#FEF3E8]/55 to-transparent rounded-r-full blur-xl -z-10 pointer-events-none" />
-        <div className="absolute right-0 top-1/3 w-[280px] h-[450px] bg-gradient-to-l from-[#FEF3E8]/55 to-transparent rounded-l-full blur-xl -z-10 pointer-events-none" />
+        <div className="absolute left-0 top-1/4 w-[280px] h-[450px] bg-gradient-to-r from-[#FAF9F5]/55 to-transparent rounded-r-full blur-xl -z-10 pointer-events-none" />
+        <div className="absolute right-0 top-1/3 w-[280px] h-[450px] bg-gradient-to-l from-[#FAF9F5]/55 to-transparent rounded-l-full blur-xl -z-10 pointer-events-none" />
 
         <Container>
           <SectionTitle
@@ -435,7 +435,7 @@ export default function Programs() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-white rounded-[24px] border border-[#E2E8E4]/80 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-[24px] border border-[#FAF9F5]/80 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#004B57] to-[#004B57]/80 flex items-center justify-center text-white mb-4 shadow-sm shadow-[#004B57]/15">
@@ -444,7 +444,7 @@ export default function Programs() {
                   <h4 className="text-lg font-bold text-[#004B57] mb-3 leading-snug">{card.title}</h4>
                   <ul className="space-y-2">
                     {card.features.map((feat) => (
-                      <li key={feat} className="text-xs text-[#4d5e53] font-semibold flex items-center gap-2">
+                      <li key={feat} className="text-xs text-[#004B57] font-semibold flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]" />
                         {feat}
                       </li>
@@ -514,7 +514,7 @@ export default function Programs() {
                     </span>
                   </div>
                   <h3 className={`${cardTitle} text-lg mb-2 leading-snug px-1 text-[#004B57] font-bold`}>{item.title}</h3>
-                  <p className={`${cardDescription} text-[#5F6B6E] text-xs font-semibold leading-relaxed px-2`}>{item.description}</p>
+                  <p className={`${cardDescription} text-[#004B57] text-xs font-semibold leading-relaxed px-2`}>{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -563,7 +563,7 @@ export default function Programs() {
                 </div>
                 <div className="pb-4">
                   <h3 className={`${cardTitle} text-base mb-1 text-[#004B57] font-bold`}>{item.title}</h3>
-                  <p className={`${cardDescription} text-[#5F6B6E] text-xs font-semibold leading-relaxed`}>{item.description}</p>
+                  <p className={`${cardDescription} text-[#004B57] text-xs font-semibold leading-relaxed`}>{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -587,13 +587,13 @@ export default function Programs() {
               <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-serif font-medium text-[#004B57] leading-tight mb-4">
                 Got Questions About <span className="text-[#FF7A1A] italic">Our Packages?</span>
               </h2>
-              <p className="text-sm text-[#5F6B6E] leading-relaxed font-medium mb-8">
+              <p className="text-sm text-[#004B57] leading-relaxed font-medium mb-8">
                 Everything you need to know about pricing, customization, lead times, and pan-India hybrid execution.
               </p>
 
-              <div className="bg-[#FAF9F5] rounded-2xl p-6 border border-[#E2E8E4] flex flex-col gap-4 text-left">
+              <div className="bg-[#FAF9F5] rounded-2xl p-6 border border-[#FAF9F5] flex flex-col gap-4 text-left">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] text-[#FF7A1A] flex items-center justify-center shrink-0">
                     <PhoneCall className="w-5 h-5" />
                   </div>
                   <div>
@@ -606,7 +606,7 @@ export default function Programs() {
                     </a>
                   </div>
                 </div>
-                <p className="text-[11px] text-[#5F6B6E] font-medium leading-relaxed">
+                <p className="text-[11px] text-[#004B57] font-medium leading-relaxed">
                   Our corporate advisors are available Monday to Saturday to answer questions or review your annual wellness calendar.
                 </p>
               </div>
@@ -626,7 +626,7 @@ export default function Programs() {
                     className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                       isOpen
                         ? 'bg-[#FAF9F5] border-[#FF7A1A]/30 shadow-md'
-                        : 'bg-white border-[#E2E8E4] hover:border-[#004B57]/20'
+                        : 'bg-white border-[#FAF9F5] hover:border-[#004B57]/20'
                     }`}
                   >
                     <button
@@ -639,7 +639,7 @@ export default function Programs() {
                       </span>
                       <span
                         className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                          isOpen ? 'bg-[#FF7A1A] text-white rotate-180' : 'bg-[#E6F2F4] text-[#004B57]'
+                          isOpen ? 'bg-[#FF7A1A] text-white rotate-180' : 'bg-[#FAF9F5] text-[#004B57]'
                         }`}
                       >
                         <ChevronDown className="w-4 h-4" />
@@ -653,7 +653,7 @@ export default function Programs() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
-                          className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium"
+                          className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#004B57] leading-relaxed font-medium"
                         >
                           {faq.a}
                         </motion.div>
@@ -675,7 +675,7 @@ export default function Programs() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#004B57] via-[#004B57] to-[#003840] rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center md:text-left relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10"
+            className="bg-gradient-to-r from-[#004B57] via-[#004B57] to-[#004B57] rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center md:text-left relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10"
           >
             {/* Ambient background glows */}
             <div className="absolute right-0 top-0 w-96 h-96 rounded-full bg-[#FF7A1A]/15 blur-3xl pointer-events-none" />
@@ -713,7 +713,7 @@ export default function Programs() {
             <div className="relative z-10 flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full sm:w-auto shrink-0">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 shadow-lg shadow-[#FF7A1A]/30 hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm transition-all duration-300 shadow-lg shadow-[#FF7A1A]/30 hover:scale-[1.02]"
               >
                 <span>Request Custom Proposal</span>
                 <ArrowRight className="w-4 h-4" />

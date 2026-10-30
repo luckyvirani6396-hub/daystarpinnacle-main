@@ -17,7 +17,7 @@ const faculties = [
     image: '/images/team-nutritionist.png',
     credentials: 'Registered Clinical Nutritionists',
     color: '#72A93B',
-    bg: '#EEF6E6',
+    bg: '#FAF9F5',
     points: [
       'Evidence-based workplace nutrition seminars',
       'Blood sugar & sustained afternoon energy plans',
@@ -29,8 +29,8 @@ const faculties = [
     subtitle: 'Stress Management & Emotional Resilience',
     image: '/images/team-doctor.png',
     credentials: 'Licensed Counseling Psychologists',
-    color: '#0066CC',
-    bg: '#E6F0FA',
+    color: '#004B57',
+    bg: '#FAF9F5',
     points: [
       'Burnout prevention & mindfulness coaching',
       'Confidential employee emotional support',
@@ -43,7 +43,7 @@ const faculties = [
     image: '/images/team-yoga.png',
     credentials: 'Certified Ergonomists & Yoga Masters',
     color: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
     points: [
       'Office posture & ergonomic desk corrections',
       'Corporate chair stretch & mobility masterclasses',
@@ -56,7 +56,7 @@ const faculties = [
     image: '/images/team-coordinator.png',
     credentials: 'Corporate Wellness Directors',
     color: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
     points: [
       'Tailored annual wellness calendar strategy',
       'Zero-hassle scheduling & calendar invitations',
@@ -101,10 +101,10 @@ export default function AboutClinicalTeam() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className={`group ${cardOnWhite} overflow-hidden flex flex-col h-full border border-[#E2E8E4]/80 hover:shadow-xl hover:border-[#FF7A1A]/35 transition-all duration-300`}
+              className={`group ${cardOnWhite} overflow-hidden flex flex-col h-full border border-[#FAF9F5]/80 hover:shadow-xl hover:border-[#FF7A1A]/35 transition-all duration-300`}
             >
               {/* Image Banner */}
-              <div className="w-full h-52 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#E2E8E4]/60">
+              <div className="w-full h-52 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#FAF9F5]/60">
                 <img
                   src={fac.image}
                   alt={fac.role}
@@ -136,7 +136,7 @@ export default function AboutClinicalTeam() {
 
                   <ul className="space-y-2 mb-4">
                     {fac.points.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2 text-xs text-[#1A2E32]/80 leading-relaxed font-medium">
+                      <li key={pt} className="flex items-start gap-2 text-xs text-[#004B57]/80 leading-relaxed font-medium">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#FF7A1A] shrink-0 mt-0.5" />
                         <span>{pt}</span>
                       </li>
@@ -144,7 +144,7 @@ export default function AboutClinicalTeam() {
                   </ul>
                 </div>
 
-                <div className="pt-3 border-t border-[#E2E8E4]/60 flex items-center gap-1.5 text-[11px] font-bold text-[#FF7A1A]">
+                <div className="pt-3 border-t border-[#FAF9F5]/60 flex items-center gap-1.5 text-[11px] font-bold text-[#FF7A1A]">
                   <Award className="w-3.5 h-3.5" />
                   <span>Certified Corporate Faculty</span>
                 </div>
@@ -154,25 +154,25 @@ export default function AboutClinicalTeam() {
         </div>
 
         {/* Authority & Confidentiality Trust Banner */}
-        <div className="bg-[#FAF9F5] border border-[#E2E8E4] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-[#FAF9F5] border border-[#FAF9F5] rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
+            <div className="w-11 h-11 rounded-xl bg-[#FAF9F5] text-[#FF7A1A] flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-sm sm:text-base font-bold text-[#004B57]">
                 100% Employee Data Confidentiality Guarantee
               </h4>
-              <p className="text-xs text-[#5F6B6E] font-medium leading-relaxed">
+              <p className="text-xs text-[#004B57] font-medium leading-relaxed">
                 Individual health responses and consultations remain strictly private. Employers only receive anonymized, aggregated participation metrics.
               </p>
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
-            <span className="px-3 py-1 rounded-full bg-white border border-[#E2E8E4] text-xs font-bold text-[#004B57]">
+            <span className="px-3 py-1 rounded-full bg-white border border-[#FAF9F5] text-xs font-bold text-[#004B57]">
               Certified Faculty
             </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-[#E2E8E4] text-xs font-bold text-[#004B57]">
+            <span className="px-3 py-1 rounded-full bg-white border border-[#FAF9F5] text-xs font-bold text-[#004B57]">
               Zero Spam
             </span>
           </div>

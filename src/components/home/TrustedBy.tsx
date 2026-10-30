@@ -98,7 +98,7 @@ const stats = [
 function LogoCard({ logo }: { logo: LogoItem }) {
   return (
     <div
-      className={`inline-flex items-center justify-center shrink-0 bg-white rounded-xl border border-[#E2E8E4] shadow-[0_2px_12px_rgba(0,75,87,0.05)] select-none hover:border-[#004B57]/20 transition-colors overflow-hidden ${logo.fullCard ? 'p-0' : 'px-4'
+      className={`inline-flex items-center justify-center shrink-0 bg-white rounded-xl border border-[#FAF9F5] shadow-[0_2px_12px_rgba(0,75,87,0.05)] select-none hover:border-[#004B57]/20 transition-colors overflow-hidden ${logo.fullCard ? 'p-0' : 'px-4'
         }`}
       style={{ width: '200px', height: '88px' }}
     >
@@ -123,7 +123,7 @@ function LogoCard({ logo }: { logo: LogoItem }) {
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#72A93B]" />
           </div>
-          <span className="text-[10px] text-[#5F6B6E] font-semibold leading-tight max-w-[170px] truncate px-1">
+          <span className="text-[10px] text-[#004B57] font-semibold leading-tight max-w-[170px] truncate px-1">
             {logo.name}
           </span>
         </div>
@@ -246,12 +246,12 @@ export default function TrustedBy() {
 
           {/* Elegant Tabs Switcher */}
           <div className="flex justify-center mt-8 mb-4 md:mt-10 md:mb-6">
-            <div className="inline-flex bg-[#FAF9F5] p-1.5 rounded-full border border-[#E2E8E4] relative shadow-[0_2px_12px_rgba(0,75,87,0.03)]">
+            <div className="inline-flex bg-[#FAF9F5] p-1.5 rounded-full border border-[#FAF9F5] relative shadow-[0_2px_12px_rgba(0,75,87,0.03)]">
               {(['private', 'government', 'ngo'] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#5F6B6E] hover:text-[#004B57]'
+                  className={`relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'text-white' : 'text-[#004B57] hover:text-[#004B57]'
                     }`}
                 >
                   {activeTab === tab && (
@@ -293,7 +293,7 @@ export default function TrustedBy() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative max-w-2xl mx-auto text-center w-full"
           >
-            <div className="bg-[#FAF9F5] rounded-xl border border-[#E2E8E4] shadow-[0_2px_16px_rgba(0,75,87,0.05)] px-4 py-3 md:px-5 md:py-4">
+            <div className="bg-[#FAF9F5] rounded-xl border border-[#FAF9F5] shadow-[0_2px_16px_rgba(0,75,87,0.05)] px-4 py-3 md:px-5 md:py-4">
               <p className={quoteText}>
                 &ldquo;Trusted by HR leaders and people teams who believe employee wellbeing is
                 the foundation of lasting business success.&rdquo;

@@ -26,15 +26,15 @@ export default function ResourcesDropdown({ isActive, isLight = false, isCapsule
 
   const linkClass = isCapsule
     ? `inline-flex items-center gap-0.5 px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
-        isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
+        isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
       }`
     : `inline-flex items-center gap-1 px-3.5 xl:px-4.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
         isActive
           ? isLight
-            ? 'text-[#D2F154] bg-white/10'
+            ? 'text-[#72A93B] bg-white/10'
             : 'text-secondary bg-secondary/10'
           : isLight
-          ? 'text-white/85 hover:text-[#D2F154] hover:bg-white/5'
+          ? 'text-white/85 hover:text-[#72A93B] hover:bg-white/5'
           : 'text-dark/70 hover:text-secondary hover:bg-secondary/5'
       }`;
 
@@ -68,7 +68,7 @@ export default function ResourcesDropdown({ isActive, isLight = false, isCapsule
                     onClick={closeDropdown}
                     className={`flex items-center justify-between px-5 py-3 text-sm transition-colors ${
                       isCurrentItem
-                        ? 'bg-[#FEF3E8] text-[#FF7A1A] font-bold'
+                        ? 'bg-[#FAF9F5] text-[#FF7A1A] font-bold'
                         : 'text-dark hover:bg-[#FF7A1A]/10 hover:text-[#FF7A1A]'
                     } ${
                       index !== resourcesItems.length - 1 ? 'border-b border-border' : ''
@@ -111,7 +111,7 @@ export function MobileResourcesList({ isResourcesActive, onNavigate }: MobileRes
         className={`flex items-center justify-between w-full px-4 py-3 rounded-xl text-base font-medium transition-colors ${
           isResourcesActive
             ? 'text-[#FF7A1A] bg-[#FF7A1A]/5'
-            : 'text-[#1a2e32] hover:text-[#FF7A1A] hover:bg-gray-50'
+            : 'text-[#004B57] hover:text-[#FF7A1A] hover:bg-gray-50'
         }`}
       >
         Resources
@@ -134,8 +134,8 @@ export function MobileResourcesList({ isResourcesActive, onNavigate }: MobileRes
                   onClick={handleNavigate}
                   className={`flex items-center justify-between px-4 py-2.5 text-sm rounded-lg transition-colors ${
                     isCurrentItem
-                      ? 'text-[#FF7A1A] font-bold bg-[#FEF3E8]'
-                      : 'text-[#1a2e32]/85 hover:text-[#FF7A1A]'
+                      ? 'text-[#FF7A1A] font-bold bg-[#FAF9F5]'
+                      : 'text-[#004B57]/85 hover:text-[#FF7A1A]'
                   }`}
                 >
                   <span className="flex items-center gap-2">

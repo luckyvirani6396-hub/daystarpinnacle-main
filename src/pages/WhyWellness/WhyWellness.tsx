@@ -49,10 +49,10 @@ export default function WhyWellness() {
   return (
     <>
       {/* ── Hero Section ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#FFFDF8] via-[#F8F7F2] to-[#EEF5E8] pt-8 pb-16 lg:pt-12 lg:pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#FAF9F5] via-[#FAF9F5] to-[#FAF9F5] pt-8 pb-16 lg:pt-12 lg:pb-24">
         {/* Blurry decorations */}
-        <div className="absolute left-[-120px] top-0 w-[520px] h-[520px] rounded-full bg-[#DDEFCF] blur-[140px] opacity-70" />
-        <div className="absolute right-[-180px] bottom-[-150px] w-[420px] h-[420px] rounded-full bg-[#EAF4DD] blur-[120px] opacity-80" />
+        <div className="absolute left-[-120px] top-0 w-[520px] h-[520px] rounded-full bg-[#FAF9F5] blur-[140px] opacity-70" />
+        <div className="absolute right-[-180px] bottom-[-150px] w-[420px] h-[420px] rounded-full bg-[#FAF9F5] blur-[120px] opacity-80" />
 
         <Container className="relative z-10 w-full px-6">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -63,7 +63,7 @@ export default function WhyWellness() {
               animate="visible"
               className="flex items-center gap-3 mb-5"
             >
-              <div className="w-8 h-8 rounded-full bg-[#5c8730]/10 flex items-center justify-center text-[#5c8730]">
+              <div className="w-8 h-8 rounded-full bg-[#72A93B]/10 flex items-center justify-center text-[#72A93B]">
                 <BarChart2 className="w-4.5 h-4.5" />
               </div>
               <span className="text-xs font-extrabold tracking-wider uppercase text-[#004B57]">
@@ -76,15 +76,15 @@ export default function WhyWellness() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#153B24] leading-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#004B57] leading-tight mb-6"
             >
               Workplace Wellness is a <br />
-              <span className="italic font-normal text-[#5c8730]">Strategic High-Return</span> Investment
+              <span className="italic font-normal text-[#72A93B]">Strategic High-Return</span> Investment
             </motion.h1>
 
             {/* Underline divider */}
             <motion.div variants={fadeUp} initial="hidden" animate="visible" className="mb-6 flex justify-center">
-              <svg className="w-48 h-2.5 text-[#5c8730]/75" viewBox="0 0 300 10" fill="currentColor">
+              <svg className="w-48 h-2.5 text-[#72A93B]/75" viewBox="0 0 300 10" fill="currentColor">
                 <path d="M1 5C50 2 150 2 299 5C150 7 50 7 1 5Z" />
               </svg>
             </motion.div>
@@ -94,7 +94,7 @@ export default function WhyWellness() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-[#2c4033] text-sm md:text-base lg:text-lg max-w-2xl leading-relaxed mb-8 font-medium"
+              className="text-[#004B57] text-sm md:text-base lg:text-lg max-w-2xl leading-relaxed mb-8 font-medium"
             >
               Absenteeism, healthcare inflation, and voluntary employee turnover cost organizations millions annually. Our B2B packages are designed to optimize health metrics, reduce healthcare premiums, and bolster employee loyalty.
             </motion.p>
@@ -105,7 +105,7 @@ export default function WhyWellness() {
                 <span>Book Corporate Assessment</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button href="#roi-calculator" variant="outline" size="lg" className="font-bold text-[#0e261a] border-[#0e261a] hover:bg-[#0e261a]/5">
+              <Button href="#roi-calculator" variant="outline" size="lg" className="font-bold text-[#004B57] border-[#004B57] hover:bg-[#004B57]/5">
                 <span>Calculate Your ROI</span>
               </Button>
             </motion.div>
@@ -133,9 +133,9 @@ export default function WhyWellness() {
               <motion.div
                 key={point.title}
                 variants={fadeUp}
-                className="bg-[#F8FAF6]/60 border border-[#E2E8E4]/60 rounded-3xl p-8 flex flex-col items-start hover:border-secondary/40 transition-all duration-300 hover:shadow-lg"
+                className="bg-[#FAF9F5]/60 border border-[#FAF9F5]/60 rounded-3xl p-8 flex flex-col items-start hover:border-secondary/40 transition-all duration-300 hover:shadow-lg"
               >
-                <div className="w-12 h-12 rounded-2xl bg-[#5c8730]/15 flex items-center justify-center text-[#5c8730] mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#72A93B]/15 flex items-center justify-center text-[#72A93B] mb-6">
                   <point.icon className="w-6 h-6" />
                 </div>
                 <h4 className="text-lg font-bold text-dark mb-3">{point.title}</h4>
@@ -147,7 +147,7 @@ export default function WhyWellness() {
       </section>
 
       {/* ── B2B ROI & Data-backed Benefits Section ── */}
-      <section className="py-20 bg-gradient-to-b from-white to-[#F8FAF6] z-10 relative">
+      <section className="py-20 bg-gradient-to-b from-white to-[#FAF9F5] z-10 relative">
         <Container>
           <SectionTitle
             subtitle="Data-Backed Case"
@@ -157,11 +157,11 @@ export default function WhyWellness() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
             {benefits.map((benefit) => (
-              <div key={benefit.label} className="bg-white rounded-3xl border border-[#E2E8E4]/80 p-8 shadow-sm flex flex-col">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#E8F2EA] rounded-full px-3 py-1 mb-4 w-fit">
+              <div key={benefit.label} className="bg-white rounded-3xl border border-[#FAF9F5]/80 p-8 shadow-sm flex flex-col">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#FAF9F5] rounded-full px-3 py-1 mb-4 w-fit">
                   {benefit.source}
                 </span>
-                <div className="text-4xl font-extrabold text-[#153B24] mb-2">{benefit.metric}</div>
+                <div className="text-4xl font-extrabold text-[#004B57] mb-2">{benefit.metric}</div>
                 <h4 className="text-base font-bold text-dark mb-3">{benefit.label}</h4>
                 <p className="text-muted text-sm leading-relaxed mb-6 flex-1">{benefit.description}</p>
                 <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider mt-auto pt-4 border-t border-border">
@@ -180,14 +180,14 @@ export default function WhyWellness() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Calculator explanation */}
             <div className="lg:col-span-5 text-left">
-              <span className="text-xs font-bold text-[#5c8730] uppercase tracking-wider block mb-3">Simulation</span>
+              <span className="text-xs font-bold text-[#72A93B] uppercase tracking-wider block mb-3">Simulation</span>
               <h3 className="text-3xl font-extrabold text-dark leading-tight mb-5 font-serif">
                 Calculate Employee Wellness Cost Savings
               </h3>
-              <p className="text-[#2c4033] text-sm md:text-[15px] leading-relaxed mb-6">
+              <p className="text-[#004B57] text-sm md:text-[15px] leading-relaxed mb-6">
                 Turnover and employee replacement are one of the highest silent costs of modern business. When a staff member suffers from severe stress or lack of health support, they are 2.6x more likely to look for another job.
               </p>
-              <p className="text-[#2c4033] text-sm md:text-[15px] leading-relaxed mb-8">
+              <p className="text-[#004B57] text-sm md:text-[15px] leading-relaxed mb-8">
                 Adjust the sliders on the simulator to calculate the baseline wellness loss for your company and see how our tailored B2B solutions immediately save costs.
               </p>
               <ul className="space-y-3.5">
@@ -215,10 +215,10 @@ export default function WhyWellness() {
       </section>
 
       {/* ── Bottom Call To Action ── */}
-      <section className="py-20 bg-gradient-to-br from-[#003D34] to-[#01231E] text-white overflow-hidden relative">
+      <section className="py-20 bg-gradient-to-br from-[#004B57] to-[#004B57] text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#72A93B]/10 via-transparent to-transparent pointer-events-none" />
         <Container className="relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
-          <Leaf className="w-12 h-12 text-[#cce452] mb-6" />
+          <Leaf className="w-12 h-12 text-[#72A93B] mb-6" />
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium mb-6 leading-tight">
             Protect Your Workplace Capital
           </h2>

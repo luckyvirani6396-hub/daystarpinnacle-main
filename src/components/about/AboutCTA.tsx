@@ -14,7 +14,7 @@ import {
 
 export default function AboutCTA() {
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16 border-t border-[#E2E8E4]/60">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/6 blur-[100px]" />
         <div className="absolute left-[-8%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#004B57]/5 blur-[90px]" />

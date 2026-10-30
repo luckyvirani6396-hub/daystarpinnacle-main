@@ -41,7 +41,7 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               initial="hidden"
               animate="visible"
               aria-label="Breadcrumb"
-              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-5 flex-wrap"
+              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#004B57] mb-5 flex-wrap"
             >
               <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
                 Home
@@ -91,8 +91,8 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
             {highlightBenefits.length > 0 && (
               <motion.ul variants={fadeUp} initial="hidden" animate="visible" className="space-y-3 mb-8 w-full max-w-md">
                 {highlightBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-2.5 text-sm text-[#2c4033] font-semibold leading-relaxed">
-                    <div className="w-5 h-5 rounded-full bg-[#FEF3E8] flex items-center justify-center shrink-0 mt-0.5 border border-[#FF7A1A]/10">
+                  <li key={benefit} className="flex items-start gap-2.5 text-sm text-[#004B57] font-semibold leading-relaxed">
+                    <div className="w-5 h-5 rounded-full bg-[#FAF9F5] flex items-center justify-center shrink-0 mt-0.5 border border-[#FF7A1A]/10">
                       <Check className="w-3 h-3 text-[#FF7A1A]" strokeWidth={3} />
                     </div>
                     <span>{benefit}</span>
@@ -148,13 +148,13 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mt-16 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-5 sm:p-6 lg:p-7.5 w-full z-20"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-0 sm:divide-x sm:divide-[#E2E8E4]/70">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-0 sm:divide-x sm:divide-[#FAF9F5]/70">
               {service.includes.slice(0, 4).map((item) => (
                 <div key={item} className="flex items-center gap-3.5 px-2 sm:px-5 py-1">
                   <div className="w-9 h-9 rounded-full bg-[#FF7A1A]/10 flex items-center justify-center shrink-0 text-[#FF7A1A] border border-[#FF7A1A]/5 shadow-sm">
                     <Check className="w-4.5 h-4.5" strokeWidth={2.5} />
                   </div>
-                  <p className="text-xs text-[#2c4033] font-semibold leading-snug">{item}</p>
+                  <p className="text-xs text-[#004B57] font-semibold leading-snug">{item}</p>
                 </div>
               ))}
             </div>

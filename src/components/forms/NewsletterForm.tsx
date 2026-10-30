@@ -26,7 +26,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
 
   return (
     <div
-      className={`relative overflow-hidden bg-[#FAF9F5] rounded-2xl border border-[#E2E8E4]/80 ${
+      className={`relative overflow-hidden bg-[#FAF9F5] rounded-2xl border border-[#FAF9F5]/80 ${
         compact ? 'p-5' : 'p-6 md:p-8 lg:p-10'
       }`}
     >
@@ -35,7 +35,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
         Stay Updated
       </h3>
       <p
-        className={`text-[#5F6B6E] font-medium leading-relaxed ${
+        className={`text-[#004B57] font-medium leading-relaxed ${
           compact ? 'text-sm mb-5' : 'text-sm md:text-base mb-6 max-w-2xl'
         }`}
       >
@@ -59,9 +59,9 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
                 required: 'Email is required',
                 pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' },
               })}
-              className={`w-full min-w-0 px-4 py-3 rounded-xl border bg-white text-[#1a2e32] placeholder:text-[#5F6B6E]/60 focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/20 transition-colors ${
+              className={`w-full min-w-0 px-4 py-3 rounded-xl border bg-white text-[#004B57] placeholder:text-[#004B57]/60 focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/20 transition-colors ${
                 compact ? '' : 'sm:flex-1'
-              } ${errors.email ? 'border-red-400' : 'border-[#E2E8E4]'}`}
+              } ${errors.email ? 'border-red-400' : 'border-[#FAF9F5]'}`}
               placeholder="Enter your email"
             />
             <Button
@@ -69,7 +69,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
               variant="primary"
               disabled={isSubmitting}
               fullWidth={compact}
-              className={compact ? '' : 'sm:px-10 shrink-0 bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold shadow-md shadow-[#FF7A1A]/20'}
+              className={compact ? '' : 'sm:px-10 shrink-0 bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold shadow-md shadow-[#FF7A1A]/20'}
             >
               {isSubmitting ? '...' : 'Subscribe'}
             </Button>

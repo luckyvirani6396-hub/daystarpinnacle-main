@@ -61,7 +61,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-[#FEF3E8]/65 rounded-[24px] p-8 md:p-12 border border-[#E2E8E4]/60 flex flex-col md:flex-row items-center justify-between gap-8"
+            className="bg-[#FAF9F5]/65 rounded-[24px] p-8 md:p-12 border border-[#FAF9F5]/60 flex flex-col md:flex-row items-center justify-between gap-8"
           >
             <div className="text-center md:text-left">
               <span className="inline-block text-[11px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-white rounded-full px-4 py-2 mb-4 border border-[#FF7A1A]/15 shadow-sm">
@@ -76,7 +76,7 @@ export default function Services() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#FF7A1A]/15 hover:scale-[1.02] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#FF7A1A]/15 hover:scale-[1.02] hover:-translate-y-0.5"
             >
               <span>Book Consultation</span>
               <HiArrowRight className="w-4 h-4" />

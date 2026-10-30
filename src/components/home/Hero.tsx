@@ -40,10 +40,10 @@ const slideFromBottom = {
 };
 
 const highlights = [
-  { line1: 'Healthier', line2: 'Workforce', icon: Users, color: '#FF7A1A', bg: '#FEECE0' },
-  { line1: 'Higher', line2: 'Productivity', icon: TrendingUp, color: '#2B7FFF', bg: '#E5F0FD' },
-  { line1: 'Reduced', line2: 'Absenteeism', icon: Shield, color: '#2E7D52', bg: '#E3F2E9' },
-  { line1: 'Better', line2: 'Work Culture', icon: Heart, color: '#E04F4F', bg: '#FDE8E8' },
+  { line1: 'Healthier', line2: 'Workforce', icon: Users, color: '#FF7A1A', bg: '#FAF9F5' },
+  { line1: 'Higher', line2: 'Productivity', icon: TrendingUp, color: '#004B57', bg: '#FAF9F5' },
+  { line1: 'Reduced', line2: 'Absenteeism', icon: Shield, color: '#004B57', bg: '#FAF9F5' },
+  { line1: 'Better', line2: 'Work Culture', icon: Heart, color: '#FF7A1A', bg: '#FAF9F5' },
 ];
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
           />
           {/* Tablet & Desktop (>= 640px): 16:9 landscape photo with subject on right */}
           <img
-            src="/images/hero-corporate-wellness-new.jpg?v=2"
+            src="/images/Fresh Green Office Stretch.png?v=2"
             alt="Corporate health and wellness program employees stretching at desk"
             loading="eager"
             decoding="async"
@@ -125,7 +125,7 @@ export default function Hero() {
               <motion.div whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto px-5 sm:px-7 py-3 sm:py-4 rounded-full bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-[#FF7A1A]/25 transition-colors duration-300"
+                  className="w-full sm:w-auto px-5 sm:px-7 py-3 sm:py-4 rounded-full bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-[#FF7A1A]/25 transition-colors duration-300"
                 >
                   <Calendar className="w-4 h-4 sm:w-4.5 sm:h-4.5" strokeWidth={2.2} />
                   <span>Schedule Consultation</span>

@@ -25,7 +25,7 @@ const pillars = [
       'Counteracting sedentary desk habits through biomechanical posture corrections, chair yoga, and movement breaks that eliminate musculoskeletal fatigue.',
     icon: Activity,
     color: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
     highlights: [
       'Desk posture & ergonomic alignment',
       'Chair mobility & micro-stretch breaks',
@@ -39,7 +39,7 @@ const pillars = [
       'Equipping employees with practical psychological tools to decompress high-stress cycles, avoid chronic burnout, and restore mental focus.',
     icon: Brain,
     color: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
     highlights: [
       'Stress mitigation & breathwork toolkits',
       'Burnout detection & boundary management',
@@ -53,7 +53,7 @@ const pillars = [
       'Translating nutritional science into sustainable workday eating habits that stabilize blood glucose, eliminate afternoon crashes, and boost clarity.',
     icon: Apple,
     color: '#72A93B',
-    bg: '#EEF6E6',
+    bg: '#FAF9F5',
     highlights: [
       'Sustained afternoon focus meal plans',
       'Healthy office snacking & hydration habits',
@@ -66,8 +66,8 @@ const pillars = [
     description:
       'Focusing on root-cause health preservation through circadian sleep optimization, lifestyle disease awareness, and proactive self-care.',
     icon: ShieldCheck,
-    color: '#0066CC',
-    bg: '#E6F0FA',
+    color: '#004B57',
+    bg: '#FAF9F5',
     highlights: [
       'Circadian rhythm & restorative sleep habits',
       'Lifestyle risk factors & preventive habits',
@@ -78,7 +78,7 @@ const pillars = [
 
 export default function AboutWellnessPillars() {
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16 border-t border-[#E2E8E4]/60">
+    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-6%] top-[15%] w-[40%] h-[40%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute left-[-6%] bottom-[15%] w-[38%] h-[38%] rounded-full bg-[#004B57]/4 blur-[90px]" />
@@ -118,7 +118,7 @@ export default function AboutWellnessPillars() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className={`${cardOnCream} p-6 sm:p-7 flex flex-col justify-between border border-[#E2E8E4]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_10px_30px_rgba(12,29,55,0.07)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}
+                className={`${cardOnCream} p-6 sm:p-7 flex flex-col justify-between border border-[#FAF9F5]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_10px_30px_rgba(12,29,55,0.07)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -128,7 +128,7 @@ export default function AboutWellnessPillars() {
                     >
                       {pillar.tag}
                     </span>
-                    <span className="text-xs font-semibold text-[#1A2E32]/40">
+                    <span className="text-xs font-semibold text-[#004B57]/40">
                       0{index + 1}
                     </span>
                   </div>
@@ -140,18 +140,18 @@ export default function AboutWellnessPillars() {
                     <Icon className="w-6 h-6" strokeWidth={2.2} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#1A2E32] mb-2 leading-snug">
+                  <h3 className="text-lg font-bold text-[#004B57] mb-2 leading-snug">
                     {pillar.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed mb-6 font-medium">
+                  <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed mb-6 font-medium">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#E2E8E4]/70 space-y-2">
+                <div className="pt-4 border-t border-[#FAF9F5]/70 space-y-2">
                   {pillar.highlights.map((hl, hIdx) => (
-                    <div key={hIdx} className="flex items-start gap-2 text-xs text-[#1A2E32]/85">
+                    <div key={hIdx} className="flex items-start gap-2 text-xs text-[#004B57]/85">
                       <CheckCircle2
                         className="w-3.5 h-3.5 mt-0.5 shrink-0"
                         style={{ color: pillar.color }}

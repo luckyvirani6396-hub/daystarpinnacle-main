@@ -44,7 +44,7 @@ export default function Logo({
           }`}
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: light ? "#FFFFFF" : "#FF7A1A",
+            color: light ? "#FAF9F5" : "#FF7A1A",
             lineHeight: 1,
           }}
         >
@@ -60,7 +60,7 @@ export default function Logo({
           }`}
           style={{
             fontFamily: "'Cormorant Garamond', serif",
-            color: light ? "rgba(255, 255, 255, 0.85)" : "#0a222d",
+            color: light ? "rgba(255, 255, 255, 0.85)" : "#004B57",
             lineHeight: 1,
           }}
         >

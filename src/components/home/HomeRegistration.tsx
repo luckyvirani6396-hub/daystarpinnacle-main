@@ -56,10 +56,10 @@ export default function HomeRegistration() {
             <ul className="space-y-3 mb-8">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="w-5 h-5 rounded-md bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-md bg-[#FAF9F5] text-[#FF7A1A] flex items-center justify-center shrink-0 mt-0.5">
                     <ClipboardList className="w-3 h-3" strokeWidth={2.5} />
                   </span>
-                  <span className={`${sectionBody} text-[#1A2E32]/90`}>{item}</span>
+                  <span className={`${sectionBody} text-[#004B57]/90`}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -67,13 +67,13 @@ export default function HomeRegistration() {
             <div className="space-y-3">
               <a
                 href={`tel:${CONTACT_PHONE_TEL}`}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#E2E8E4] hover:border-[#FF7A1A]/30 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#FAF9F5] hover:border-[#FF7A1A]/30 transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <HiPhone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#5F6B6E]">
+                  <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#004B57]">
                     Call Us
                   </p>
                   <p className="text-sm font-bold text-[#004B57]">{CONTACT_PHONE}</p>
@@ -82,13 +82,13 @@ export default function HomeRegistration() {
 
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#E2E8E4] hover:border-[#FF7A1A]/30 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#FAF9F5] hover:border-[#FF7A1A]/30 transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <HiMail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#5F6B6E]">
+                  <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#004B57]">
                     Email Us
                   </p>
                   <p className="text-sm font-bold text-[#004B57] break-all">{CONTACT_EMAIL}</p>
@@ -105,15 +105,15 @@ export default function HomeRegistration() {
             className="lg:col-span-8"
           >
             <div className={`${cardOnWhite} p-6 sm:p-7 md:p-8`}>
-              <div className="flex items-center gap-3 mb-5 pb-5 border-b border-[#E2E8E4]">
-                <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] shrink-0">
+              <div className="flex items-center gap-3 mb-5 pb-5 border-b border-[#FAF9F5]">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <Building2 className="w-5 h-5" strokeWidth={2.2} />
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004B57] leading-tight">
                     Register Your Interest
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed font-medium mt-0.5">
+                  <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed font-medium mt-0.5">
                     Share your company details and we&apos;ll prepare a customized wellness proposal.
                   </p>
                 </div>

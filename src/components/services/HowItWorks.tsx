@@ -52,12 +52,12 @@ export default function HowItWorks() {
             <motion.div
               key={step}
               variants={fadeUp}
-              className="bg-white rounded-[24px] border border-[#E2E8E4]/60 p-6 hover:border-[#FF7A1A]/40 hover:shadow-lg hover:shadow-[#FF7A1A]/5 transition-all duration-300 relative"
+              className="bg-white rounded-[24px] border border-[#FAF9F5]/60 p-6 hover:border-[#FF7A1A]/40 hover:shadow-lg hover:shadow-[#FF7A1A]/5 transition-all duration-300 relative"
             >
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] mb-3 block">
                 Step {step}
               </span>
-              <div className="w-12 h-12 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A] mb-4 shadow-sm border border-[#FF7A1A]/10">
+              <div className="w-12 h-12 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] mb-4 shadow-sm border border-[#FF7A1A]/10">
                 <Icon className="w-6 h-6" strokeWidth={1.8} />
               </div>
               <h3 className="text-lg font-bold text-dark mb-2">{title}</h3>

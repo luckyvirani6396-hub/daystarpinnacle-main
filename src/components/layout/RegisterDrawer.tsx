@@ -93,7 +93,7 @@ export default function RegisterDrawer() {
             whileTap={{ scale: 0.96 }}
             onClick={open}
             aria-label="Open registration form"
-            className="fixed right-0 top-1/2 -translate-y-1/2 z-[10000] flex items-center gap-2.5 pl-3.5 pr-2.5 py-5 rounded-l-2xl rounded-r-none bg-[#004B57] text-white shadow-[-6px_0_28px_rgba(0,75,87,0.35)] border border-r-0 border-white/20 hover:bg-[#003840] transition-colors duration-300 group"
+            className="fixed right-0 top-1/2 -translate-y-1/2 z-[10000] flex items-center gap-2.5 pl-3.5 pr-2.5 py-5 rounded-l-2xl rounded-r-none bg-[#004B57] text-white shadow-[-6px_0_28px_rgba(0,75,87,0.35)] border border-r-0 border-white/20 hover:bg-[#004B57] transition-colors duration-300 group"
           >
             <span className="flex flex-col items-center gap-2">
               <motion.span
@@ -166,12 +166,12 @@ export default function RegisterDrawer() {
                 className="relative z-10 flex flex-col h-full"
               >
                 {/* Header */}
-                <div className="shrink-0 px-5 sm:px-6 pt-5 pb-4 border-b border-[#E2E8E4] bg-[#FAF9F5]/95 backdrop-blur-sm">
+                <div className="shrink-0 px-5 sm:px-6 pt-5 pb-4 border-b border-[#FAF9F5] bg-[#FAF9F5]/95 backdrop-blur-sm">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <motion.span
                         variants={itemVariants}
-                        className="inline-flex text-[10px] font-extrabold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-[#FEF3E8] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-2"
+                        className="inline-flex text-[10px] font-extrabold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-[#FAF9F5] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-2"
                       >
                         Quick Register
                       </motion.span>
@@ -184,7 +184,7 @@ export default function RegisterDrawer() {
                       </motion.h2>
                       <motion.p
                         variants={itemVariants}
-                        className="text-sm text-[#5F6B6E] font-medium mt-1.5"
+                        className="text-sm text-[#004B57] font-medium mt-1.5"
                       >
                         Share your details — we&apos;ll design a wellness plan for your team.
                       </motion.p>
@@ -196,7 +196,7 @@ export default function RegisterDrawer() {
                       aria-label="Close registration form"
                       whileHover={{ rotate: 90, scale: 1.05 }}
                       whileTap={{ scale: 0.92 }}
-                      className="shrink-0 w-10 h-10 rounded-xl border border-[#E2E8E4] bg-white flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-colors"
+                      className="shrink-0 w-10 h-10 rounded-xl border border-[#FAF9F5] bg-white flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-colors"
                     >
                       <X className="w-5 h-5" strokeWidth={2.2} />
                     </motion.button>

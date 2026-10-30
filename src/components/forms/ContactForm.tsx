@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Lock } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import type { ContactFormData } from '../../types';
 import { submitContactForm } from '../../services/api';
 
@@ -58,13 +58,13 @@ export default function ContactForm({
       <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-10 px-6 bg-gradient-to-br from-[#FEF3E8] to-[#FAF9F5] rounded-2xl border border-[#FF7A1A]/25 shadow-sm"
+        className="text-center py-10 px-6 bg-gradient-to-br from-[#FAF9F5] to-[#FAF9F5] rounded-2xl border border-[#FF7A1A]/25 shadow-sm"
       >
         <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white shadow-sm border border-[#FF7A1A]/20 flex items-center justify-center text-[#FF7A1A]">
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <h3 className="text-xl font-serif font-bold text-[#004B57] mb-2">Inquiry Received!</h3>
-        <p className="text-sm text-[#1A2E32]/80 font-medium max-w-md mx-auto leading-relaxed">
+        <p className="text-sm text-[#004B57]/80 font-medium max-w-md mx-auto leading-relaxed">
           Thank you for reaching out. Our corporate wellness specialist will review your details and contact you within 24 hours.
         </p>
         {!autoCloseAfterMs && (
@@ -95,8 +95,8 @@ export default function ContactForm({
               required: 'Full name is required',
               minLength: { value: 2, message: 'At least 2 characters' },
             })}
-            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
-              errors.name ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#004B57] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.name ? 'border-red-400 bg-red-50/20' : 'border-[#FAF9F5]'
             }`}
             placeholder="John Doe"
           />
@@ -114,8 +114,8 @@ export default function ContactForm({
               required: 'Work email is required',
               pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Please enter a valid email' },
             })}
-            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
-              errors.email ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#004B57] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.email ? 'border-red-400 bg-red-50/20' : 'border-[#FAF9F5]'
             }`}
             placeholder="john@company.com"
           />
@@ -136,8 +136,8 @@ export default function ContactForm({
               required: 'Phone number is required',
               minLength: { value: 10, message: 'Enter a valid 10-digit number' },
             })}
-            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
-              errors.phone ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#004B57] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.phone ? 'border-red-400 bg-red-50/20' : 'border-[#FAF9F5]'
             }`}
             placeholder="+91 98XXXXXXXX"
           />
@@ -152,8 +152,8 @@ export default function ContactForm({
             id={fieldId('companyName')}
             type="text"
             {...register('companyName', { required: 'Company name is required' })}
-            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
-              errors.companyName ? 'border-red-400 bg-red-50/20' : 'border-[#E2E8E4]'
+            className={`w-full px-3.5 py-2.5 rounded-xl border bg-[#FAF9F5]/40 text-sm text-[#004B57] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none ${
+              errors.companyName ? 'border-red-400 bg-red-50/20' : 'border-[#FAF9F5]'
             }`}
             placeholder="Acme Technologies Ltd."
           />
@@ -170,7 +170,7 @@ export default function ContactForm({
           <select
             id={fieldId('employeeCount')}
             {...register('employeeCount')}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[#FAF9F5] bg-[#FAF9F5]/40 text-sm text-[#004B57] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
           >
             <option value="">Select team size</option>
             <option value="20-50">20 – 50 Employees</option>
@@ -187,7 +187,7 @@ export default function ContactForm({
           <select
             id={fieldId('wellnessProgram')}
             {...register('wellnessProgram')}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-[#FAF9F5] bg-[#FAF9F5]/40 text-sm text-[#004B57] focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none cursor-pointer"
           >
             <option value="">Select interest area</option>
             <option value="all-in-one">Complete Corporate Wellness Plan</option>
@@ -209,7 +209,7 @@ export default function ContactForm({
           id={fieldId('message')}
           rows={compact ? 2 : 3}
           {...register('message')}
-          className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8E4] bg-[#FAF9F5]/40 text-sm text-[#1A2E32] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none resize-none"
+          className="w-full px-3.5 py-2.5 rounded-xl border border-[#FAF9F5] bg-[#FAF9F5]/40 text-sm text-[#004B57] placeholder:text-gray-400 focus:bg-white focus:border-[#FF7A1A] focus:ring-2 focus:ring-[#FF7A1A]/15 transition-all outline-none resize-none"
           placeholder="Briefly tell us about your goals, preferred schedule, or team requirements..."
         />
       </div>
@@ -220,7 +220,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3.5 px-6 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm shadow-md shadow-[#FF7A1A]/20 transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full py-3.5 px-6 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm shadow-md shadow-[#FF7A1A]/20 transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? (
           <>
@@ -235,17 +235,6 @@ export default function ContactForm({
         )}
       </button>
 
-      {/* Trust & Privacy Guarantee */}
-      <div className="flex items-center justify-center gap-4 text-[11px] text-[#5F6B6E] font-medium pt-1">
-        <span className="inline-flex items-center gap-1">
-          <Lock className="w-3 h-3 text-[#FF7A1A]" />
-          <span>100% Confidential</span>
-        </span>
-        <span className="w-1 h-1 rounded-full bg-gray-300" />
-        <span>24h Fast Response</span>
-        <span className="w-1 h-1 rounded-full bg-gray-300" />
-        <span>Zero Spam</span>
-      </div>
     </form>
   );
 }

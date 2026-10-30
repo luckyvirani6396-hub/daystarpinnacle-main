@@ -34,7 +34,7 @@ export default function ArticleGrid({ posts, activeCategory, onCategoryChange }:
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeCategory === category
                   ? 'bg-[#FF7A1A] text-white shadow-lg shadow-[#FF7A1A]/20'
-                  : 'bg-white text-dark/70 border border-[#E2E8E4] hover:border-[#FF7A1A]/50 hover:text-[#FF7A1A]'
+                  : 'bg-white text-dark/70 border border-[#FAF9F5] hover:border-[#FF7A1A]/50 hover:text-[#FF7A1A]'
               }`}
             >
               {category}

@@ -31,7 +31,7 @@ export default function VideoTestimonials() {
             <motion.div
               key={video.id}
               variants={fadeUp}
-              className="group relative rounded-[24px] overflow-hidden cursor-pointer border border-[#E2E8E4]/60 hover:border-secondary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/12"
+              className="group relative rounded-[24px] overflow-hidden cursor-pointer border border-[#FAF9F5]/60 hover:border-secondary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/12"
             >
               <div className="relative h-56 overflow-hidden">
                 <img
@@ -41,9 +41,9 @@ export default function VideoTestimonials() {
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-[#153B24]/40 flex items-center justify-center group-hover:bg-[#153B24]/50 transition-colors">
+                <div className="absolute inset-0 bg-[#004B57]/40 flex items-center justify-center group-hover:bg-[#004B57]/50 transition-colors">
                   <div className="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                    <FaPlay className="w-5 h-5 text-[#5c8730] ml-1" />
+                    <FaPlay className="w-5 h-5 text-[#72A93B] ml-1" />
                   </div>
                 </div>
               </div>

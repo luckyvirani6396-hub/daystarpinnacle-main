@@ -73,7 +73,7 @@ function FooterLink({ to, label }: { to: string; label: string }) {
     <li>
       <Link
         to={to}
-        className="group flex items-center gap-2 text-sm text-[#1A2E32]/75 hover:text-[#FF7A1A] transition-all duration-200 font-medium py-1"
+        className="group flex items-center gap-2 text-sm text-[#004B57]/75 hover:text-[#FF7A1A] transition-all duration-200 font-medium py-1"
       >
         <ArrowRight className="w-3.5 h-3.5 text-[#FF7A1A] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 shrink-0" />
         <span className="transition-transform duration-200 group-hover:translate-x-1">{label}</span>
@@ -84,7 +84,7 @@ function FooterLink({ to, label }: { to: string; label: string }) {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#FAF9F5] text-[#1A2E32] border-t border-[#E2E8E4]">
+    <footer className="relative overflow-hidden bg-[#FAF9F5] text-[#004B57] border-t border-[#FAF9F5]">
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-6%] top-[-15%] w-[45%] h-[55%] rounded-full bg-[#FF7A1A]/5 blur-[120px]" />
@@ -106,11 +106,11 @@ export default function Footer() {
             <motion.div variants={columnVariants} className="sm:col-span-2 lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6">
               <Logo className="mb-5 hover:opacity-90 transition-opacity" />
 
-              <span className="inline-flex text-[10px] font-extrabold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full bg-[#FEF3E8] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-4 shadow-sm">
+              <span className="inline-flex text-[10px] font-extrabold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full bg-[#FAF9F5] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-4 shadow-sm">
                 {SITE_TAGLINE}
               </span>
 
-              <p className="text-[#5F6B6E] text-sm leading-relaxed mb-6 font-medium">
+              <p className="text-[#004B57] text-sm leading-relaxed mb-6 font-medium">
                 Empowering organizations to build healthier, happier, and more productive workplaces through scientifically designed, expert-led wellness programs.
               </p>
 
@@ -127,7 +127,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center text-[#004B57] hover:bg-[#FF7A1A] hover:border-[#FF7A1A] hover:text-white hover:scale-105 transition-all duration-200 shadow-sm"
+                      className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center text-[#004B57] hover:bg-[#FF7A1A] hover:border-[#FF7A1A] hover:text-white hover:scale-105 transition-all duration-200 shadow-sm"
                     >
                       <Icon className="w-4 h-4" />
                     </a>
@@ -162,12 +162,12 @@ export default function Footer() {
               <ul className="space-y-4">
                 {/* Address */}
                 <li className="flex items-start gap-3.5 group">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-[#004B57] mb-0.5 leading-snug">{COMPANY_NAME}</p>
-                    <p className="text-xs text-[#5F6B6E] leading-relaxed font-medium">{STREET_ADDRESS}</p>
+                    <p className="text-xs text-[#004B57] leading-relaxed font-medium">{STREET_ADDRESS}</p>
                   </div>
                 </li>
 
@@ -177,11 +177,11 @@ export default function Footer() {
                     href={`tel:${CONTACT_PHONE_TEL}`}
                     className="flex items-center gap-3.5 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#5F6B6E]">Call Us</p>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#004B57]">Call Us</p>
                       <p className="text-sm font-bold text-[#004B57] group-hover:text-[#FF7A1A] transition-colors">
                         {CONTACT_PHONE}
                       </p>
@@ -195,11 +195,11 @@ export default function Footer() {
                     href={`mailto:${CONTACT_EMAIL}`}
                     className="flex items-center gap-3.5 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center shrink-0 text-[#FF7A1A] shadow-sm group-hover:border-[#FF7A1A]/40 transition-colors">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#5F6B6E]">Email Us</p>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#004B57]">Email Us</p>
                       <p className="text-sm font-bold text-[#004B57] group-hover:text-[#FF7A1A] transition-colors break-all">
                         {CONTACT_EMAIL}
                       </p>
@@ -212,17 +212,17 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom Legal / Copyright Bar */}
-        <div className="pt-8 pb-12 border-t border-[#E2E8E4] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#5F6B6E] text-center sm:text-left font-medium">
+        <div className="pt-8 pb-12 border-t border-[#FAF9F5] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#004B57] text-center sm:text-left font-medium">
             © {new Date().getFullYear()}{' '}
             <span className="text-[#004B57] font-bold">{SITE_NAME}</span>. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6 text-xs text-[#5F6B6E] font-medium sm:mr-20 lg:mr-24">
+          <div className="flex items-center gap-6 text-xs text-[#004B57] font-medium sm:mr-20 lg:mr-24">
             <Link to="/privacy-policy" className="hover:text-[#FF7A1A] transition-colors duration-200">
               Privacy Policy
             </Link>
-            <span className="text-[#CBD5E1]">·</span>
+            <span className="text-[#FAF9F5]">·</span>
             <Link to="/terms-of-service" className="hover:text-[#FF7A1A] transition-colors duration-200">
               Terms of Service
             </Link>

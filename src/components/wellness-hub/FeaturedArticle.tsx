@@ -25,7 +25,7 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="group bg-white rounded-[28px] overflow-hidden border border-[#E2E8E4]/60 hover:border-[#FF7A1A]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF7A1A]/10"
+          className="group bg-white rounded-[28px] overflow-hidden border border-[#FAF9F5]/60 hover:border-[#FF7A1A]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF7A1A]/10"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="relative overflow-hidden h-64 lg:h-auto lg:min-h-[380px]">
@@ -42,7 +42,7 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
             </div>
 
             <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center relative">
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-[#FEF3E8] rounded-full px-3.5 py-1.5 w-fit mb-5 border border-[#FF7A1A]/10">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-[#FAF9F5] rounded-full px-3.5 py-1.5 w-fit mb-5 border border-[#FF7A1A]/10">
                 {post.category}
               </span>
 
@@ -50,11 +50,11 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
                 {post.title}
               </h3>
 
-              <p className="text-[#5F6B6E] text-base leading-relaxed mb-6 line-clamp-3 font-medium">
+              <p className="text-[#004B57] text-base leading-relaxed mb-6 line-clamp-3 font-medium">
                 {post.excerpt}
               </p>
 
-              <div className="flex items-center gap-4 text-xs text-[#5F6B6E] mb-8 font-semibold">
+              <div className="flex items-center gap-4 text-xs text-[#004B57] mb-8 font-semibold">
                 <span className="flex items-center gap-1.5">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#FF7A1A]">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -64,7 +64,7 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
                   </svg>
                   {post.date}
                 </span>
-                <span className="text-[#5F6B6E]/30">•</span>
+                <span className="text-[#004B57]/30">•</span>
                 <span className="flex items-center gap-1.5">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#FF7A1A]">
                     <circle cx="12" cy="12" r="10" />
@@ -76,7 +76,7 @@ export default function FeaturedArticle({ post }: FeaturedArticleProps) {
 
               <Link
                 to={`/health-hub/${post.slug}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#FF7A1A] hover:bg-[#E86800] text-white font-bold text-sm transition-all duration-300 w-fit shadow-lg shadow-[#FF7A1A]/20 hover:scale-[1.02] hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm transition-all duration-300 w-fit shadow-lg shadow-[#FF7A1A]/20 hover:scale-[1.02] hover:-translate-y-0.5"
               >
                 <span>Read Full Article</span>
                 <HiArrowRight className="w-4 h-4" />

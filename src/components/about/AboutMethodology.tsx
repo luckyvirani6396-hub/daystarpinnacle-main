@@ -72,7 +72,7 @@ const steps = [
     description:
       'Detailed participation metrics, employee satisfaction feedback, and measurable wellbeing trends delivered directly to HR leadership.',
     icon: TrendingUp,
-    color: '#0066CC',
+    color: '#004B57',
     badge: 'Review & Optimize',
     points: [
       'Session attendance & engagement metrics',
@@ -137,7 +137,7 @@ export default function AboutMethodology() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className={`${cardOnCream} p-6 sm:p-7 flex flex-col justify-between border border-[#E2E8E4]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_8px_30px_rgba(12,29,55,0.06)] hover:-translate-y-1 transition-all duration-300 relative`}
+                className={`${cardOnCream} p-6 sm:p-7 flex flex-col justify-between border border-[#FAF9F5]/80 shadow-[0_4px_20px_rgba(12,29,55,0.03)] hover:shadow-[0_8px_30px_rgba(12,29,55,0.06)] hover:-translate-y-1 transition-all duration-300 relative`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -147,7 +147,7 @@ export default function AboutMethodology() {
                     >
                       Step {item.step}
                     </span>
-                    <span className="text-xs font-semibold text-[#1A2E32]/60">
+                    <span className="text-xs font-semibold text-[#004B57]/60">
                       {item.badge}
                     </span>
                   </div>
@@ -159,20 +159,20 @@ export default function AboutMethodology() {
                     <Icon className="w-6 h-6" strokeWidth={2.2} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#1A2E32] mb-1">
+                  <h3 className="text-lg font-bold text-[#004B57] mb-1">
                     {item.title}
                   </h3>
                   <p className="text-xs font-semibold text-[#004B57] uppercase tracking-wider mb-3">
                     {item.subtitle}
                   </p>
-                  <p className="text-xs sm:text-sm text-[#1A2E32]/75 leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed mb-5">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#E2E8E4]/70 space-y-2">
+                <div className="pt-4 border-t border-[#FAF9F5]/70 space-y-2">
                   {item.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2 text-xs text-[#1A2E32]/80">
+                    <div key={pIdx} className="flex items-start gap-2 text-xs text-[#004B57]/80">
                       <CheckCircle2
                         className="w-3.5 h-3.5 mt-0.5 shrink-0"
                         style={{ color: item.color }}
@@ -192,13 +192,13 @@ export default function AboutMethodology() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
-          className="rounded-2xl bg-gradient-to-br from-[#FAF9F5] via-[#F4F2EC] to-[#EAE7DC] border border-[#E2E8E4] p-6 sm:p-8"
+          className="rounded-2xl bg-gradient-to-br from-[#FAF9F5] via-[#FAF9F5] to-[#FAF9F5] border border-[#FAF9F5] p-6 sm:p-8"
         >
           <div className="text-center max-w-2xl mx-auto mb-6">
-            <h4 className="text-base sm:text-lg font-bold text-[#1A2E32]">
+            <h4 className="text-base sm:text-lg font-bold text-[#004B57]">
               Enterprise Corporate Delivery Standards
             </h4>
-            <p className="text-xs sm:text-sm text-[#1A2E32]/70 mt-1">
+            <p className="text-xs sm:text-sm text-[#004B57]/70 mt-1">
               Engineered specifically for fast-paced corporate environments, ensuring seamless engagement and total compliance.
             </p>
           </div>
@@ -209,16 +209,16 @@ export default function AboutMethodology() {
               return (
                 <div
                   key={idx}
-                  className="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-[#E2E8E4]/80 flex items-start gap-3.5"
+                  className="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-[#FAF9F5]/80 flex items-start gap-3.5"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#004B57]/10 text-[#004B57] flex items-center justify-center shrink-0">
                     <StdIcon className="w-5 h-5" strokeWidth={2.2} />
                   </div>
                   <div>
-                    <h5 className="text-sm font-bold text-[#1A2E32] mb-1">
+                    <h5 className="text-sm font-bold text-[#004B57] mb-1">
                       {std.title}
                     </h5>
-                    <p className="text-xs text-[#1A2E32]/70 leading-relaxed">
+                    <p className="text-xs text-[#004B57]/70 leading-relaxed">
                       {std.description}
                     </p>
                   </div>

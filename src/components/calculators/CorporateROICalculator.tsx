@@ -17,9 +17,9 @@ export default function CorporateROICalculator({ className = '' }: { className?:
   const estimatedSavings = potentialBurnoutCost * 0.28;
 
   return (
-    <div className={`bg-white rounded-[24px] border border-[#E2E8E4]/60 p-6 md:p-8 shadow-xl shadow-secondary/5 ${className}`}>
+    <div className={`bg-white rounded-[24px] border border-[#FAF9F5]/60 p-6 md:p-8 shadow-xl shadow-secondary/5 ${className}`}>
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#EAF2E1] to-[#DDEFCF] flex items-center justify-center text-[#5c8730]">
+        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#FAF9F5] to-[#FAF9F5] flex items-center justify-center text-[#72A93B]">
           <TrendingUp className="w-5 h-5" />
         </div>
         <div>
@@ -36,7 +36,7 @@ export default function CorporateROICalculator({ className = '' }: { className?:
               <Users className="w-4 h-4 text-secondary" />
               <span>Total Employees:</span>
             </label>
-            <span className="text-base font-extrabold text-primary bg-[#EAF2E1] px-3 py-1 rounded-full">
+            <span className="text-base font-extrabold text-primary bg-[#FAF9F5] px-3 py-1 rounded-full">
               {employees}
             </span>
           </div>
@@ -47,7 +47,7 @@ export default function CorporateROICalculator({ className = '' }: { className?:
             step="10"
             value={employees}
             onChange={(e) => setEmployees(Number(e.target.value))}
-            className="w-full h-2 bg-[#E2E8E4] rounded-lg appearance-none cursor-pointer accent-primary"
+            className="w-full h-2 bg-[#FAF9F5] rounded-lg appearance-none cursor-pointer accent-primary"
           />
           <div className="flex justify-between text-[10px] text-muted mt-1">
             <span>10</span>
@@ -63,7 +63,7 @@ export default function CorporateROICalculator({ className = '' }: { className?:
               <Award className="w-4 h-4 text-secondary" />
               <span>Estimated Burnout Rate (%):</span>
             </label>
-            <span className="text-base font-extrabold text-primary bg-[#EAF2E1] px-3 py-1 rounded-full">
+            <span className="text-base font-extrabold text-primary bg-[#FAF9F5] px-3 py-1 rounded-full">
               {burnoutRate}%
             </span>
           </div>
@@ -74,7 +74,7 @@ export default function CorporateROICalculator({ className = '' }: { className?:
             step="5"
             value={burnoutRate}
             onChange={(e) => setBurnoutRate(Number(e.target.value))}
-            className="w-full h-2 bg-[#E2E8E4] rounded-lg appearance-none cursor-pointer accent-primary"
+            className="w-full h-2 bg-[#FAF9F5] rounded-lg appearance-none cursor-pointer accent-primary"
           />
           <div className="flex justify-between text-[10px] text-muted mt-1">
             <span>5%</span>

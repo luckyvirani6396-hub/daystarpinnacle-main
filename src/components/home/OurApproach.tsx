@@ -93,7 +93,7 @@ export default function OurApproach() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className={`group ${cardOnWhite} overflow-hidden flex flex-col h-full shadow-[0_4px_25px_rgba(12,29,55,0.04)] border border-[#E2E8E4]/60 hover:shadow-[0_12px_35px_rgba(12,29,55,0.08)] hover:-translate-y-1 transition-all duration-300`}
+                className={`group ${cardOnWhite} overflow-hidden flex flex-col h-full shadow-[0_4px_25px_rgba(12,29,55,0.04)] border border-[#FAF9F5]/60 hover:shadow-[0_12px_35px_rgba(12,29,55,0.08)] hover:-translate-y-1 transition-all duration-300`}
               >
                 {/* Card Image Banner */}
                 <div className="w-full h-44 relative overflow-hidden shrink-0 bg-gray-50 border-b border-gray-100">
@@ -121,13 +121,13 @@ export default function OurApproach() {
                     >
                       <item.icon className="w-4.5 h-4.5" strokeWidth={2.2} />
                     </div>
-                    <h3 className="text-base sm:text-[17px] font-bold text-[#0C1D37] leading-snug tracking-tight group-hover:text-[#FF7A1A] transition-colors">
+                    <h3 className="text-base sm:text-[17px] font-bold text-[#004B57] leading-snug tracking-tight group-hover:text-[#FF7A1A] transition-colors">
                       {item.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-[13.5px] text-[#2c4033]/80 leading-relaxed font-medium pl-1">
+                  <p className="text-xs sm:text-[13.5px] text-[#004B57]/80 leading-relaxed font-medium pl-1">
                     {item.description}
                   </p>
                 </div>

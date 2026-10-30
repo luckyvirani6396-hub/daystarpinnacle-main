@@ -73,14 +73,14 @@ export default function FAQ() {
               and delivery to scale and scheduling.
             </p>
 
-            <div className="p-5 rounded-2xl bg-white border border-[#E2E8E4] shadow-[0_4px_24px_rgba(0,75,87,0.06)]">
+            <div className="p-5 rounded-2xl bg-white border border-[#FAF9F5] shadow-[0_4px_24px_rgba(0,75,87,0.06)]">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-[#FEF3E8] flex items-center justify-center text-[#FF7A1A]">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A]">
                   <MessageCircle className="w-5 h-5" strokeWidth={2} />
                 </div>
                 <p className="text-sm font-bold text-[#004B57]">Still have questions?</p>
               </div>
-              <p className="text-xs text-[#5F6B6E] leading-relaxed mb-4">
+              <p className="text-xs text-[#004B57] leading-relaxed mb-4">
                 Our team is happy to walk you through program options and help design a plan
                 for your organization.
               </p>
@@ -115,7 +115,7 @@ export default function FAQ() {
                     <span
                       className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center text-[10px] font-extrabold tracking-wider transition-colors duration-300 ${isOpen
                         ? 'bg-[#FF7A1A] text-white'
-                        : 'bg-[#E6F2F4] text-[#004B57] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                        : 'bg-[#FAF9F5] text-[#004B57] group-hover:bg-[#FAF9F5] group-hover:text-[#FF7A1A]'
                         }`}
                     >
                       {String(index + 1).padStart(2, '0')}
@@ -130,7 +130,7 @@ export default function FAQ() {
                     <span
                       className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen
                         ? 'bg-[#FF7A1A]/10 text-[#FF7A1A] rotate-180'
-                        : 'bg-[#FAF9F5] text-[#5F6B6E] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                        : 'bg-[#FAF9F5] text-[#004B57] group-hover:bg-[#FAF9F5] group-hover:text-[#FF7A1A]'
                         }`}
                     >
                       <ChevronDown className="w-5 h-5" strokeWidth={2.2} />
@@ -147,8 +147,8 @@ export default function FAQ() {
                         className="overflow-hidden"
                       >
                         <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
-                          <div className="ml-[52px] border-t border-[#E2E8E4]/80 pt-4">
-                            <p className="text-sm text-[#5F6B6E] leading-relaxed font-medium">
+                          <div className="ml-[52px] border-t border-[#FAF9F5]/80 pt-4">
+                            <p className="text-sm text-[#004B57] leading-relaxed font-medium">
                               {item.answer}
                             </p>
                           </div>

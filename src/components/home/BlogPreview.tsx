@@ -57,7 +57,7 @@ export default function BlogPreview() {
                 className={`${cardOnCream} overflow-hidden flex flex-col h-full hover:shadow-xl hover:border-[#FF7A1A]/30 transition-all duration-300 group cursor-pointer block`}
               >
                 {/* Blog Card Image Header */}
-                <div className="w-full h-52 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#E2E8E4]/60">
+                <div className="w-full h-52 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#FAF9F5]/60">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -73,12 +73,12 @@ export default function BlogPreview() {
 
                 {/* Content Padding container */}
                 <div className="p-6 sm:p-7 flex flex-col flex-grow">
-                  <div className="flex items-center justify-between gap-3 text-xs text-[#5F6B6E] font-semibold mb-3">
+                  <div className="flex items-center justify-between gap-3 text-xs text-[#004B57] font-semibold mb-3">
                     <span className="inline-flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-[#FF7A1A]" />
                       {post.date}
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[#5F6B6E]">
+                    <span className="inline-flex items-center gap-1 text-[#004B57]">
                       <Clock3 className="w-3.5 h-3.5" />
                       {post.readTime}
                     </span>
@@ -91,7 +91,7 @@ export default function BlogPreview() {
                     {post.excerpt}
                   </p>
 
-                  <div className="pt-3 mt-auto border-t border-[#E2E8E4]/60">
+                  <div className="pt-3 mt-auto border-t border-[#FAF9F5]/60">
                     <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#004B57] group-hover:text-[#FF7A1A] transition-colors">
                       <span>Read Full Article</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

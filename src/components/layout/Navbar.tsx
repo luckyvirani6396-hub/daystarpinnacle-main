@@ -37,7 +37,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 pointer-events-none">
       {/* Top Info Bar (Hidden, retained for future use) */}
       {SHOW_TOP_BAR && !isScrolled && !isOpen && (
-        <div className="hidden lg:block bg-[#FCFBF7] text-[#2c4033] text-xs py-2.5 px-6 border-b border-[#e2e8e4]/60 font-semibold pointer-events-auto select-none shadow-sm">
+        <div className="hidden lg:block bg-[#FAF9F5] text-[#004B57] text-xs py-2.5 px-6 border-b border-[#FAF9F5]/60 font-semibold pointer-events-auto select-none shadow-sm">
           <div className="max-w-8xl mx-auto flex items-center justify-between">
             {/* Left Contact Info */}
             <div className="flex items-center gap-6">
@@ -55,7 +55,7 @@ export default function Navbar() {
                 <HiMail className="w-3.5 h-3.5 text-[#FF7A1A]" />
                 <span>{CONTACT_EMAIL}</span>
               </a>
-              <span className="flex items-center gap-2 text-[#2c4033]/80">
+              <span className="flex items-center gap-2 text-[#004B57]/80">
                 <HiClock className="w-3.5 h-3.5 text-[#FF7A1A]" />
                 <span>Mon - Sat: 9:30 AM - 6:30 PM</span>
               </span>
@@ -63,18 +63,18 @@ export default function Navbar() {
 
             {/* Right Socials & Consultation */}
             <div className="flex items-center gap-5">
-              <span className="flex items-center gap-2 text-[#2c4033]/80">
+              <span className="flex items-center gap-2 text-[#004B57]/80">
                 <HiLocationMarker className="w-3.5 h-3.5 text-[#FF7A1A]" />
                 <span>Noida, Uttar Pradesh</span>
               </span>
               <span className="h-3.5 w-[1px] bg-gray-300" />
               <div className="flex items-center gap-2.5">
-                <span className="text-[#2c4033]/65 text-[11px] font-bold">Follow Us:</span>
+                <span className="text-[#004B57]/65 text-[11px] font-bold">Follow Us:</span>
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2c4033] hover:text-[#FF7A1A] transition-colors"
+                  className="text-[#004B57] hover:text-[#FF7A1A] transition-colors"
                 >
                   <FaFacebook className="w-3.5 h-3.5" />
                 </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2c4033] hover:text-[#FF7A1A] transition-colors"
+                  className="text-[#004B57] hover:text-[#FF7A1A] transition-colors"
                 >
                   <FaInstagram className="w-3.5 h-3.5" />
                 </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2c4033] hover:text-[#FF7A1A] transition-colors"
+                  className="text-[#004B57] hover:text-[#FF7A1A] transition-colors"
                 >
                   <FaYoutube className="w-3.5 h-3.5" />
                 </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2c4033] hover:text-[#FF7A1A] transition-colors"
+                  className="text-[#004B57] hover:text-[#FF7A1A] transition-colors"
                   aria-label="WhatsApp"
                 >
                   <FaWhatsapp className="w-3.5 h-3.5" />
@@ -114,7 +114,7 @@ export default function Navbar() {
         className={`transition-all duration-300 w-[95%] max-w-8xl mx-auto pointer-events-auto ${isScrolled ? 'my-2' : 'my-4'
           }`}
       >
-        <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#e8efe9] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4">
+        <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#FAF9F5] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4">
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0 min-w-0">
             <Logo compact />
@@ -146,7 +146,7 @@ export default function Navbar() {
                 <div key={item.path} className="relative flex flex-col items-center">
                   <Link
                     to={item.path}
-                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${isActive ? 'text-[#FF7A1A]' : 'text-[#1a2e32] hover:text-[#FF7A1A]'
+                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
                       }`}
                   >
                     <span className="2xl:hidden">{shortLabel}</span>
@@ -161,7 +161,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <Link
               to="/contact"
-              className="bg-[#FF7A1A] text-white hover:bg-[#E86800] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 whitespace-nowrap"
+              className="bg-[#FF7A1A] text-white hover:bg-[#FF7A1A] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 whitespace-nowrap"
             >
               <span className="hidden xl:inline">Book Consultation</span>
               <span className="xl:hidden">Book Now</span>
@@ -175,7 +175,7 @@ export default function Navbar() {
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#1a2e32] hover:text-[#FF7A1A] p-2 flex items-center justify-center"
+              className="text-[#004B57] hover:text-[#FF7A1A] p-2 flex items-center justify-center"
               aria-label="WhatsApp"
             >
               <FaWhatsapp className="w-6 h-6" />
@@ -183,7 +183,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-full hover:bg-gray-100 text-[#1a2e32] transition-colors cursor-pointer"
+              className="p-2 rounded-full hover:bg-gray-100 text-[#004B57] transition-colors cursor-pointer"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isOpen}
             >
@@ -201,7 +201,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden w-[95%] mx-auto bg-white/95 backdrop-blur-md rounded-3xl shadow-xl border border-[#e8efe9] overflow-hidden mt-1 p-5 absolute left-1/2 -translate-x-1/2 pointer-events-auto"
+            className="lg:hidden w-[95%] mx-auto bg-white/95 backdrop-blur-md rounded-3xl shadow-xl border border-[#FAF9F5] overflow-hidden mt-1 p-5 absolute left-1/2 -translate-x-1/2 pointer-events-auto"
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => {
@@ -229,7 +229,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${isActive
                         ? 'text-[#FF7A1A] bg-[#FF7A1A]/5'
-                        : 'text-[#1a2e32] hover:text-[#FF7A1A] hover:bg-gray-50'
+                        : 'text-[#004B57] hover:text-[#FF7A1A] hover:bg-gray-50'
                       }`}
                   >
                     {label}
@@ -242,7 +242,7 @@ export default function Navbar() {
                   <span className="text-sm text-gray-500 font-medium">Quick Contact</span>
                   <a
                     href={`tel:${CONTACT_PHONE_TEL}`}
-                    className="text-sm font-bold text-[#1a2e32] flex items-center gap-1 hover:text-[#FF7A1A] transition-colors"
+                    className="text-sm font-bold text-[#004B57] flex items-center gap-1 hover:text-[#FF7A1A] transition-colors"
                   >
                     <HiPhone className="w-4 h-4 text-[#FF7A1A]" />
                     {CONTACT_PHONE}
@@ -251,7 +251,7 @@ export default function Navbar() {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full bg-[#FF7A1A] text-white text-center font-bold py-3.5 rounded-2xl hover:bg-[#E86800] transition-colors shadow-md shadow-[#FF7A1A]/10"
+                  className="w-full bg-[#FF7A1A] text-white text-center font-bold py-3.5 rounded-2xl hover:bg-[#FF7A1A] transition-colors shadow-md shadow-[#FF7A1A]/10"
                 >
                   Book Consultation
                 </Link>

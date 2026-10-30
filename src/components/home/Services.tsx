@@ -36,7 +36,7 @@ export const dimensions = [
     tagline: 'Encourage active, healthy lifestyles',
     icon: Activity,
     color: '#FF7A1A',
-    bg: '#FEF3E8',
+    bg: '#FAF9F5',
     image: '/images/solution-physical.png',
     bullets: [
       'Corporate Yoga & Stretching',
@@ -51,8 +51,8 @@ export const dimensions = [
     title: 'Mental Wellbeing',
     tagline: 'Build emotional resilience & focus',
     icon: Brain,
-    color: '#0066CC',
-    bg: '#E6F0FA',
+    color: '#004B57',
+    bg: '#FAF9F5',
     image: '/images/solution-mental.png',
     bullets: [
       'Mindfulness & Meditation',
@@ -68,7 +68,7 @@ export const dimensions = [
     tagline: 'Promote smart daily fuel & eating habits',
     icon: Flame,
     color: '#72A93B',
-    bg: '#F1F9EB',
+    bg: '#FAF9F5',
     image: '/images/solution-nutrition.png',
     bullets: [
       'Clinical Nutrition Seminars',
@@ -83,8 +83,8 @@ export const dimensions = [
     title: 'Emotional Wellness',
     tagline: 'Strengthen psychological safety & EQ',
     icon: Heart,
-    color: '#E74C3C',
-    bg: '#FDEDEC',
+    color: '#FF7A1A',
+    bg: '#FAF9F5',
     image: '/images/solution-emotional.png',
     bullets: [
       'Emotional Intelligence Training',
@@ -99,8 +99,8 @@ export const dimensions = [
     title: 'Social Wellbeing',
     tagline: 'Foster deep team camaraderie & trust',
     icon: HeartHandshake,
-    color: '#8E44AD',
-    bg: '#F5EEF8',
+    color: '#72A93B',
+    bg: '#FAF9F5',
     image: '/images/solution-social.png',
     bullets: [
       'Interactive Team-Building Days',
@@ -115,8 +115,8 @@ export const dimensions = [
     title: 'Work-Life Balance',
     tagline: 'Sustainable productivity & recharge habits',
     icon: Smile,
-    color: '#2980B9',
-    bg: '#EBF5FB',
+    color: '#004B57',
+    bg: '#FAF9F5',
     image: '/images/solution-balance.png',
     bullets: [
       'Hybrid Work Boundary Setting',
@@ -131,8 +131,8 @@ export const dimensions = [
     title: 'Financial Wellness',
     tagline: 'Reduce money stress with practical literacy',
     icon: DollarSign,
-    color: '#27AE60',
-    bg: '#EAFAF1',
+    color: '#72A93B',
+    bg: '#FAF9F5',
     image: '/images/solution-financial.png',
     bullets: [
       'Budgeting & Personal Savings',
@@ -147,8 +147,8 @@ export const dimensions = [
     title: 'Preventive Healthcare',
     tagline: 'Early detection & preventive habits',
     icon: Shield,
-    color: '#F39C12',
-    bg: '#FEF9E7',
+    color: '#FF7A1A',
+    bg: '#FAF9F5',
     image: '/images/solution-preventive.png',
     bullets: [
       'Annual Onsite Health Screenings',
@@ -163,8 +163,8 @@ export const dimensions = [
     title: 'Environmental Wellness',
     tagline: 'Ergonomic, healthy workspaces',
     icon: Leaf,
-    color: '#16A085',
-    bg: '#E8F8F5',
+    color: '#004B57',
+    bg: '#FAF9F5',
     image: '/images/solution-environmental.png',
     bullets: [
       'Individual Ergonomic Audits',
@@ -180,7 +180,7 @@ export const dimensions = [
     tagline: 'Comprehensive mind-body alignment',
     icon: RefreshCw,
     color: '#004B57',
-    bg: '#E6F2F4',
+    bg: '#FAF9F5',
     image: '/images/solution-holistic.png',
     bullets: [
       'Corporate Chair Massage Days',
@@ -305,7 +305,7 @@ export default function Services() {
         {/* Carousel Top Controls Bar: Counter badge + Prev / Next Arrow buttons */}
         <div className="flex items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F5] border border-[#E2E8E4] text-xs font-bold text-[#004B57]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F5] border border-[#FAF9F5] text-xs font-bold text-[#004B57]">
               <Sparkles className="w-3.5 h-3.5 text-[#FF7A1A]" />
               <span>10 Core Wellness Dimensions</span>
             </span>
@@ -320,7 +320,7 @@ export default function Services() {
               className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${
                 canScrollLeft
                   ? 'border-[#004B57]/20 text-[#004B57] bg-white hover:bg-[#FAF9F5] hover:border-[#FF7A1A] hover:text-[#FF7A1A] shadow-sm hover:scale-105 cursor-pointer'
-                  : 'border-[#E2E8E4] text-gray-300 bg-white/50 cursor-not-allowed opacity-50'
+                  : 'border-[#FAF9F5] text-gray-300 bg-white/50 cursor-not-allowed opacity-50'
               }`}
             >
               <ChevronLeft className="w-5 h-5" strokeWidth={2.2} />
@@ -333,7 +333,7 @@ export default function Services() {
               className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${
                 canScrollRight
                   ? 'border-[#004B57]/20 text-[#004B57] bg-white hover:bg-[#FAF9F5] hover:border-[#FF7A1A] hover:text-[#FF7A1A] shadow-sm hover:scale-105 cursor-pointer'
-                  : 'border-[#E2E8E4] text-gray-300 bg-white/50 cursor-not-allowed opacity-50'
+                  : 'border-[#FAF9F5] text-gray-300 bg-white/50 cursor-not-allowed opacity-50'
               }`}
             >
               <ChevronRight className="w-5 h-5" strokeWidth={2.2} />
@@ -359,11 +359,11 @@ export default function Services() {
                 data-service-card
                 className="w-[86vw] sm:w-[350px] md:w-[370px] lg:w-[calc(33.333%-16px)] shrink-0 snap-start flex flex-col"
               >
-                <div className="group bg-white rounded-2xl border border-[#E2E8E4] shadow-[0_4px_20px_rgba(0,75,87,0.06)] hover:shadow-[0_14px_36px_rgba(0,75,87,0.12)] hover:border-[#FF7A1A]/35 transition-all duration-300 flex flex-col h-full overflow-hidden">
+                <div className="group bg-white rounded-2xl border border-[#FAF9F5] shadow-[0_4px_20px_rgba(0,75,87,0.06)] hover:shadow-[0_14px_36px_rgba(0,75,87,0.12)] hover:border-[#FF7A1A]/35 transition-all duration-300 flex flex-col h-full overflow-hidden">
                   {/* Card Visual Banner */}
                   <Link
                     to={`/services/${dim.slug}`}
-                    className="relative w-full h-48 sm:h-52 overflow-hidden bg-gray-50 border-b border-[#E2E8E4]/60 block shrink-0 cursor-pointer"
+                    className="relative w-full h-48 sm:h-52 overflow-hidden bg-gray-50 border-b border-[#FAF9F5]/60 block shrink-0 cursor-pointer"
                   >
                     <img
                       src={dim.image}
@@ -405,7 +405,7 @@ export default function Services() {
                         </h3>
                       </Link>
 
-                      <p className="text-xs text-[#5F6B6E] font-medium leading-relaxed mb-4">
+                      <p className="text-xs text-[#004B57] font-medium leading-relaxed mb-4">
                         {dim.tagline}
                       </p>
 
@@ -414,7 +414,7 @@ export default function Services() {
                         {dim.bullets.map((bullet) => (
                           <li
                             key={bullet}
-                            className="flex items-start gap-2.5 text-xs sm:text-[13px] text-[#1A2E32]/85 font-medium leading-relaxed"
+                            className="flex items-start gap-2.5 text-xs sm:text-[13px] text-[#004B57]/85 font-medium leading-relaxed"
                           >
                             <span
                               className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
@@ -429,7 +429,7 @@ export default function Services() {
                     </div>
 
                     {/* Card Footer Actions */}
-                    <div className="pt-4 border-t border-[#E2E8E4]/70 flex items-center justify-between gap-3 mt-auto">
+                    <div className="pt-4 border-t border-[#FAF9F5]/70 flex items-center justify-between gap-3 mt-auto">
                       <Link
                         to={`/services/${dim.slug}`}
                         className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#004B57] group-hover:text-[#FF7A1A] transition-colors"
@@ -440,7 +440,7 @@ export default function Services() {
 
                       <Link
                         to="/contact"
-                        className="text-[11.5px] font-bold text-[#FF7A1A] hover:text-[#E86800] px-3 py-1.5 rounded-lg bg-[#FEF3E8] border border-[#FF7A1A]/20 hover:border-[#FF7A1A]/50 transition-all"
+                        className="text-[11.5px] font-bold text-[#FF7A1A] hover:text-[#FF7A1A] px-3 py-1.5 rounded-lg bg-[#FAF9F5] border border-[#FF7A1A]/20 hover:border-[#FF7A1A]/50 transition-all"
                       >
                         Book
                       </Link>
@@ -453,7 +453,7 @@ export default function Services() {
         </div>
 
         {/* Carousel Bottom Bar: Pagination Dots + View All Button */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#E2E8E4]/60">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#FAF9F5]/60">
           {/* Pagination indicator dots */}
           <div className="flex items-center gap-1.5 overflow-x-auto py-1">
             {dimensions.map((dim, idx) => (
@@ -465,7 +465,7 @@ export default function Services() {
                 className={`transition-all duration-300 rounded-full cursor-pointer ${
                   activePageIndex === idx
                     ? 'w-7 h-2.5 bg-[#FF7A1A]'
-                    : 'w-2.5 h-2.5 bg-[#E2E8E4] hover:bg-[#004B57]/40'
+                    : 'w-2.5 h-2.5 bg-[#FAF9F5] hover:bg-[#004B57]/40'
                 }`}
               />
             ))}

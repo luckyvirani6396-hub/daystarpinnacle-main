@@ -55,7 +55,7 @@ export default function Testimonials() {
               more engaged workplaces.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6 border-t border-[#E2E8E4]">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-6 border-t border-[#FAF9F5]">
               {[
                 { value: '98%', label: 'Satisfaction' },
                 { value: '500+', label: 'Clients' },
@@ -82,7 +82,7 @@ export default function Testimonials() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -24 }}
                   transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="relative bg-[#FAF9F5] rounded-3xl border border-[#E2E8E4] overflow-hidden shadow-[0_16px_48px_rgba(0,75,87,0.08)]"
+                  className="relative bg-[#FAF9F5] rounded-3xl border border-[#FAF9F5] overflow-hidden shadow-[0_16px_48px_rgba(0,75,87,0.08)]"
                 >
                   <div className="relative p-7 sm:p-9 md:p-10">
                     {/* Decorative quote */}
@@ -102,11 +102,11 @@ export default function Testimonials() {
                       ))}
                     </div>
 
-                    <blockquote className="text-base sm:text-lg md:text-xl text-[#1A2E32]/85 leading-relaxed font-medium mb-8 pr-4">
+                    <blockquote className="text-base sm:text-lg md:text-xl text-[#004B57]/85 leading-relaxed font-medium mb-8 pr-4">
                       &ldquo;{active.feedback}&rdquo;
                     </blockquote>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pt-6 border-t border-[#E2E8E4]/80">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pt-6 border-t border-[#FAF9F5]/80">
                       <div className="flex items-center gap-4">
                         <div className="relative">
                           <img
@@ -129,7 +129,7 @@ export default function Testimonials() {
                         <button
                           type="button"
                           onClick={prev}
-                          className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-all shadow-sm"
+                          className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-all shadow-sm"
                           aria-label="Previous testimonial"
                         >
                           <ChevronLeft className="w-5 h-5" />
@@ -137,7 +137,7 @@ export default function Testimonials() {
                         <button
                           type="button"
                           onClick={next}
-                          className="w-10 h-10 rounded-xl bg-[#FF7A1A] border border-[#FF7A1A] flex items-center justify-center text-white hover:bg-[#E86800] transition-all shadow-sm shadow-[#FF7A1A]/25"
+                          className="w-10 h-10 rounded-xl bg-[#FF7A1A] border border-[#FF7A1A] flex items-center justify-center text-white hover:bg-[#FF7A1A] transition-all shadow-sm shadow-[#FF7A1A]/25"
                           aria-label="Next testimonial"
                         >
                           <ChevronRight className="w-5 h-5" />
@@ -168,12 +168,12 @@ export default function Testimonials() {
                       loading="lazy"
                       decoding="async"
                       className={`w-8 h-8 rounded-full object-cover border-2 ${
-                        i === current ? 'border-[#FF7A1A]' : 'border-[#E2E8E4]'
+                        i === current ? 'border-[#FF7A1A]' : 'border-[#FAF9F5]'
                       }`}
                     />
                     <span
                       className={`text-xs font-bold hidden sm:block ${
-                        i === current ? 'text-[#004B57]' : 'text-[#5F6B6E]'
+                        i === current ? 'text-[#004B57]' : 'text-[#004B57]'
                       }`}
                     >
                       {item.name}

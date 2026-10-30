@@ -65,7 +65,7 @@ export default function SectionTitle({
           <span
             className={`inline-flex text-[10px] sm:text-[11px] font-extrabold tracking-[0.2em] uppercase px-3.5 py-1.5 rounded-full ${light
                 ? 'text-white bg-white/10 border border-white/20'
-                : 'text-[#FF7A1A] bg-[#FEF3E8] border border-[#FF7A1A]/20 shadow-sm'
+                : 'text-[#FF7A1A] bg-[#FAF9F5] border border-[#FF7A1A]/20 shadow-sm'
               }`}
           >
             {subtitle}
@@ -82,7 +82,7 @@ export default function SectionTitle({
 
       {description && (
         <p
-          className={`text-[13px] sm:text-sm leading-relaxed font-medium ${light ? 'text-white/80' : 'text-[#1A2E32]/85'
+          className={`text-[13px] sm:text-sm leading-relaxed font-medium ${light ? 'text-white/80' : 'text-[#004B57]/85'
             } max-w-2xl ${align === 'center' ? 'mx-auto' : ''}`}
         >
           {description}

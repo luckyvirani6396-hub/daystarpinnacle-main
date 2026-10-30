@@ -23,7 +23,7 @@ export default function PageHero({
   const bgImage = image || '/images/about-hero.png';
 
   return (
-    <section className="relative w-full overflow-hidden flex items-center bg-[#F8FAF6] pt-[150px] pb-12 min-h-[380px] md:min-h-[420px]">
+    <section className="relative w-full overflow-hidden flex items-center bg-[#FAF9F5] pt-[150px] pb-12 min-h-[380px] md:min-h-[420px]">
       {/* Background Image — Ken Burns zoom */}
       <motion.div
         className="absolute inset-0 z-0 select-none"
@@ -58,7 +58,7 @@ export default function PageHero({
               to="/"
               className="flex items-center gap-1.5 hover:text-[#72A93B] transition-colors duration-200"
             >
-              <Home className="w-3.5 h-3.5 text-[#5c8730]" />
+              <Home className="w-3.5 h-3.5 text-[#72A93B]" />
               <span>Home</span>
             </Link>
             <span className="text-[#004B57]/30">/</span>
@@ -68,24 +68,24 @@ export default function PageHero({
                 <span className="text-[#004B57]/30">/</span>
               </>
             )}
-            <span className="text-[#5C8730] font-bold">{title}</span>
+            <span className="text-[#72A93B] font-bold">{title}</span>
           </nav>
 
           {/* Page Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-[#0e261a] leading-none mb-3">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-[#004B57] leading-none mb-3">
             {title}
           </h1>
 
           {/* Custom Hand-drawn Underline Divider SVG */}
           <div className="mb-4 flex">
-            <svg className="w-36 h-2 text-[#5c8730]/75" viewBox="0 0 300 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-36 h-2 text-[#72A93B]/75" viewBox="0 0 300 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 5C50 2 150 2 299 5C150 7 50 7 1 5Z" />
             </svg>
           </div>
 
           {/* Description */}
           {description && (
-            <p className="text-[14px] md:text-[15.5px] text-[#2c4033] leading-relaxed max-w-md font-medium">
+            <p className="text-[14px] md:text-[15.5px] text-[#004B57] leading-relaxed max-w-md font-medium">
               {description}
             </p>
           )}

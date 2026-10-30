@@ -66,7 +66,7 @@ export default function ContactHero() {
               initial="hidden"
               animate="visible"
               aria-label="Breadcrumb"
-              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-5 flex-wrap"
+              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#004B57] mb-5 flex-wrap"
             >
               <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
                 Home
@@ -103,7 +103,7 @@ export default function ContactHero() {
               We&apos;re Here to <span className={sectionHeadingAccent}>Help You Thrive</span>.
             </motion.h2>
 
-            <motion.p variants={fadeUp} initial="hidden" animate="visible" className="text-[#5F6B6E] text-sm md:text-[15.5px] leading-relaxed max-w-xl mb-8 font-medium">
+            <motion.p variants={fadeUp} initial="hidden" animate="visible" className="text-[#004B57] text-sm md:text-[15.5px] leading-relaxed max-w-xl mb-8 font-medium">
               Ready to start your B2B corporate health journey? Reach out for a free consultation, program details, or custom proposals — our team responds within 24 hours.
             </motion.p>
 
@@ -115,7 +115,7 @@ export default function ContactHero() {
                 { key: 'support', icon: MessageCircle, label: <>Expert<br />Support</> },
               ].map(({ key, icon: Icon, label }) => (
                 <div key={key} className="flex flex-col items-center z-10 w-24 sm:w-28">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FEF3E8] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FDF2E9] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FAF9F5] rounded-full flex items-center justify-center text-[#FF7A1A] shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#FAF9F5] border border-[#FF7A1A]/10 shadow-[0_4px_12px_rgba(255,122,26,0.08)]">
                     <Icon className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.8} />
                   </div>
                   <span className="text-[11.5px] sm:text-[12.5px] font-bold text-[#004B57] text-center mt-3.5 leading-snug tracking-wide">{label}</span>
@@ -165,7 +165,7 @@ export default function ContactHero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-8 sm:mt-10 bg-white/95 backdrop-blur-md shadow-xl border border-white/50 rounded-2xl p-5 sm:p-6 lg:p-7 w-full z-20"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x sm:divide-[#E2E8E4]/70">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x sm:divide-[#FAF9F5]/70">
             {contactQuickInfo.map(({ label, value, href, icon }) => (
               <a
                 key={label}

@@ -26,7 +26,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
     >
       <Link to={`/health-hub/${post.slug}`} className="flex flex-col h-full">
         {/* Blog Card Image Header */}
-        <div className="w-full h-48 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#E2E8E4]/60">
+        <div className="w-full h-48 relative overflow-hidden shrink-0 bg-gray-50 border-b border-[#FAF9F5]/60">
           <img
             src={post.image}
             alt={post.title}
@@ -35,7 +35,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
-          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#FF7A1A] bg-[#FEF3E8] border border-[#FF7A1A]/20 px-2.5 py-1 rounded-full shadow-sm z-10">
+          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#FF7A1A] bg-[#FAF9F5] border border-[#FF7A1A]/20 px-2.5 py-1 rounded-full shadow-sm z-10">
             <Building2 className="w-3 h-3" strokeWidth={2.3} />
             {post.category}
           </span>
@@ -44,11 +44,11 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
         {/* Content Padding container */}
         <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center justify-between gap-3 mb-4">
-            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#5F6B6E]">
+            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#004B57]">
               <Calendar className="w-3.5 h-3.5 mr-1" />
               {post.date}
             </span>
-            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#5F6B6E]">
+            <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#004B57]">
               <Clock3 className="w-3.5 h-3.5 mr-1" />
               {post.readTime}
             </span>

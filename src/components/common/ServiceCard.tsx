@@ -45,7 +45,7 @@ export default function ServiceCard({ title, description, to, image }: ServiceCa
         <h3 className="text-xl md:text-[22px] font-serif font-bold text-[#004B57] mb-2.5 transition-colors duration-300 group-hover:text-[#FF7A1A]">
           {title}
         </h3>
-        <p className="text-[#5F6B6E] leading-relaxed text-[13px] sm:text-sm flex-1 font-medium">{description}</p>
+        <p className="text-[#004B57] leading-relaxed text-[13px] sm:text-sm flex-1 font-medium">{description}</p>
       </div>
     </>
   );

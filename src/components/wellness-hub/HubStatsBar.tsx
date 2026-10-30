@@ -13,7 +13,7 @@ const hubStats = [
 
 export default function HubStatsBar() {
   return (
-    <section className="py-14 md:py-16 bg-gradient-to-r from-[#003C46] via-[#004B57] to-[#003C46] relative overflow-hidden text-white">
+    <section className="py-14 md:py-16 bg-gradient-to-r from-[#004B57] via-[#004B57] to-[#004B57] relative overflow-hidden text-white">
       <div className="absolute inset-0 pointer-events-none opacity-15">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#FF7A1A] rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-1/4 w-60 h-60 bg-white rounded-full blur-[90px]" />
@@ -28,10 +28,10 @@ export default function HubStatsBar() {
         >
           {hubStats.map((stat) => (
             <motion.div key={stat.label} variants={fadeUp} className="text-center px-4 pt-4 sm:pt-0">
-              <span className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#FF9A4A] block">
+              <span className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#FF7A1A] block">
                 {stat.value}
               </span>
-              <p className="text-[#E2E8E4] mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider">{stat.label}</p>
+              <p className="text-[#FAF9F5] mt-2 text-xs sm:text-sm font-semibold uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

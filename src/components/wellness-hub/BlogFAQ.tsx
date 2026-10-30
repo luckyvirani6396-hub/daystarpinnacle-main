@@ -45,7 +45,7 @@ export default function BlogFAQ() {
   };
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/70 z-10 border-t border-[#E2E8E4]">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/70 z-10 border-t border-[#FAF9F5]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading and Contact Card */}
@@ -66,18 +66,18 @@ export default function BlogFAQ() {
               Clear answers on how our corporate wellness articles translate into actionable on-site and virtual workforce programs.
             </p>
 
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#E2E8E4] shadow-sm">
+            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#FAF9F5] shadow-sm">
               <div className="flex items-center gap-3.5 mb-3">
-                <div className="w-11 h-11 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0 border border-[#FF7A1A]/15">
+                <div className="w-11 h-11 rounded-xl bg-[#FAF9F5] text-[#FF7A1A] flex items-center justify-center shrink-0 border border-[#FF7A1A]/15">
                   <PhoneCall className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#004B57]">Need Direct Assistance?</h4>
-                  <p className="text-xs text-[#5F6B6E] font-medium">Speak with our wellness consultant</p>
+                  <p className="text-xs text-[#004B57] font-medium">Speak with our wellness consultant</p>
                 </div>
               </div>
 
-              <p className="text-xs text-[#5F6B6E] leading-relaxed mb-5 font-medium">
+              <p className="text-xs text-[#004B57] leading-relaxed mb-5 font-medium">
                 Have specific workforce requirements or multi-city team needs? Our corporate team is ready to assist.
               </p>
 
@@ -121,7 +121,7 @@ export default function BlogFAQ() {
                       className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-colors duration-300 ${
                         isOpen
                           ? 'bg-[#FF7A1A] text-white'
-                          : 'bg-[#E6F2F4] text-[#004B57] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                          : 'bg-[#FAF9F5] text-[#004B57] group-hover:bg-[#FAF9F5] group-hover:text-[#FF7A1A]'
                       }`}
                     >
                       {String(index + 1).padStart(2, '0')}
@@ -137,7 +137,7 @@ export default function BlogFAQ() {
                       className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
                         isOpen
                           ? 'bg-[#FF7A1A]/10 text-[#FF7A1A] rotate-180'
-                          : 'bg-[#FAF9F5] text-[#5F6B6E] group-hover:bg-[#FEF3E8] group-hover:text-[#FF7A1A]'
+                          : 'bg-[#FAF9F5] text-[#004B57] group-hover:bg-[#FAF9F5] group-hover:text-[#FF7A1A]'
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" strokeWidth={2.5} />
@@ -154,8 +154,8 @@ export default function BlogFAQ() {
                         className="overflow-hidden"
                       >
                         <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
-                          <div className="ml-12 border-t border-[#E2E8E4]/80 pt-3.5">
-                            <p className="text-xs sm:text-sm text-[#5F6B6E] leading-relaxed font-medium">
+                          <div className="ml-12 border-t border-[#FAF9F5]/80 pt-3.5">
+                            <p className="text-xs sm:text-sm text-[#004B57] leading-relaxed font-medium">
                               {item.a}
                             </p>
                           </div>

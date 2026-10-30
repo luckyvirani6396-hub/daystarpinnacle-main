@@ -9,14 +9,14 @@ export default function BlogContactCTA() {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden bg-white z-10">
       <Container>
-        <div className="bg-gradient-to-br from-[#004B57] via-[#003C46] to-[#002D34] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-2xl">
+        <div className="bg-gradient-to-br from-[#004B57] via-[#004B57] to-[#004B57] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-2xl">
           {/* Decorative ambient glowing circles */}
           <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-[#FF7A1A]/20 blur-3xl pointer-events-none" />
           <div className="absolute -left-24 -bottom-24 w-80 h-80 rounded-full bg-[#72A93B]/15 blur-3xl pointer-events-none" />
           <div
             className="absolute inset-0 opacity-[0.06] pointer-events-none"
             style={{
-              backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+              backgroundImage: 'radial-gradient(circle, #FAF9F5 1px, transparent 1px)',
               backgroundSize: '28px 28px',
             }}
           />

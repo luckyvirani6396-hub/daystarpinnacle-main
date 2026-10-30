@@ -72,12 +72,12 @@ export default function WellnessAssessmentQuiz() {
   };
 
   return (
-    <div className="relative bg-white rounded-[32px] p-6 md:p-10 border border-[#E2E8E4]/80 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden z-10">
+    <div className="relative bg-white rounded-[32px] p-6 md:p-10 border border-[#FAF9F5]/80 shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden z-10">
       {/* Visual background details */}
       <div className="absolute -right-24 -top-24 w-48 h-48 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
       <div className="absolute -left-24 -bottom-24 w-48 h-48 bg-[#72A93B]/5 rounded-full blur-2xl pointer-events-none" />
 
-      <div className="max-w-4xl mb-8 border-b border-[#E2E8E4]/50 pb-6 relative z-10">
+      <div className="max-w-4xl mb-8 border-b border-[#FAF9F5]/50 pb-6 relative z-10">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
@@ -109,7 +109,7 @@ export default function WellnessAssessmentQuiz() {
                   cx="50"
                   cy="50"
                   r="42"
-                  className="stroke-[#E8F2EA]"
+                  className="stroke-[#FAF9F5]"
                   strokeWidth="7"
                   fill="transparent"
                 />
@@ -128,12 +128,12 @@ export default function WellnessAssessmentQuiz() {
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-3xl font-extrabold text-[#003D34]">{Math.round(result.score)}%</span>
+                <span className="text-3xl font-extrabold text-[#004B57]">{Math.round(result.score)}%</span>
                 <span className="text-[9px] uppercase font-bold tracking-widest text-[#72A93B] mt-0.5">Score</span>
               </div>
             </div>
 
-            <span className="inline-block text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#E8F2EA] rounded-full px-4 py-1.5 mb-3">
+            <span className="inline-block text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#FAF9F5] rounded-full px-4 py-1.5 mb-3">
               {result.title}
             </span>
             <p className="text-muted text-sm md:text-base mb-8 max-w-lg mx-auto leading-relaxed">
@@ -141,7 +141,7 @@ export default function WellnessAssessmentQuiz() {
             </p>
 
             {/* Recommendation details card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#E8F2EA]/40 to-[#E8F2EA]/10 border border-[#E2E8E4]/60 shadow-inner text-left mb-8 relative overflow-hidden">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#FAF9F5]/40 to-[#FAF9F5]/10 border border-[#FAF9F5]/60 shadow-inner text-left mb-8 relative overflow-hidden">
               <div className="absolute -right-8 -bottom-8 opacity-10 text-primary pointer-events-none">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-24 h-24">
                   <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41M9 16a5 5 0 1 1 6 0" />
@@ -154,7 +154,7 @@ export default function WellnessAssessmentQuiz() {
                   </svg>
                 </div>
                 <div>
-                  <h5 className="text-xs font-extrabold text-[#003D34] uppercase tracking-wider">Your Personalized Plan</h5>
+                  <h5 className="text-xs font-extrabold text-[#004B57] uppercase tracking-wider">Your Personalized Plan</h5>
                   <p className="text-dark font-bold text-base mt-1.5 leading-relaxed">{result.recommendation}</p>
                 </div>
               </div>
@@ -182,14 +182,14 @@ export default function WellnessAssessmentQuiz() {
             {/* Elegant Header Progress tracker */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-3">
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#E8F2EA] px-3.5 py-1.5 rounded-full">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-[#FAF9F5] px-3.5 py-1.5 rounded-full">
                   Step {step + 1} of {quizQuestions.length}
                 </span>
                 <span className="text-xs font-bold text-muted">
                   {Math.round(((step + 1) / quizQuestions.length) * 100)}% Complete
                 </span>
               </div>
-              <div className="w-full h-2 bg-[#E2E8E4]/60 rounded-full overflow-hidden">
+              <div className="w-full h-2 bg-[#FAF9F5]/60 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-primary via-[#72A93B] to-primary rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${((step + 1) / quizQuestions.length) * 100}%` }}
@@ -212,22 +212,22 @@ export default function WellnessAssessmentQuiz() {
                       onClick={() => setSelectedAnswer(option.value)}
                       className={`group flex items-center gap-4 p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                         isSelected
-                          ? 'border-primary bg-[#E8F2EA]/20 shadow-md shadow-primary/5 scale-[1.01]'
-                          : 'border-[#E2E8E4] bg-white hover:border-[#72A93B]/50 hover:bg-[#F8FAF6] hover:scale-[1.005]'
+                          ? 'border-primary bg-[#FAF9F5]/20 shadow-md shadow-primary/5 scale-[1.01]'
+                          : 'border-[#FAF9F5] bg-white hover:border-[#72A93B]/50 hover:bg-[#FAF9F5] hover:scale-[1.005]'
                       }`}
                     >
                       {/* Letter badge */}
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm transition-all duration-300 shrink-0 ${
                         isSelected
                           ? 'bg-primary text-white shadow-sm'
-                          : 'bg-[#E8F2EA] text-[#003D34] group-hover:bg-[#003D34] group-hover:text-white'
+                          : 'bg-[#FAF9F5] text-[#004B57] group-hover:bg-[#004B57] group-hover:text-white'
                       }`}>
                         {letters[index]}
                       </div>
                       
                       <div className="flex-1 min-w-0">
                         <p className={`text-sm md:text-[15px] font-extrabold transition-colors duration-300 ${
-                          isSelected ? 'text-[#003D34]' : 'text-[#2D3E42] group-hover:text-[#003D34]'
+                          isSelected ? 'text-[#004B57]' : 'text-[#004B57] group-hover:text-[#004B57]'
                         }`}>
                           {option.label}
                         </p>
@@ -237,7 +237,7 @@ export default function WellnessAssessmentQuiz() {
                       <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
                         isSelected 
                           ? 'border-primary bg-primary text-white shadow-sm' 
-                          : 'border-[#CBD5E1] bg-white group-hover:border-[#72A93B]'
+                          : 'border-[#FAF9F5] bg-white group-hover:border-[#72A93B]'
                       }`}>
                         {isSelected && (
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4.5" className="w-3 h-3">
@@ -256,8 +256,8 @@ export default function WellnessAssessmentQuiz() {
                   disabled={selectedAnswer === null}
                   className={`w-full py-4 rounded-xl text-sm font-extrabold uppercase tracking-widest transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer ${
                     selectedAnswer === null
-                      ? 'bg-[#E2E8E4]/80 text-[#8E9B9A] border border-[#E2E8E4] cursor-not-allowed shadow-none'
-                      : 'bg-primary text-white hover:bg-[#002D26] hover:-translate-y-0.5 shadow-primary/20 active:translate-y-0'
+                      ? 'bg-[#FAF9F5]/80 text-[#FAF9F5] border border-[#FAF9F5] cursor-not-allowed shadow-none'
+                      : 'bg-primary text-white hover:bg-[#004B57] hover:-translate-y-0.5 shadow-primary/20 active:translate-y-0'
                   }`}
                 >
                   <span>{isLast ? 'See Results' : 'Next Question'}</span>

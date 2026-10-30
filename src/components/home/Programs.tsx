@@ -71,7 +71,7 @@ export default function Programs() {
   return (
     <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-[-5%] top-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-bl from-[#FEF3E8]/60 to-transparent blur-[90px]" />
+        <div className="absolute right-[-5%] top-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-bl from-[#FAF9F5]/60 to-transparent blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.12)} />
       </div>
 
@@ -102,7 +102,7 @@ export default function Programs() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative flex flex-col rounded-3xl border p-6 md:p-8 transition-all duration-300 ${pkg.featured
                   ? 'bg-[#004B57] border-[#004B57] text-white shadow-[0_20px_60px_rgba(0,75,87,0.2)] md:scale-[1.03] z-10 pt-8'
-                  : 'bg-white border-[#E2E8E4] hover:border-[#FF7A1A]/25 hover:shadow-lg'
+                  : 'bg-white border-[#FAF9F5] hover:border-[#FF7A1A]/25 hover:shadow-lg'
                 }`}
             >
               {pkg.featured && (
@@ -112,7 +112,7 @@ export default function Programs() {
               )}
 
               <div
-                className={`mb-6 pb-5 border-b ${pkg.featured ? 'border-white/15' : 'border-[#E2E8E4]/80'
+                className={`mb-6 pb-5 border-b ${pkg.featured ? 'border-white/15' : 'border-[#FAF9F5]/80'
                   }`}
               >
                 <div
@@ -145,7 +145,7 @@ export default function Programs() {
                 {pkg.includes.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm">
                     <Check className="w-4 h-4 shrink-0 mt-0.5 text-[#FF7A1A]" strokeWidth={2.5} />
-                    <span className={pkg.featured ? 'text-white/80' : 'text-[#1A2E32]/75'}>{item}</span>
+                    <span className={pkg.featured ? 'text-white/80' : 'text-[#004B57]/75'}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -153,8 +153,8 @@ export default function Programs() {
               <a
                 href="#register"
                 className={`inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${pkg.featured
-                    ? 'bg-[#FF7A1A] hover:bg-[#E86800] text-white shadow-lg'
-                    : 'bg-[#FAF9F5] hover:bg-[#FF7A1A] hover:text-white text-[#004B57] border border-[#E2E8E4]'
+                    ? 'bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white shadow-lg'
+                    : 'bg-[#FAF9F5] hover:bg-[#FF7A1A] hover:text-white text-[#004B57] border border-[#FAF9F5]'
                   }`}
               >
                 <span>{pkg.cta}</span>
@@ -169,7 +169,7 @@ export default function Programs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#FAF9F5] to-[#FEF3E8]/35 rounded-3xl border border-[#e2e8e4]/80 p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+          className="bg-gradient-to-r from-[#FAF9F5] to-[#FAF9F5]/35 rounded-3xl border border-[#FAF9F5]/80 p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="flex items-start gap-4 text-left">
             <div className="w-12 h-12 rounded-2xl bg-[#004B57] flex items-center justify-center text-[#FF7A1A] shrink-0">

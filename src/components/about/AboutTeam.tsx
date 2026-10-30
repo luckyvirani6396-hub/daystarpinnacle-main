@@ -75,10 +75,10 @@ export default function AboutTeam() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
-                className={`group ${cardOnCream} overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 hover:border-[#FF7A1A]/30 transition-all duration-300 border border-[#E2E8E4]/70`}
+                className={`group ${cardOnCream} overflow-hidden flex flex-col h-full hover:shadow-lg hover:-translate-y-1 hover:border-[#FF7A1A]/30 transition-all duration-300 border border-[#FAF9F5]/70`}
               >
                 {/* Team member portrait banner */}
-                <div className="w-full h-64 relative overflow-hidden bg-gray-50 border-b border-[#E2E8E4]/60 shrink-0">
+                <div className="w-full h-64 relative overflow-hidden bg-gray-50 border-b border-[#FAF9F5]/60 shrink-0">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -95,12 +95,12 @@ export default function AboutTeam() {
                     <span className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#FF7A1A] mb-1.5 block">
                       {member.role}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0C1D37] leading-snug mb-3 group-hover:text-[#FF7A1A] transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-[#004B57] leading-snug mb-3 group-hover:text-[#FF7A1A] transition-colors">
                       {member.name}
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-[13px] text-[#2c4033]/80 leading-relaxed font-medium pt-3 border-t border-[#E2E8E4]/60 mt-auto">
+                  <p className="text-xs sm:text-[13px] text-[#004B57]/80 leading-relaxed font-medium pt-3 border-t border-[#FAF9F5]/60 mt-auto">
                     {member.specialty}
                   </p>
                 </div>

@@ -13,7 +13,7 @@ export default function CTA() {
         <div
           className="absolute inset-0 opacity-[0.08]"
           style={{
-            backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, #FAF9F5 1px, transparent 1px)',
             backgroundSize: '32px 32px',
           }}
         />

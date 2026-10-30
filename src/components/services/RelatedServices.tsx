@@ -56,13 +56,13 @@ export default function RelatedServices({ services }: RelatedServicesProps) {
         {/* Header with Heading 'More Services' and navigation controls */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-8">
           <div>
-            <span className="inline-flex text-[10px] sm:text-[11px] font-extrabold tracking-[0.2em] uppercase px-3.5 py-1.5 rounded-full bg-[#FEF3E8] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-3">
+            <span className="inline-flex text-[10px] sm:text-[11px] font-extrabold tracking-[0.2em] uppercase px-3.5 py-1.5 rounded-full bg-[#FAF9F5] border border-[#FF7A1A]/25 text-[#FF7A1A] mb-3">
               Explore More
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-serif font-medium text-[#004B57] leading-[1.12] tracking-tight">
               More <span className="text-[#FF7A1A] italic font-normal">Services</span>
             </h2>
-            <p className="text-[13px] sm:text-sm text-[#1A2E32]/80 leading-relaxed font-medium mt-2 max-w-xl">
+            <p className="text-[13px] sm:text-sm text-[#004B57]/80 leading-relaxed font-medium mt-2 max-w-xl">
               Explore our complete suite of corporate wellness solutions designed to empower, energize, and retain your workforce.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function RelatedServices({ services }: RelatedServicesProps) {
             <button
               type="button"
               onClick={() => handleScroll('left')}
-              className="w-10 h-10 rounded-xl bg-white border border-[#E2E8E4] flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-all shadow-xs cursor-pointer"
+              className="w-10 h-10 rounded-xl bg-white border border-[#FAF9F5] flex items-center justify-center text-[#004B57] hover:bg-[#004B57] hover:text-white hover:border-[#004B57] transition-all shadow-xs cursor-pointer"
               aria-label="Previous services"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -79,7 +79,7 @@ export default function RelatedServices({ services }: RelatedServicesProps) {
             <button
               type="button"
               onClick={() => handleScroll('right')}
-              className="w-10 h-10 rounded-xl bg-[#FF7A1A] border border-[#FF7A1A] flex items-center justify-center text-white hover:bg-[#E86800] transition-all shadow-xs shadow-[#FF7A1A]/20 cursor-pointer"
+              className="w-10 h-10 rounded-xl bg-[#FF7A1A] border border-[#FF7A1A] flex items-center justify-center text-white hover:bg-[#FF7A1A] transition-all shadow-xs shadow-[#FF7A1A]/20 cursor-pointer"
               aria-label="Next services"
             >
               <ChevronRight className="w-5 h-5" />

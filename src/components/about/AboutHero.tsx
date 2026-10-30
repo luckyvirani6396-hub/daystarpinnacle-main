@@ -46,7 +46,7 @@ export default function AboutHero() {
             <motion.nav
               variants={childVariants}
               aria-label="Breadcrumb"
-              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#5F6B6E] mb-4"
+              className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#004B57] mb-4"
             >
               <Link to="/" className="hover:text-[#FF7A1A] transition-colors">
                 Home
@@ -122,14 +122,14 @@ export default function AboutHero() {
 
               {/* Experienced Wellness Specialists Floating Badge (No specific numbers) */}
               <div className="absolute -bottom-4 left-4 right-4 sm:left-6 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl border border-white shadow-[0_12px_40px_rgba(0,75,87,0.10)] px-4 py-3 sm:px-5 sm:py-3.5 flex items-center gap-3 z-30">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FEF3E8] text-[#FF7A1A] flex items-center justify-center shrink-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FAF9F5] text-[#FF7A1A] flex items-center justify-center shrink-0">
                   <Award className="w-5 h-5 text-[#FF7A1A]" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm font-bold text-[#004B57] leading-tight">
                     Experienced Wellness Specialists
                   </p>
-                  <p className="text-[10.5px] sm:text-xs text-[#2c4033]/70 font-medium mt-0.5 truncate">
+                  <p className="text-[10.5px] sm:text-xs text-[#004B57]/70 font-medium mt-0.5 truncate">
                     Customized health &amp; wellbeing solutions
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function AboutHero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E2E8E4] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FAF9F5] to-transparent" />
     </section>
   );
 }

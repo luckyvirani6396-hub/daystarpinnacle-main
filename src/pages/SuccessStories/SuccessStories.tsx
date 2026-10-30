@@ -21,7 +21,7 @@ export default function SuccessStories() {
       </Suspense>
 
       {/* CTA Banner */}
-      <section className="py-14 md:py-18 relative overflow-hidden z-10 bg-[#F8FAF6]/30">
+      <section className="py-14 md:py-18 relative overflow-hidden z-10 bg-[#FAF9F5]/30">
         <SectionDecorations />
         <Container>
           <motion.div
@@ -29,7 +29,7 @@ export default function SuccessStories() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-[#E8F2EA]/60 rounded-[24px] p-8 md:p-12 border border-[#E2E8E4]/50 flex flex-col md:flex-row items-center justify-between gap-8"
+            className="bg-[#FAF9F5]/60 rounded-[24px] p-8 md:p-12 border border-[#FAF9F5]/50 flex flex-col md:flex-row items-center justify-between gap-8"
           >
             <div className="text-center md:text-left">
               <span className="inline-block text-[11px] font-extrabold uppercase tracking-widest text-[#72A93B] bg-white rounded-full px-4 py-2 mb-4">
@@ -44,7 +44,7 @@ export default function SuccessStories() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#5c8730] hover:bg-[#496b26] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-md shadow-[#5c8730]/10 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#72A93B] hover:bg-[#72A93B] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-md shadow-[#72A93B]/10 hover:scale-[1.02]"
             >
               Start Your Journey
               <HiArrowRight className="w-4 h-4" />
