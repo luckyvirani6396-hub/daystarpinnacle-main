@@ -67,7 +67,7 @@ const faculties = [
 
 export default function AboutClinicalTeam() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[-8%] top-[15%] w-[45%] h-[45%] rounded-full bg-[#004B57]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.12)} />

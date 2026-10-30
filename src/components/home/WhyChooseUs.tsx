@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
   BarChart3,
   Globe,
   HeartHandshake,
@@ -10,7 +8,6 @@ import {
   Zap,
 } from 'lucide-react';
 import {
-  btnPrimary,
   iconAccentCycle,
   sectionDotGrid,
   sectionHeadingAccent,
@@ -20,6 +17,7 @@ import {
   sectionBody,
 } from './sectionStyles';
 
+import LeafAccents from '../common/LeafAccents';
 const reasons = [
   {
     title: 'Customized Wellness Roadmaps',
@@ -67,7 +65,25 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
+      {/* Background photo with a light fade behind the heading for readability */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <img
+          src="/images/corporate-hero.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover object-[center_40%] select-none"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.7) 22%, rgba(255,255,255,0) 42%)',
+          }}
+        />
+      </div>
+      <LeafAccents />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[12%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute left-[-8%] bottom-[12%] w-[38%] h-[38%] rounded-full bg-[#004B57]/4 blur-[90px]" />
@@ -139,29 +155,6 @@ export default function WhyChooseUs() {
             );
           })}
         </div>
-
-        {/* Cohesive, logical bottom CTA banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-12 md:mt-16 bg-white border border-[#FAF9F5] rounded-2xl p-6 md:p-8 shadow-[0_4px_24px_rgba(0,75,87,0.06)] flex flex-col sm:flex-row items-center justify-between gap-6"
-        >
-          <div className="text-center sm:text-left">
-            <h3 className="text-lg md:text-xl font-serif font-bold text-[#004B57]">
-              Ready to build a healthier, more engaged workforce?
-            </h3>
-            <p className="text-xs sm:text-sm text-[#004B57] font-medium mt-1">
-              Speak with our corporate wellness consultants to craft a plan for your organization.
-            </p>
-          </div>
-
-          <Link to="/contact" className={`${btnPrimary} shrink-0`}>
-            <span>Book Consultation</span>
-            <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

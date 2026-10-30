@@ -7,7 +7,7 @@ import { btnPrimary } from '../home/sectionStyles';
 
 export default function BlogContactCTA() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-white z-10">
+    <section className="py-16 md:py-24 relative overflow-hidden bg-[#F3F8EE] z-10">
       <Container>
         <div className="bg-gradient-to-br from-[#004B57] via-[#004B57] to-[#004B57] rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-2xl">
           {/* Decorative ambient glowing circles */}

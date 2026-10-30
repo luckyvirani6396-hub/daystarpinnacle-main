@@ -120,8 +120,6 @@ export default function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             className="lg:col-span-5 relative order-2"
           >
-            <div className="absolute left-[-10px] top-[10%] bottom-[10%] w-7 bg-[#FF7A1A] rounded-r-full z-20 shadow-lg shadow-[#FF7A1A]/20" />
-            <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
 
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/10 to-[#004B57]/5 rounded-[28px] blur-xl" />

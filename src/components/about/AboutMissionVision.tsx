@@ -47,7 +47,7 @@ const coreValues = [
 
 export default function AboutMissionVision() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />

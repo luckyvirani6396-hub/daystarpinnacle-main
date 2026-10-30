@@ -18,11 +18,11 @@ import {
   UserCheck,
   Check,
   PhoneCall,
-  Sparkles,
 } from 'lucide-react';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import ProgramCard from '../../components/common/ProgramCard';
+import LeafCTABanner from '../../components/common/LeafCTABanner';
 import { pagePrograms } from '../../assets/data/content';
 import { PAGE_HERO_IMAGES } from '../../constants/pageImages';
 import { CONTACT_PHONE, CONTACT_PHONE_TEL } from '../../constants';
@@ -220,8 +220,6 @@ export default function Programs() {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
               className="lg:col-span-5 relative order-2"
             >
-              <div className="absolute left-[-10px] top-[10%] bottom-[10%] w-7 bg-[#FF7A1A] rounded-r-full z-20 shadow-lg shadow-[#FF7A1A]/20" />
-              <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
 
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/10 to-[#004B57]/5 rounded-[28px] blur-xl" />
@@ -299,7 +297,7 @@ export default function Programs() {
       </section>
 
       {/* ── Programs List Section ─────────────────────────── */}
-      <section id="programs-list" className="py-20 md:py-28 relative z-10 bg-white">
+      <section id="programs-list" className="py-20 md:py-28 relative z-10 bg-[#F3F8EE]">
         <Container>
           <SectionTitle
             subtitle="Workplace Wellness"
@@ -396,7 +394,7 @@ export default function Programs() {
 
 
       {/* ── SECTION: Fully Supported Journeys ─────────────────────── */}
-      <section className="py-20 md:py-28 relative overflow-hidden bg-white z-10">
+      <section className="py-20 md:py-28 relative overflow-hidden bg-[#F3F8EE] z-10">
         <div className="absolute left-0 top-1/4 w-[280px] h-[450px] bg-gradient-to-r from-[#FAF9F5]/55 to-transparent rounded-r-full blur-xl -z-10 pointer-events-none" />
         <div className="absolute right-0 top-1/3 w-[280px] h-[450px] bg-gradient-to-l from-[#FAF9F5]/55 to-transparent rounded-l-full blur-xl -z-10 pointer-events-none" />
 
@@ -572,7 +570,7 @@ export default function Programs() {
       </section>
 
       {/* ── SECTION: Corporate Programs FAQ ───────────────────────── */}
-      <section className="py-20 md:py-28 relative overflow-hidden bg-white z-10">
+      <section className="py-20 md:py-28 relative overflow-hidden bg-[#F3F8EE] z-10">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left FAQ intro */}
@@ -667,68 +665,7 @@ export default function Programs() {
         </Container>
       </section>
 
-      {/* ── SECTION: Final High-Impact Consultation CTA Banner ────── */}
-      <section className="py-20 md:py-28 relative overflow-hidden bg-[#FAF9F5]/70 z-10">
-        <Container>
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#004B57] via-[#004B57] to-[#004B57] rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center md:text-left relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10"
-          >
-            {/* Ambient background glows */}
-            <div className="absolute right-0 top-0 w-96 h-96 rounded-full bg-[#FF7A1A]/15 blur-3xl pointer-events-none" />
-            <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-[#72A93B]/10 blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 max-w-2xl">
-              <span className="inline-flex items-center gap-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 border border-white/15 mb-4">
-                <Sparkles className="w-3.5 h-3.5" />
-                Custom Corporate Proposals
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-white tracking-tight leading-tight mb-4">
-                Ready to Build a Healthier, <span className="text-[#FF7A1A] italic">More Engaged</span> Workforce?
-              </h2>
-              <p className="text-white/80 text-sm sm:text-base leading-relaxed font-medium mb-6">
-                Receive a tailored wellness proposal matching your team headcount, office locations, and annual budget within 24 hours.
-              </p>
-
-              {/* Trust badges */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-white/90">
-                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
-                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                  Free 30-Min Consultation
-                </span>
-                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
-                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                  Flexible Hybrid Delivery
-                </span>
-                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
-                  <Check className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                  Zero Long-Term Lock-In
-                </span>
-              </div>
-            </div>
-
-            <div className="relative z-10 flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full sm:w-auto shrink-0">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm transition-all duration-300 shadow-lg shadow-[#FF7A1A]/30 hover:scale-[1.02]"
-              >
-                <span>Request Custom Proposal</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href={`tel:${CONTACT_PHONE_TEL}`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs border border-white/20 transition-all duration-300"
-              >
-                <PhoneCall className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                <span>Call Directly: {CONTACT_PHONE}</span>
-              </a>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
+      <LeafCTABanner />
     </>
   );
 }

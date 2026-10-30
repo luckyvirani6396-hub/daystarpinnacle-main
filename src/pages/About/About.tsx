@@ -4,7 +4,7 @@ import AboutHero from '../../components/about/AboutHero';
 const AboutMissionVision = lazy(() => import('../../components/about/AboutMissionVision'));
 const AboutWellnessPillars = lazy(() => import('../../components/about/AboutWellnessPillars'));
 const AboutEmployeeFirst = lazy(() => import('../../components/about/AboutEmployeeFirst'));
-const AboutCTA = lazy(() => import('../../components/about/AboutCTA'));
+const LeafCTABanner = lazy(() => import('../../components/common/LeafCTABanner'));
 
 export default function About() {
   return (
@@ -14,7 +14,7 @@ export default function About() {
         <AboutMissionVision />
         <AboutWellnessPillars />
         <AboutEmployeeFirst />
-        <AboutCTA />
+        <LeafCTABanner />
       </Suspense>
     </div>
   );

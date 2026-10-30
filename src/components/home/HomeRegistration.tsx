@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { HiMail, HiPhone } from 'react-icons/hi';
 import { Building2, ClipboardList } from 'lucide-react';
 import ContactForm from '../forms/ContactForm';
+import LeafAccents from '../common/LeafAccents';
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
@@ -10,6 +11,7 @@ import {
 import {
   cardOnWhite,
   sectionBody,
+  sectionDotGrid,
   sectionHeadingAccent,
   sectionIntroBadge,
   sectionIntroHeading,
@@ -25,10 +27,13 @@ export default function HomeRegistration() {
   return (
     <section
       id="register"
-      className="relative w-full bg-white overflow-hidden py-12 md:py-16 scroll-mt-28"
+      className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16 scroll-mt-28"
     >
+      <LeafAccents />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[8%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[120px]" />
+        <div className="absolute left-[-8%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#72A93B]/8 blur-[100px]" />
+        <div className="absolute inset-0" style={sectionDotGrid(0.16)} />
       </div>
 
       <div className="relative z-10 w-[95%] max-w-8xl mx-auto px-5 sm:px-6 md:px-8">
@@ -67,7 +72,7 @@ export default function HomeRegistration() {
             <div className="space-y-3">
               <a
                 href={`tel:${CONTACT_PHONE_TEL}`}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#FAF9F5] hover:border-[#FF7A1A]/30 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#FAF9F5] shadow-[0_2px_12px_rgba(0,75,87,0.05)] hover:border-[#FF7A1A]/30 hover:shadow-[0_6px_20px_rgba(0,75,87,0.08)] transition-all"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <HiPhone className="w-5 h-5" />
@@ -82,7 +87,7 @@ export default function HomeRegistration() {
 
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF9F5] border border-[#FAF9F5] hover:border-[#FF7A1A]/30 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-[#FAF9F5] shadow-[0_2px_12px_rgba(0,75,87,0.05)] hover:border-[#FF7A1A]/30 hover:shadow-[0_6px_20px_rgba(0,75,87,0.08)] transition-all"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] flex items-center justify-center text-[#FF7A1A] shrink-0">
                   <HiMail className="w-5 h-5" />

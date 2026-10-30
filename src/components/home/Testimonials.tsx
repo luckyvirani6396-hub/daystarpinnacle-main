@@ -30,7 +30,7 @@ export default function Testimonials() {
   }, [isPaused]);
 
   return (
-    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[10%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.2)} />

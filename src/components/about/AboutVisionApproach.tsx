@@ -49,7 +49,7 @@ const approaches = [
 
 export default function AboutVisionApproach() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-16 md:py-24">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-16 md:py-24">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" style={sectionDotGrid(0.1)} />
       </div>

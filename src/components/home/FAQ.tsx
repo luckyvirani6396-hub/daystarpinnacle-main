@@ -12,6 +12,7 @@ import {
   sectionIntroHeading,
 } from './sectionStyles';
 
+import LeafAccents from '../common/LeafAccents';
 const faqItems = [
   {
     question: 'Can programs be customized?',
@@ -49,6 +50,7 @@ export default function FAQ() {
 
   return (
     <section className="relative w-full bg-[#FAF9F5] overflow-hidden py-12 md:py-16">
+      <LeafAccents />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[-8%] bottom-[8%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/4 blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.16)} />

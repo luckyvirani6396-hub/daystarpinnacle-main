@@ -114,7 +114,7 @@ export default function WhyWellness() {
       </section>
 
       {/* ── Corporate Challenges Section ── */}
-      <section className="py-20 bg-white z-10 relative">
+      <section className="py-20 bg-[#F3F8EE] z-10 relative">
         <Container>
           <SectionTitle
             subtitle="The Challenge"
@@ -147,7 +147,7 @@ export default function WhyWellness() {
       </section>
 
       {/* ── B2B ROI & Data-backed Benefits Section ── */}
-      <section className="py-20 bg-gradient-to-b from-white to-[#FAF9F5] z-10 relative">
+      <section className="py-20 bg-gradient-to-b from-[#F3F8EE] to-[#FAF9F5] z-10 relative">
         <Container>
           <SectionTitle
             subtitle="Data-Backed Case"
@@ -175,7 +175,7 @@ export default function WhyWellness() {
       </section>
 
       {/* ── Interactive ROI Estimator Section ── */}
-      <section id="roi-calculator" className="py-20 md:py-24 bg-white z-10 relative">
+      <section id="roi-calculator" className="py-20 md:py-24 bg-[#F3F8EE] z-10 relative">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Calculator explanation */}

@@ -71,7 +71,7 @@ const supportPillars = [
 
 export default function AboutEmployeeFirst() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16 border-t border-[#FAF9F5]/60">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[-6%] top-[10%] w-[38%] h-[38%] rounded-full bg-[#004B57]/4 blur-[100px]" />
         <div className="absolute right-[-6%] bottom-[10%] w-[38%] h-[38%] rounded-full bg-[#FF7A1A]/4 blur-[90px]" />
@@ -101,7 +101,7 @@ export default function AboutEmployeeFirst() {
         </motion.div>
 
         {/* 6 Support Principles Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {supportPillars.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -133,35 +133,6 @@ export default function AboutEmployeeFirst() {
             );
           })}
         </div>
-
-        {/* Supporting HR & People Teams Promise */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="rounded-2xl bg-gradient-to-r from-[#FAF9F5]/70 via-[#FAF9F5] to-[#FAF9F5]/70 border border-[#FAF9F5] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <div className="max-w-2xl">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FF7A1A] block mb-1">
-              Seamless HR Enablement
-            </span>
-            <h4 className="text-lg font-bold text-[#004B57] mb-1">
-              Maximum Employee Engagement, Zero HR Overhead
-            </h4>
-            <p className="text-xs sm:text-sm text-[#004B57]/75 leading-relaxed font-medium">
-              From creative email teaser templates and calendar invitations to automated post-session surveys
-              and attendance analytics, we take complete care of logistics so your HR team never has to stress.
-            </p>
-          </div>
-
-          <div className="shrink-0 flex items-center gap-3 bg-white px-5 py-3 rounded-xl border border-[#FAF9F5] shadow-sm">
-            <div className="w-3 h-3 rounded-full bg-[#72A93B] animate-pulse" />
-            <span className="text-xs font-bold text-[#004B57]">
-              Turnkey Program Delivery
-            </span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

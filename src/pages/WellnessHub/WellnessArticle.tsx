@@ -570,7 +570,7 @@ export default function WellnessArticle() {
           )}
 
           {/* Bottom Full-Width CTA Banner */}
-          <section className="mt-16 sm:mt-20 rounded-3xl bg-white border border-[#FAF9F5] p-8 sm:p-12 text-center relative overflow-hidden shadow-sm">
+          <section className="mt-16 sm:mt-20 rounded-3xl bg-[#F3F8EE] border border-[#FAF9F5] p-8 sm:p-12 text-center relative overflow-hidden shadow-sm">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute -right-10 -top-10 w-60 h-60 rounded-full bg-[#FF7A1A]/5 blur-3xl" />
               <div className="absolute -left-10 -bottom-10 w-60 h-60 rounded-full bg-[#004B57]/5 blur-3xl" />

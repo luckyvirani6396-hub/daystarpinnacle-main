@@ -5,7 +5,7 @@ import { whyChooseUs } from '../../assets/data/content';
 
 export default function CareApproach() {
   return (
-    <section className="py-14 md:py-18 bg-white relative z-20">
+    <section className="py-14 md:py-18 bg-[#F3F8EE] relative z-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="lg:col-span-4 flex flex-col items-start">

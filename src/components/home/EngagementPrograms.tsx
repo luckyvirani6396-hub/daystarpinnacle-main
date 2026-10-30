@@ -88,7 +88,7 @@ export default function EngagementPrograms() {
   const active = programs.find((p) => p.id === activeId) ?? programs[0];
 
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[12%] w-[40%] h-[40%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.14)} />

@@ -105,8 +105,6 @@ export default function WellnessHubHero() {
           </div>
 
           <div className="col-span-1 lg:col-span-5 relative w-full flex items-center justify-center lg:justify-end mt-8 lg:mt-0 z-10">
-            <div className="absolute left-[-10px] top-[10%] bottom-[10%] w-7 bg-[#FF7A1A] rounded-r-full z-20 shadow-lg shadow-[#FF7A1A]/20" />
-            <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
             
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/10 to-[#004B57]/5 rounded-[28px] blur-xl" />

@@ -121,6 +121,43 @@ select:focus {
   }
 }
 
+/* Periodic light sweep across CTA buttons */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  animation: btn-shine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-shine {
+  0%,
+  65% {
+    left: -75%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after {
+    animation: none;
+  }
+}
+
 .skeleton {
   background: linear-gradient(90deg, #FAF9F5 25%, color-mix(in srgb, #72A93B 18%, #FAF9F5) 50%, #FAF9F5 75%);
   background-size: 200% 100%;

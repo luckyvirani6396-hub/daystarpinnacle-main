@@ -1,7 +1,6 @@
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
   Check,
   CheckCircle2,
   Calendar,
@@ -14,6 +13,7 @@ import {
 import Container from '../../components/common/Container';
 import ServiceDetailHero from '../../components/services/ServiceDetailHero';
 import RelatedServices from '../../components/services/RelatedServices';
+import LeafCTABanner from '../../components/common/LeafCTABanner';
 import { clinicalServices, getServiceBySlug } from '../../assets/data/clinicalServices';
 import { fadeUp } from '../../utils/animations';
 import { sectionDotGrid } from '../../components/home/sectionStyles';
@@ -255,37 +255,7 @@ export default function ServiceDetail() {
 
       <RelatedServices services={otherServices} currentTitle={service.title} />
 
-      {/* Program CTA block */}
-      <section className="py-14 md:py-18 bg-[#FAF9F5]/40">
-        <Container>
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="bg-[#FAF9F5]/65 rounded-[24px] p-8 md:p-12 border border-[#FAF9F5]/60 flex flex-col md:flex-row items-center justify-between gap-8"
-          >
-            <div className="text-center md:text-left">
-              <span className="inline-block text-[11px] font-extrabold uppercase tracking-widest text-[#FF7A1A] bg-white rounded-full px-4 py-2 mb-4 border border-[#FF7A1A]/15 shadow-sm">
-                Full Programs
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#004B57] mb-3 font-serif">
-                Want a Complete Transformation Plan?
-              </h3>
-              <p className="text-muted text-sm md:text-base leading-relaxed max-w-lg font-medium">
-                Our structured multi-week programs bundle coaching, meal plans, and milestones for lasting results.
-              </p>
-            </div>
-            <Link
-              to="/programs"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF7A1A] hover:bg-[#FF7A1A] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#FF7A1A]/15 hover:scale-[1.02] hover:-translate-y-0.5"
-            >
-              <span>View Programs</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
-        </Container>
-      </section>
+      <LeafCTABanner />
     </>
   );
 }

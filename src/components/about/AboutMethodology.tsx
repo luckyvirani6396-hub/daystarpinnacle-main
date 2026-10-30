@@ -102,7 +102,7 @@ const standards = [
 
 export default function AboutMethodology() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0" style={sectionDotGrid(0.08)} />
       </div>

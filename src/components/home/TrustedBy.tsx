@@ -176,7 +176,7 @@ export default function TrustedBy() {
   const row2 = [...currentLogos.slice(mid)].reverse();
 
   return (
-    <section id="trusted" className="relative w-full bg-white select-none overflow-hidden py-16 md:py-24">
+    <section id="trusted" className="relative w-full bg-[#F3F8EE] select-none overflow-hidden py-16 md:py-24">
       <style>{`
         @keyframes marquee-left {
           0% { transform: translateX(0); }

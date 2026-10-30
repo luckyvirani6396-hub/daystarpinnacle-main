@@ -79,7 +79,7 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
   const closeDropdown = () => setIsOpen(false);
 
   const linkClass = isCapsule
-    ? `inline-flex items-center gap-0.5 px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
+    ? `group relative inline-flex items-center gap-0.5 px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${
         isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
       }`
     : `inline-flex items-center gap-1 px-3.5 xl:px-4.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
@@ -100,24 +100,34 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
     >
       <Link to="/services" className={linkClass}>
         Services
-        <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <HiChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        {isCapsule && (
+          <span
+            className={`absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] rounded-full bg-[#FF7A1A] transition-all duration-300 ease-out ${
+              isActive || isOpen ? 'w-[60%]' : 'w-0 group-hover:w-[60%]'
+            }`}
+          />
+        )}
       </Link>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2, ease: easeSoft }}
-            className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[580px] xl:w-[620px] z-50 pointer-events-auto"
+            initial={{ opacity: 0, y: -10, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.98 }}
+            transition={{ duration: 0.25, ease: easeSoft }}
+            style={{ transformOrigin: 'top center', x: '-50%' }}
+            className="absolute top-full left-1/2 pt-3 w-[580px] xl:w-[620px] z-50 pointer-events-auto"
           >
+            {/* Pointer caret */}
+            <span className="absolute top-[7px] left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-[#FAF9F5] border-l border-t border-[#004B57]/5 z-10" />
             <motion.div
               variants={listVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-white rounded-2xl shadow-2xl shadow-black/15 border border-[#FAF9F5] overflow-hidden"
+              className="relative bg-white rounded-2xl shadow-2xl shadow-black/15 border border-[#FAF9F5] overflow-hidden"
             >
               {/* Top micro-header */}
               <div className="px-5 py-2.5 bg-[#FAF9F5] border-b border-[#FAF9F5] flex items-center justify-between">
@@ -140,17 +150,23 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                       <Link
                         to={`/services/${service.slug}`}
                         onClick={closeDropdown}
-                        className={`group flex items-center gap-3 p-2.5 rounded-xl transition-all duration-200 border ${
+                        className={`group relative flex items-center gap-3 p-2.5 rounded-xl transition-all duration-300 border overflow-hidden ${
                           isCurrentService
                             ? 'bg-[#FAF9F5] border-[#FF7A1A]/40 shadow-xs'
-                            : 'hover:bg-[#FAF9F5] border-transparent hover:border-[#FAF9F5]/70'
+                            : 'border-transparent hover:border-[#FF7A1A]/15 hover:bg-gradient-to-r hover:from-[#FF7A1A]/[0.07] hover:to-transparent hover:shadow-sm hover:translate-x-0.5'
                         }`}
                       >
+                        {/* Left accent bar grows on hover */}
+                        <span
+                          className={`absolute left-0 top-1/2 -translate-y-1/2 w-[3px] rounded-r-full bg-[#FF7A1A] transition-all duration-300 ${
+                            isCurrentService ? 'h-[60%]' : 'h-0 group-hover:h-[60%]'
+                          }`}
+                        />
                         <div
-                          className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-200 ${
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 ${
                             isCurrentService
                               ? 'bg-[#FF7A1A] text-white shadow-sm shadow-[#FF7A1A]/25'
-                              : 'bg-[#FAF9F5] group-hover:bg-[#FF7A1A] text-[#FF7A1A] group-hover:text-white'
+                              : 'bg-[#FAF9F5] group-hover:bg-[#FF7A1A] text-[#FF7A1A] group-hover:text-white group-hover:shadow-md group-hover:shadow-[#FF7A1A]/30 group-hover:scale-110 group-hover:-rotate-6'
                           }`}
                         >
                           <Icon className="w-4 h-4" strokeWidth={2.2} />
@@ -176,6 +192,9 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                             {service.desc}
                           </p>
                         </div>
+                        {!isCurrentService && (
+                          <ArrowRight className="w-3.5 h-3.5 shrink-0 text-[#FF7A1A] opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+                        )}
                       </Link>
                     </motion.div>
                   );
@@ -190,14 +209,14 @@ export default function ServicesDropdown({ isActive, isLight = false, isCapsule 
                 <Link
                   to="/services"
                   onClick={closeDropdown}
-                  className={`text-[12.5px] font-extrabold flex items-center gap-1 transition-colors ${
+                  className={`group text-[12.5px] font-extrabold flex items-center gap-1 transition-colors ${
                     location.pathname === '/services'
                       ? 'text-[#FF7A1A]'
                       : 'text-[#004B57] hover:text-[#FF7A1A]'
                   }`}
                 >
                   <span>View All Services</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
             </motion.div>
@@ -258,14 +277,14 @@ export function MobileServicesList({ isServicesActive, onNavigate }: MobileServi
                     <Link
                       to={`/services/${service.slug}`}
                       onClick={handleNavigate}
-                      className={`flex items-center justify-between px-4 py-2.5 text-sm rounded-lg transition-colors ${
+                      className={`group flex items-center justify-between px-4 py-2.5 text-sm rounded-lg transition-all duration-300 ${
                         isCurrentService
                           ? 'text-[#FF7A1A] font-bold bg-[#FAF9F5]'
-                          : 'text-[#004B57]/85 hover:text-[#FF7A1A]'
+                          : 'text-[#004B57]/85 hover:text-[#FF7A1A] hover:bg-[#FF7A1A]/5'
                       }`}
                     >
                       <span className="flex items-center gap-2">
-                        <HiChevronRight className="w-4 h-4 shrink-0" />
+                        <HiChevronRight className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                         {service.title}
                       </span>
                       {isCurrentService && (

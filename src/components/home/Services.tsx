@@ -16,7 +16,6 @@ import {
   RefreshCw,
   Shield,
   Smile,
-  Sparkles,
 } from 'lucide-react';
 import {
   btnPrimary,
@@ -28,6 +27,7 @@ import {
   sectionIntroHeading,
 } from './sectionStyles';
 
+import LeafAccents from '../common/LeafAccents';
 export const dimensions = [
   {
     id: 'physical',
@@ -275,7 +275,8 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative w-full bg-white overflow-hidden py-12 md:py-16">
+    <section id="services" className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
+      <LeafAccents />
       {/* Background decorations matching brand palette */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[15%] w-[45%] h-[45%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
@@ -304,12 +305,7 @@ export default function Services() {
 
         {/* Carousel Top Controls Bar: Counter badge + Prev / Next Arrow buttons */}
         <div className="flex items-center justify-between gap-4 mb-6">
-          <div className="flex items-center gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF9F5] border border-[#FAF9F5] text-xs font-bold text-[#004B57]">
-              <Sparkles className="w-3.5 h-3.5 text-[#FF7A1A]" />
-              <span>10 Core Wellness Dimensions</span>
-            </span>
-          </div>
+          <div className="flex items-center gap-2.5" />
 
           <div className="flex items-center gap-2">
             <button

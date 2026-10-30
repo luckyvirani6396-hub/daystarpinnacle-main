@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
-import { FaWhatsapp } from 'react-icons/fa';
 import Container from '../common/Container';
 import SectionDecorations from '../common/SectionDecorations';
 import ContactForm from '../forms/ContactForm';
-import Button from '../common/Button';
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   CONTACT_PHONE_TEL,
   COMPANY_NAME,
   STREET_ADDRESS,
-  WHATSAPP_NUMBER,
 } from '../../constants';
 import { fadeUp } from '../../utils/animations';
 
@@ -47,7 +44,7 @@ const contactMethods = [
 
 export default function ContactSection() {
   return (
-    <section id="contact-form" className="py-10 md:py-14 relative overflow-hidden z-10 bg-white">
+    <section id="contact-form" className="py-10 md:py-14 relative overflow-hidden z-10 bg-[#F3F8EE]">
       <SectionDecorations />
 
       <Container>
@@ -92,27 +89,6 @@ export default function ContactSection() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="bg-gradient-to-br from-[#72A93B]/10 to-[#72A93B]/5 rounded-[24px] p-6 border border-[#72A93B]/20 shadow-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-[#72A93B]/15 flex items-center justify-center border border-[#72A93B]/5">
-                  <FaWhatsapp className="w-6 h-6 text-[#72A93B]" />
-                </div>
-                <div>
-                  <p className="font-bold text-[#004B57]">Chat on WhatsApp</p>
-                  <p className="text-xs text-muted font-medium">Get instant responses</p>
-                </div>
-              </div>
-              <Button
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi, I'd like to know more about your corporate wellness programs.`}
-                variant="secondary"
-                fullWidth
-                className="font-bold border-[#72A93B]/30 text-[#72A93B] hover:bg-[#72A93B] hover:text-white"
-              >
-                <FaWhatsapp className="w-5 h-5" />
-                Message Us
-              </Button>
             </div>
           </motion.div>
 

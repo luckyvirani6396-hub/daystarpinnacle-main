@@ -114,7 +114,12 @@ export default function Navbar() {
         className={`transition-all duration-300 w-[95%] max-w-8xl mx-auto pointer-events-auto ${isScrolled ? 'my-2' : 'my-4'
           }`}
       >
-        <nav className="bg-white/95 backdrop-blur-md shadow-lg rounded-xl border border-[#FAF9F5] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4">
+        <motion.nav
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className={`bg-white/95 backdrop-blur-md rounded-xl border border-[#FAF9F5] px-3 xl:px-5 2xl:px-6 py-1.5 xl:py-2 flex items-center justify-between gap-2 xl:gap-4 transition-shadow duration-300 ${isScrolled ? 'shadow-xl shadow-[#004B57]/10' : 'shadow-lg'}`}
+        >
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0 min-w-0">
             <Logo compact />
@@ -122,15 +127,25 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center justify-center flex-1 min-w-0 gap-0 xl:gap-0.5 2xl:gap-1.5">
-            {navItems.map((item) => {
+            {navItems.map((item, idx) => {
               const isActive =
                 location.pathname === item.path ||
                 (item.path === '/services' && location.pathname.startsWith('/services')) ||
                 ((item.path === '/health-hub' || item.path === '/resources') &&
                   (location.pathname.startsWith('/health-hub') || location.pathname.startsWith('/resources')));
 
+              const entrance = {
+                initial: { opacity: 0, y: -8 },
+                animate: { opacity: 1, y: 0 },
+                transition: { delay: 0.25 + idx * 0.06, duration: 0.4 },
+              };
+
               if (item.path === '/services') {
-                return <ServicesDropdown key={item.path} isActive={isActive} isCapsule={true} />;
+                return (
+                  <motion.div key={item.path} {...entrance}>
+                    <ServicesDropdown isActive={isActive} isCapsule={true} />
+                  </motion.div>
+                );
               }
 
               const shortLabel =
@@ -143,16 +158,20 @@ export default function Navbar() {
                       : item.label;
 
               return (
-                <div key={item.path} className="relative flex flex-col items-center">
+                <motion.div key={item.path} {...entrance} className="relative flex flex-col items-center">
                   <Link
                     to={item.path}
-                    className={`px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
+                    className={`group relative px-1.5 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] font-semibold whitespace-nowrap transition-all duration-200 ${isActive ? 'text-[#FF7A1A]' : 'text-[#004B57] hover:text-[#FF7A1A]'
                       }`}
                   >
                     <span className="2xl:hidden">{shortLabel}</span>
                     <span className="hidden 2xl:inline">{item.label}</span>
+                    <span
+                      className={`absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] rounded-full bg-[#FF7A1A] transition-all duration-300 ease-out ${isActive ? 'w-[60%]' : 'w-0 group-hover:w-[60%]'
+                        }`}
+                    />
                   </Link>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -161,11 +180,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <Link
               to="/contact"
-              className="bg-[#FF7A1A] text-white hover:bg-[#FF7A1A] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 whitespace-nowrap"
+              className="btn-shine group bg-[#FF7A1A] text-white hover:bg-[#FF7A1A] font-semibold text-[12px] xl:text-[13px] 2xl:text-[13.5px] px-3 xl:px-4 2xl:px-5 py-2 xl:py-2.5 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md shadow-[#FF7A1A]/10 hover:shadow-lg hover:shadow-[#FF7A1A]/30 hover:-translate-y-0.5 whitespace-nowrap"
             >
               <span className="hidden xl:inline">Book Consultation</span>
               <span className="xl:hidden">Book Now</span>
-              <span className="font-sans font-bold">→</span>
+              <span className="font-sans font-bold transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
@@ -190,7 +209,7 @@ export default function Navbar() {
               {isOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
             </button>
           </div>
-        </nav>
+        </motion.nav>
       </div>
 
       {/* Mobile Drawer menu */}

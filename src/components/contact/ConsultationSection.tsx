@@ -60,8 +60,9 @@ export default function ConsultationSection() {
 }
 
 const MAPS_API_KEY = 'AIzaSyAkUfhrldqKHWEk5wEHLrTTPSaURHcmwPQ';
-const LAT = 28.6019;
-const LNG = 77.3588;
+// Office location (from the Google Maps share link for "Office", Sector 57, Noida)
+const LAT = 28.601944814006387;
+const LNG = 77.35617528899144;
 
 export function MapSection() {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -114,7 +115,7 @@ export function MapSection() {
       const infoWindow = new google.maps.InfoWindow({
         content: `
           <div style="font-family: 'Poppins', 'Inter', sans-serif; padding: 20px; max-width: 400px; color: #004B57; line-height: 1.5;">
-            
+
             <div style="display: flex; align-items: center; gap: 12px; margin-bottom:12px;">
               <img src="${resolvedLogoUrl}" alt="Daystar Pinnacle" width="48" height="48" style="border-radius: 12px; object-fit: contain; background: #FAF9F5; padding: 4px; border: 1.5px solid #FAF9F5;" />
               <div>
@@ -131,13 +132,13 @@ export function MapSection() {
                 </svg>
                 <span style="font-weight: 500; color: #004B57;">2nd Floor, A-5, Sector 57, Noida, Uttar Pradesh - 201301</span>
               </div>
-              
+
               <div style="display: flex; align-items: center; gap: 8px;">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#FF7A1A" stroke-width="2" style="flex-shrink: 0;">
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
-                <span style="font-weight: 500; color: #004B57;">Mon – Sat: 9:00 AM – 7:00 PM</span>
+                <span style="font-weight: 500; color: #004B57;">Mon – Sat: 9:30 AM – 6:30 PM</span>
               </div>
 
               <div style="display: flex; align-items: center; gap: 8px;">
@@ -214,7 +215,7 @@ export function MapSection() {
   }, []);
 
   return (
-    <section id="map" className="pb-14 md:pb-18 bg-white">
+    <section id="map" className="pb-14 md:pb-18 bg-[#F3F8EE]">
       <Container>
         <motion.div
           variants={fadeUp}

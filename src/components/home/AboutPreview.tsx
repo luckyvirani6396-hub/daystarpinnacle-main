@@ -58,7 +58,7 @@ const childVariants = {
 
 export default function AboutPreview() {
   return (
-    <section id="about" className="relative w-full bg-white overflow-hidden isolate py-12 md:py-16 scroll-mt-20">
+    <section id="about" className="relative w-full bg-[#F3F8EE] overflow-hidden isolate py-12 md:py-16 scroll-mt-20">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-8%] top-[10%] w-[42%] h-[42%] rounded-full bg-[#FF7A1A]/4 blur-[100px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.1)} />
@@ -73,8 +73,6 @@ export default function AboutPreview() {
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             className="lg:col-span-5 relative order-2 lg:order-1"
           >
-            <div className="absolute left-[-10px] top-[10%] bottom-[10%] w-7 bg-[#FF7A1A] rounded-r-full z-20 shadow-lg shadow-[#FF7A1A]/20" />
-            <div className="absolute -right-2 top-[10%] bottom-[10%] w-9 bg-[#004B57] rounded-l-full z-20 shadow-lg" />
 
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-br from-[#FF7A1A]/8 to-transparent rounded-[28px] blur-xl" />

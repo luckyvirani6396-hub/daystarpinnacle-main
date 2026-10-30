@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Crown, Rocket, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, Check, Crown, Sparkles, Star } from 'lucide-react';
 import {
-  btnPrimary,
   sectionBody,
   sectionDotGrid,
   sectionHeadingAccent,
@@ -69,7 +68,7 @@ const packages = [
 
 export default function Programs() {
   return (
-    <section className="relative w-full bg-white overflow-hidden py-12 md:py-16">
+    <section className="relative w-full bg-[#F3F8EE] overflow-hidden py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-[-5%] top-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-bl from-[#FAF9F5]/60 to-transparent blur-[90px]" />
         <div className="absolute inset-0" style={sectionDotGrid(0.12)} />
@@ -92,7 +91,7 @@ export default function Programs() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-10 md:items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 md:items-stretch">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.id}
@@ -163,33 +162,6 @@ export default function Programs() {
             </motion.div>
           ))}
         </div>
-
-        {/* Enterprise card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#FAF9F5] to-[#FAF9F5]/35 rounded-3xl border border-[#FAF9F5]/80 p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <div className="flex items-start gap-4 text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[#004B57] flex items-center justify-center text-[#FF7A1A] shrink-0">
-              <Rocket className="w-6 h-6" strokeWidth={2} />
-            </div>
-            <div>
-              <h3 className="text-xl sm:text-2xl font-serif font-semibold text-[#004B57] mb-2 tracking-tight">
-                Enterprise Solutions
-              </h3>
-              <p className={`${sectionBody} max-w-xl`}>
-                Need something unique? Our enterprise wellness solutions are fully customized around
-                your workforce size, business objectives, workplace culture, and budget.
-              </p>
-            </div>
-          </div>
-          <a href="#register" className={`${btnPrimary} shrink-0`}>
-            <span>Request a Custom Proposal</span>
-            <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
